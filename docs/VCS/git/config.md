@@ -6,8 +6,6 @@
 ## Configuração
 O Git vem com uma ferramenta chamada git config que permite ver e atribuir variáveis de configuração que controlam todos os aspectos de como o Git aparece e opera.
 
-<br><br>
-
 ## Identidade
 O primeiro passo é configurar sua identidade, seu nome e endereço de e-mail, isso é importante pois cada commit usa esta informação, e ela é carimbada de forma imutável nos commits que você criar. 
 
@@ -15,8 +13,6 @@ O primeiro passo é configurar sua identidade, seu nome e endereço de e-mail, i
 git config --global user.name "Seu nome"
 git config --global user.email seuemail@exemplo.br
 ```
-
-<br><br>
 
 ## Editor de texto padrão
 Um outro ponto legal de se configurar é o editor onde você poderá abrir o arquivo de configuração do Git , .gitconfig , fica fácil de você visualizar as configurações do Git e também adicionar outras que julgue necessário. Para isso execute o comando à seguir no seu terminal:
@@ -30,8 +26,6 @@ Esse comando define o editor do .gitconfig como o **VS Code** , que é o editor 
 ``` bash
 code .gitconfig
 ```
-
-<br><br>
 
 ## Autenticação
 
@@ -48,26 +42,44 @@ Existem duas formas pelas quais você pode acessar o GitHub pelo terminal:
     
 > Veja aqui como configurar para <a name="ssh">[SSH](chaveSSH.md#back-chave-ssh)</a>.
 
-<br><br>
-
 ## Conectando o repositório local ao remoto
 O Git suporta muitas formas de fazer referência a um repositório remoto. Duas das maneiras mais fáceis de acessar um repositório remoto são por meio dos protocolos HTTP e SSH. HTTP é uma maneira fácil de permitir acesso anônimo, somente leitura a um repositório.
 
 Geralmente não é possível enviar confirmações para um endereço HTTP (você não quer permitir envios anônimos de forma nenhuma). Para acesso de leitura-gravação, é necessário usar SSH.
 
 Para conectar os dois repositórios você deverá abrir o seu terminal, acessar o diretório do seu repositório e então executar o seguinte comando:
-``` bash
+```bash
 git remote add origin git@github.com:user-github/repo-name.git
 ```
-Sendo origin um apelido para o seu repositório, poderia ser qualquer outro. E no lugar da URL git@github.com:user-github/repo-name.git deve ir a gerada pelo seu repositório.
+Sendo origin um apelido para o seu repositório, poderia ser qualquer outro. E no lugar da URL git@github.com:user-github/repo-name.git deve ser gerada pelo seu repositório.
 
 Para verificar que tudo funcionou corretamente, execute o comando git remote -v , você obterá um resultado semelhante a esse:
-``` bash
+```bash
 origin  git@github.com:user-github/repo-name.git (fetch)
 origin  git@github.com:user-github/repo-name.git (push)
 ```
 
-<br><br>
+## Mudando de repositório remoto
+Caso você esteja querendo mudar a **origin** do repo você pode seguir por duas abordagens:
+1. Remover a origin atual e adicionar a origin desejada:
+    ```bash
+    git remote remove origin
+    git remote add origin git@github.com:user-github/repo-name.git
+    ```
+2. Sobrescrever a origin atual diretamente pela nova:
+    ```bash
+    git remote set-url origin git://new.url.here
+    ```
+
+## Definindo repositório padrão
+Para definir a ramificação remota padrão para a ramificação local atual, basta utilizar a opção **--set-upstream**:
+```bash
+git branch --set-upstream <remote-branch>
+```
+Sua forma abreviada **-u** é mais utilizada:
+```bash
+git push -u origin local-branch
+```
 
 ## Sincronizando repositórios
 Os repositórios já estão criados e também já estão conectados, agora é a hora de enviar as alterações feitas no repositório local para o repositório remote.
