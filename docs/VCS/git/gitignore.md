@@ -1,4 +1,4 @@
-# :back: [.gitignore](../../../README.md#low-level-programming)
+# :back: [.gitignore](../../../README.md#version-control-systems)
 O arquivo `.gitignore` serve para avisar ao git que queremos ignorar determinadas coisas dentro do nosso sistema de controle de versão.
 
 ## Ferramentas
