@@ -1,4 +1,4 @@
-# :back: [Configurações](../../../README.md#programação-de-baixo-nível)
+# :back: [Configurações](../../../README.md#low-level-programming)
 
 ## Livro oficial do git
 * https://git-scm.com/book/pt-br/v2
