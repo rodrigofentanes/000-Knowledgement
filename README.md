@@ -1,49 +1,49 @@
 <h1 align="center">Meu conhecimento</h1> 
 
-## Fundamentals
+## Fundamentos da programação
 
 <details>
     <summary>
-        Math
+        Matemática
     </summary>
     
--   [Introdução](docs/F/M/intro.md)
+-   [Introdução](docs/FDP/M/intro.md)
 
 </details>
 
 <details>
     <summary>
-        Programming Logic
+        Lógica de programação
     </summary>
     
--   [Introdução](docs/F/PL/intro.md)
+-   [Introdução](docs/FDP/LDP/intro.md)
 
 </details>
 
 <details>
     <summary>
-        Data Structure
+        Estrutura de dados
     </summary>
     
--   [Introdução](docs/F/DS/intro.md)
+-   [Introdução](docs/FDP/EDD/intro.md)
 
 </details>
 
 <details>
     <summary>
-        Algorithms
+        Algoritmos
     </summary>
     
--   [Introdução](docs/F/A/intro.md)
+-   [Introdução](docs/FDP/A/intro.md)
 
 </details>
 
 <details>
     <summary>
-        Systems Architecture
+        Arquitetura de sistemas
     </summary>
     
--   [Introdução](docs/F/SA/intro.md)
+-   [Introdução](docs/FDP/ADS/intro.md)
 
 </details>
 
