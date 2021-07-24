@@ -1,4 +1,4 @@
-# :back: [Introdução à lógica de programação](../../../README.md#fundamentals)
+# :back: [Introdução à lógica de programação](../../../README.md#fundamentos-da-programação)
 
 ## Abstração
 Abstração é a habilidade de concentrar nos aspectos essenciais de um contexte qualquer, ignorando características menos importantes ou acidentais, ou seja, nada mais é que abordar um problema extenso da forma mais simples possível.

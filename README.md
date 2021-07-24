@@ -22,19 +22,19 @@
 
 <details>
     <summary>
-        Estrutura de dados
+        Algoritmos
     </summary>
     
--   [Introdução](docs/FDP/EDD/intro.md)
+-   [Introdução](docs/FDP/A/intro.md)
 
 </details>
 
 <details>
     <summary>
-        Algoritmos
+        Estrutura de dados
     </summary>
     
--   [Introdução](docs/FDP/A/intro.md)
+-   [Introdução](docs/FDP/EDD/intro.md)
 
 </details>
 
