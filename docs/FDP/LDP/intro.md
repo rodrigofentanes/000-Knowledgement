@@ -60,10 +60,55 @@ Os operadores relacionais mais comuns são:
 
 ## Tomadas de decisão
 Ocorre quando uma ou mais condições determinam qual será o próximo passo a seguir. 
+Abaixo alguns tipos de tomada de decisão:
+| Nome | exemplo | Significado |
+| :-: | :-: | :-: |
+| switch | switch ( numero ){ case 1: x = 1; break; case 2: x = 2; break; default: x = 0; break; } return x; | "interruptor" : "caso" 1, faça: x igual a 1 e "saia do switch" ; "caso" 2, faça: x igual a 2 e "saia do switch" ; "caso" nenhum dos casos anteriores, faça: x igual a zero e "saia do switch"; "retorne" o valor de x; |
+| if else | if( x > 3 ){ y = verdadeiro } else{ y = falso } | "se" : "se" x é maior que 3 então y é igual a "verdadeiro". "se não" então y é igual a falso.  |
 
 ## Concatenação
 É a operação de unir dois ou mais conteúdos do tipo "string".
 
 ## Estrutura de repetição
-É uma estrutura que permite excutar mais de uma vez o mesmo comando ou conjunto de comandos, de acordo com uma condição ou com um **contador**.
+També conhecido como **laço de repetição**, é uma estrutura que permite excutar mais de uma vez o mesmo comando ou conjunto de comandos, de acordo com uma condição ou com um **contador**.
+
+Abaixo alguns tipos de estruturas de repetição:
+| Nome | Exemplo | Significado |
+| :-: | :-: | :-: |
+| while | while( x < y ){ x = x + 1 } | "Enquanto" x é menor que y, faça: x é iguai a x mais 1 |
+| for | for( int i = 0 ; i < 1000 ; i + 1 ){ println( i ) } | "para" i igual a zero; enquanto i for menor que 1000; some 1 ao i. Faça: "escreva" o valor de i na tela. |
+
+## Vetores e Matrizes
+**Matriz** é um coleção de variáveis do mesmo tipo, acessíveis com um único nome e armazenadas igualmente na memória.
+
+Os **vetores** são matrizes de uma só dimensão.
+
+A individualização de cada variável de um vetor é feita através de uso de **índices**.
+
+-   Vetor[5];
+    - 6 linhas, de 0 à 5.
+    - 6 posições.
+
+    | Posições |
+    | :-: |
+    | [0] |
+    | [1] |
+    | [2] |
+    | [3] |
+    | [4] |
+    | [5] |
+
+-   Matriz[5][3];
+    - 6 linhas, de 0 à 5.
+    - 4 colunas, de 0 à 3.
+    - 24 posições.
+
+    | Posições |
+    | :-: |
+    | [0,0] [0,1] [0,2] [0,3] |
+    | [1,0] [1,1] [1,2] [1,3] |
+    | [2,0] [2,1] [2,2] [2,3] |
+    | [3,0] [3,1] [3,2] [3,3] |
+    | [4,0] [4,1] [4,2] [4,3] |
+    | [5,0] [5,1] [5,2] [5,3] |
 

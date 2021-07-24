@@ -20,14 +20,6 @@
 
 </details>
 
-<details>
-    <summary>
-        Algoritmos
-    </summary>
-    
--   [Introdução](docs/FDP/A/intro.md)
-
-</details>
 
 <details>
     <summary>
@@ -35,6 +27,15 @@
     </summary>
     
 -   [Introdução](docs/FDP/EDD/intro.md)
+
+</details>
+
+<details>
+    <summary>
+        Algoritmos
+    </summary>
+    
+-   [Introdução](docs/FDP/A/intro.md)
 
 </details>
 
