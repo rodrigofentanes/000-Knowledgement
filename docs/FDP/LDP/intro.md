@@ -89,7 +89,7 @@ A individualização de cada variável de um vetor é feita através de uso de *
     - 6 linhas, de 0 à 5.
     - 6 posições.
 
-    | Posições |
+    | Índices |
     | :-: |
     | [0] |
     | [1] |
@@ -103,7 +103,7 @@ A individualização de cada variável de um vetor é feita através de uso de *
     - 4 colunas, de 0 à 3.
     - 24 posições.
 
-    | Posições |
+    | Índices |
     | :-: |
     | [0,0] [0,1] [0,2] [0,3] |
     | [1,0] [1,1] [1,2] [1,3] |
