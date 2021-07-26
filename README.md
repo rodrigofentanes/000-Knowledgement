@@ -1,5 +1,9 @@
 <h1 align="center">Meu conhecimento</h1> 
 
+Espaço utilizado para o meu aprendizado. Está em constante alteração e, em algum momento de reestrturação de pensamento, pode encontrar-se desorganizado.
+
+<hr> <!-- ------------------------------------------------ -->
+
 ## Fundamentos da programação
 
 <details>
@@ -27,15 +31,6 @@
     </summary>
     
 -   [Introdução](docs/FDP/EDD/intro.md)
-
-</details>
-
-<details>
-    <summary>
-        Algoritmos
-    </summary>
-    
--   [Introdução](docs/FDP/A/intro.md)
 
 </details>
 
