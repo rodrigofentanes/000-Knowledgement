@@ -1,20 +1,5 @@
 # :back: [Linux/Unix cheat sheet](../../../README.md#low-level-programming)
 
-<!-- 
-    VER: https://app.betrybe.com/course/fundamentals/unix/unix-part-1/recursos-adicionais-opcional
-* https://www.guru99.com/linux-commands-cheat-sheet.html
-* https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/
-* https://predictivehacks.com/unix-commands-cheatsheet/
-* https://www.gotothings.com/unix/unix-commands-cheat-sheet.htm
-* https://www.dummies.com/computers/operating-systems/unix/unix-for-dummies-cheat-sheet/
-* https://sites.tufts.edu/cbi/files/2013/01/linux_cheat_sheet.pdf
-* https://files.fosswire.com/2007/08/fwunixref.pdf
-* https://en.wikipedia.org/wiki/List_of_Unix_commands
-* http://doors.stanford.edu/~sr/computing/basic-unix.html
-* https://www.tjhsst.edu/~dhyatt/superap/unixcmd.html
-* https://www.softwaretestinghelp.com/unix-commands/ 
--->
-
 | Atalhos | Resultado |
 | :-: | :- |
 | `[tab]` | autocomoplete |

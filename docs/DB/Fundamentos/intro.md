@@ -12,7 +12,7 @@ SGBDs são softwares que padronizam banco de dados. Sua principal característic
 
 Outra característica comum aos SGBDs é o controle/gerência de usuários para que seja possível administrar quem pode ou não interagir ou como quem pode interagir irá utilizar estes dados. 
 
-<br><br>
+<br>
 
 ## Tipos de SGBD
 Podem ser:
@@ -36,10 +36,6 @@ Podem ser:
 # Bancos de dados Relacionais
 São bancos de dados para sistemas que precisam de uma confiabilidade muito grande dos dados. Exemplo: controle de vendas (não podem haver vendas duplicadas) e de estoque (os itens do estoque não podem ser divergentes).
 
-Veja abaixo uma representação de um banco de dados relacional:
-
-![plot](files/.png) 
-
 <br><br>
 
 # Bancos de dados Não Relacionais
@@ -52,7 +48,11 @@ Normalmente, estes bancos de dados já possuem ferramentas prontas para consumir
 # Atomicidade
 É o ato de garantir que todos os dados estão corretos para que só assim um dado possa ser inserido no banco de dados.
 
+<br><br>
+
 # Concistência de dados
 Vamos supor que um banco de dados esteja espelhado em quatro servidores/HDs diferentes, isso é uma prática comum pois, ao espelhar os dados, o administrador do sistema pode configurar um espelho da base de dados para apenas ler dados e outro apenas para escrever dados, isso irá diminui a concorrência e melhorar a eficiência do sistema como um todo. Mas voltando à consistência de dados, podemos dizer que dados consistêntes ocorrem num banco relacional pois este só irá persistir os dados quando todos os quatro espelhos estiverem com a mesma informação em determinado campo, enquanto o Não Relacional pode persistir um dado não atualizado em um dos espelhos.
+
+<br><br>
 
 # Interoperabilidade
