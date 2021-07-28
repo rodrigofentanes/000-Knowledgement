@@ -127,6 +127,17 @@ A palavra 'not null' apos a declaração de uma variável significa que esta var
 <br>
 <br>
 
-# Operadores Lógicos
--   AND
--   OR
+# Chave Primária
+É uma chave que identifica um registro de forma única.
+
+Uma chave primária oide ser **única** ou **composta**.
+
+É uma forma de identificar um registro, logo, esta tem que ser única para cada registro. Esta chave também gera uma maior performance no momento da busca pois ela indexa os registros para que quando for feita uma busca por esta chave a query retorne de forma mais rápida.
+
+<br>
+<br>
+
+# Chave Estrangeira
+É uma chave que faz a relação de uma tabela com outra tabela.
+
+Uma chave estrangeira sempre será uma cópia exata de uma chave primária, do mesmo tipo, do mesmo tamanho. 

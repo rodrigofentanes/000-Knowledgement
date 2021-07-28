@@ -14,6 +14,22 @@
 | Operadores | Significado |
 | :---: | :--- |
 | * | Todos |
+| = | igual |
+| + | Serve tanto para **somar números** quanto para **concatenar strings** |
+| <> | diferente |
+| LIKE '%texto%' | similar |
+| AND | && , E e somente E |
+| OR | \|\| , OU |
+
+<br>
+<br>
+
+# Funções
+| Função | Origem | Exemplo | Descrição |
+| :-: | :- | :- | :- |
+| `getdate()` | obter data |  | retorna a data e a hora atual |
+| `isnull( campo, retorno )` | é nulo |  | verifica se o campo passado é null, constrói uma coluna preenchendo os campos que forem nulos com o valor do retorno |
+| `` |  |
 
 <br>
 <br>
@@ -35,8 +51,19 @@
 | `DROP TABLE` | derruba | `DROP TABLE Inventory` | **Exclui** a tabela Inventory |
 | `UPDATE` | atualizar | `UPDATE Inventory SET name = 'orange', quantity = '30' WHERE id = 1` | Altera os valores de 'name' e 'quantity' contidos anteriormente na tabela pelos novos valores de 'name' e 'quantity' onde o id for igual a 1 |
 | `DELETE` | deletar | `DELETE FROM Inventory` | **Deleta** todos as linhas da tabela. |
-| `a` |  | `a` |  |
-
+| `ALTER` | alterar | `ALTER TABLE Inventory` | Altera a tabela Inventory |
+| `ADD CONSTRAINT` | adicionar restrição/regra | `ALTER TABLE Inventory ADD CONSTRAINT pk_regra` | Adiciona uma regra à tabela Inventory |
+| `PRIMARY KEY` | chave primária | `ALTER TABLE Inventory ADD CONSTRAINT pk_inventory PRIMARY KEY (id)` | Adiciona uma regra que define uma coluna, ou colunas, como chave primária da tabela. Neste caso a coluna que servirá de chave primária é a 'id' |
+| `FOREING KEY` | chave estrangeira | `ALTER TABLE Sale ADD CONSTRAINT fk_sale FOREING KEY (id) REFERENCES Inventory (id) ` | Adiciona uma regra que define uma coluna de uma tabela como chave estrangeira e logo após referencia esta a uma chave primária de outra tabela. Neste caso a coluna que servirá de chave estrangeira é a coluna 'id' da tabela Sale que fará referência à chave primária 'id' da tabela Inventory |
+| `` |  | `` |  |
 
 <br>
 <br>
+
+# Estruturas de decisão
+| Estrutura | Origem | Exemplo | Descrição |
+| :-: | :- | :- | :- |
+| `CASE` | caso | `SELECT *, CASE WHEN name = 'Joao' THEN 'Temos aqui um Joao' WHEN name = 'Pedro' THEN 'Temos aqui um Pedro' ELSE 'Não é quem estamos procurando' END FROM Inventory` | Em caso disso faça isso, no caso daquilo faça aquilo. Note que ao final da extrututura é necessário colocar um `END`. |
+| `convert( params )` | convert | `SELECT *, CONVERT( varchar(), quantity ) FROM Inventory ` | convert um valor de um tipo para outro tipo. Ex.: Converte o valor de quantity que é do tipo INT para o tipo VARCHAR |
+| `` |  | `` |  |
+| `` |  | `` |  |
