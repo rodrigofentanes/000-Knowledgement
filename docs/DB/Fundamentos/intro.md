@@ -60,6 +60,8 @@ Normalmente, estes bancos de dados já possuem ferramentas prontas para consumir
 <br>
 
 # Concistência de dados
+Serve para garantir que os dados estejam iguais em todas as instâncias de um banco de dados.
+
 Vamos supor que um banco de dados esteja espelhado em quatro servidores/HDs diferentes, isso é uma prática comum pois, ao espelhar os dados, o administrador do sistema pode configurar um espelho da base de dados para apenas ler dados e outro apenas para escrever dados, isso irá diminui a concorrência e melhorar a eficiência do sistema como um todo. Mas voltando à consistência de dados, podemos dizer que dados consistêntes ocorrem num banco relacional pois este só irá persistir os dados quando todos os quatro espelhos estiverem com a mesma informação em determinado campo, enquanto o Não Relacional pode persistir um dado não atualizado em um dos espelhos.
 
 <br>

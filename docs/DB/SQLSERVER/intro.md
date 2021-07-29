@@ -130,7 +130,10 @@ A palavra 'not null' apos a declaração de uma variável significa que esta var
 # Chave Primária
 É uma chave que identifica um registro de forma única.
 
-Uma chave primária oide ser **única** ou **composta**.
+Uma chave primária oide ser:
+-   Única
+-   Composta
+    -   É útil para quando, por exemplo, tivermos que fazer um select relacionado a mais de uma tabela.
 
 É uma forma de identificar um registro, logo, esta tem que ser única para cada registro. Esta chave também gera uma maior performance no momento da busca pois ela indexa os registros para que quando for feita uma busca por esta chave a query retorne de forma mais rápida.
 
@@ -138,6 +141,21 @@ Uma chave primária oide ser **única** ou **composta**.
 <br>
 
 # Chave Estrangeira
-É uma chave que faz a relação de uma tabela com outra tabela.
+É uma chave que faz a relação de uma tabela com outra tabela. A chave estrangeira pode referenciar qualquer coluna de outra tabela.
 
-Uma chave estrangeira sempre será uma cópia exata de uma chave primária, do mesmo tipo, do mesmo tamanho. 
+Uma chave estrangeira sempre será uma cópia exata de uma chave primária, do mesmo tipo, do mesmo tamanho.
+
+<br>
+<br>
+
+# Normalização
+A normalização tem três fases importantes:
+1.  O primeiro passo se divide em duas etapas:
+    -   Não deve haver um conjunto de colunas repetido:
+        -   Ex.: Uma coluna para 'telefone celular' e outra coluna para 'telefone fixo'.
+    -   Não deve haver um conjunto de informações em apenas uma propriedade:
+        -   Ex.: Uma coluna 'endereço' para guarder CEP, rua, baixo, cidade, etc.
+2.  Não devem haver informações duplicadas que dependam de uma chave primaria.
+    -   Ex.: Colocar uma coluna 'nome' numa tabela 'conta' e uma coluna 'nome' numa outra tabela 'usuario'; 
+3.  Não deve haver, na mesma tabela, duas colunas que precisam depender uma da outra mas não dependem.
+    -   Ex.: Uma coluna 'codigo_de_status' e outra coluna 'status' na mesma tabela.
