@@ -66,7 +66,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 <details>
     <summary>
-        Introdução
+        Fundamentos
     </summary>
 
 -   [Controle de versão](docs/VCS/Intro/controleDeVersao.md)
@@ -79,7 +79,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Git
     </summary>
 
--   [Fundamentos](docs/VCS/git/intro.md)
+-   [Introdução](docs/VCS/git/intro.md)
 -   [Comandos Git](docs/VCS/git/comandosGit.md)
 -   [Configuração](docs/VCS/git/config.md)
 -   [.gitignore](docs/VCS/git/gitignore.md)
