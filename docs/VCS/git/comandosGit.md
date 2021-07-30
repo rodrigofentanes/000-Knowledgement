@@ -1,4 +1,10 @@
-# :back: [Comandos Git](../../../README.md#version-control-systems)
+# :back: [README](../../../README.md#version-control-systems)
+
+<h1 align="center">
+    Comandos Git
+</h1> 
+
+<br>
 
 ## Comandos high-level
 

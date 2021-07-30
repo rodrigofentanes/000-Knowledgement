@@ -1,4 +1,10 @@
-# :back: [Expressões Regulares](../../../README.md#low-level-programming)
+# :back: [README](../../../README.md#low-level-programming)
+
+<h1 align="center">
+    REGEX (Expressões Regulares)
+</h1> 
+
+<br>
 
 ## Aplicações
 O regex é uma notação que faz verificações em textos e tem, de forma geral, três principais aplicações:

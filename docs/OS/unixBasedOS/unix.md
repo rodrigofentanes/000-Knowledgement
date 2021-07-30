@@ -1,4 +1,13 @@
-# :back: [Unix](../../../README.md#low-level-programming)
+# :back: [README](../../../README.md#low-level-programming)
+
+<h1 align="center">
+    Unix
+</h1> 
+
+<br>
+
+# Introdução
+
 Unix é um sistema operacional. É cosiderado como base de muitos sistemas operacionais existentes. Foi criado utilizando a linguagem de programação C.
 
 O Unix é montado em basicamente três níveis (camadas):

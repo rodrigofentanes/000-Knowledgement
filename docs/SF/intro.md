@@ -1,8 +1,19 @@
-# :back: [Introdução](../../README.md#salesforce)
+# :back: [README](../../README.md#salesforce)
+
+<h1 align="center">
+    Salesforce
+</h1> 
+
+<br>
+
+# Introdução
 
 > A página de configuração é a página inicial do desenvolvedor Salesforce
 
 > No Criador de aplicativo Lightning, edite o componente de Lista relacionada e selecione Lista aprimorada como o Tipo de lista relacionada.
+
+<br>
+<br>
 
 # Objetos
 Um objeto é um banco de dados que permite armazenar informações sobre uma empresa.
@@ -14,13 +25,13 @@ Existem difenrentes tipos de objetos:
 * [Contatos](#contatos)
 
 
-### Leads
+## Leads
 São pessoas que demonstram interesse pelos nossos produtos/serviços ao subscreverem um site, participar num evento, enviarem um email, etc.
 
-### Contas
+## Contas
 Representam um cliente ou cliente potencial
 
-### Oportunidades
+## Oportunidades
 É um objeto onde ocorre a negociação. Uma oportunidade representa uma negociação com um cliente. Na mesma conta, podemos ter muitas oportunidades.
 
 > O campo mais importante de uma oportunidade é o campo "fase".
@@ -34,9 +45,8 @@ Representam um cliente ou cliente potencial
 |  | Aberto |  |
 |  |  |  |
 
-### Contatos
+## Contatos
 É a empresa física relacionada à conta.
-
 
 ## Criação de objetos
 É importante saber o **requisito** e a **solução** antes de criar um objeto.

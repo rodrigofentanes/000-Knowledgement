@@ -1,3 +1,9 @@
-# :back: [Introdução](../../../README.md#fundamentos-da-programação)
+# :back: [README](../../../README.md#fundamentos-da-programação)
 
-## Aplicações
+<h1 align="center">
+    Matemática
+</h1> 
+
+<br>
+
+# Introdução

@@ -1,4 +1,10 @@
-# :back: [Hyper Text Markup Language](../../../README.md#web-development)
+# :back: [README](../../../README.md#web-development)
+
+<h1 align="center">
+    HTML (Hyper Text Markup Language)
+</h1> 
+
+<br>
 
 Linguagem de marcação de texto, não é uma linguagem de programação.
 * É o esqueleto de uma página web.

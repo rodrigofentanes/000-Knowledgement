@@ -1,4 +1,10 @@
-# :back: [Otimizando o terminal](../../../README.md#low-level-programming)
+# :back: [README](../../../README.md#low-level-programming)
+
+<h1 align="center">
+    Otimizando o terminal
+</h1> 
+
+<br>
 
 ## Oh My Zsh!
 * https://ohmyz.sh/

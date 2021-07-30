@@ -1,4 +1,10 @@
-# :back: [Configurações](../../../README.md#version-control-systems)
+# :back: [README](../../../README.md#version-control-systems)
+
+<h1 align="center">
+    Configurações do Git
+</h1> 
+
+<br>
 
 ## Livro oficial do git
 * https://git-scm.com/book/pt-br/v2

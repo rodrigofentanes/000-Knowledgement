@@ -1,10 +1,17 @@
 # :back: [README](../../../README.md#programming-fundamentals)
 
 <h1 align="center">
-    Introdução à lógica de programação
+    Lógica de programação
 </h1> 
 
 <br>
+
+# Introdução
+...
+
+<br>
+<br>
+
 
 # Algoritmos
 Em lógica de programação, um algoritmo é uma sequência de passos para resolver um problema.
@@ -22,7 +29,7 @@ Abstração é a habilidade de concentrar nos aspectos essenciais de um contexte
 <br>
 <br>
 
-# [Fluxograma](fluxograma.md)
+# [Fluxograma](fluxograma.md#back-readme)
 Sendo uma ferramenta, o fluxograma, é utilizada para representar graficamente o algoritmo, isto é, a sequência lógica e coerente do **fluxo de dados**.
 
 <br>

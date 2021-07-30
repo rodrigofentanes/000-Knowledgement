@@ -1,4 +1,10 @@
-# :back: [Funcionamento de uma aplicação web](../../../README.md#web-development)
+# :back: [README](../../../README.md#web-development)
+
+<h1 align="center">
+    Funcionamento de uma aplicação web
+</h1> 
+
+<br>
 
 ## Modele cliente-servidor
 * Cliente envia requisição. Servidor recebe requisição.

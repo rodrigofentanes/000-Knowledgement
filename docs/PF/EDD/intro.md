@@ -1,8 +1,12 @@
-# :back: [Introdução à estrutura de dados](../../../README.md#fundamentos-da-programação)
+# :back: [README](../../../README.md#fundamentos-da-programação)
+
+<h1 align="center">
+    Estrutura de dados
+</h1>
 
 <br>
 
-# Definição
+# Introdução
 Estrutura de dados é uma estrutura organizada de dados na memória de um computador ou em qualquer dispositivo de armazenamento, de forma que os dados possam ser utilizados de forma correta.
 
 Essas estruturas encontram muitas aplicações no desenvolvimento de sistemas, sendo que algumas são altamente especializadas e utilizadas em taredas específicas.

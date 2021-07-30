@@ -1,4 +1,10 @@
-# :back: [Como funciona a internet](../../../README.md#web-development)
+# :back: [README](../../../README.md#web-development)
+
+<h1 align="center">
+    Funcionamento da internet
+</h1> 
+
+<br>
 
 A INTERNET 
 * É uma rede global de computadores.

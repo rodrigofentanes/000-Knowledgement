@@ -1,8 +1,12 @@
-# :back: [Introdução à Java](../../../README.md#programming-languages)
+# :back: [README](../../../README.md#programming-languages)
+
+<h1 align="center">
+    Java
+</h1> 
 
 <br>
 
-# Características
+# Introdução
 Diferentes das linguagens de programação compiladas, onde a compilação do código se dá ainda em tempo de desenvolvimento, a linguagem Java é comilada para um bytecode que é interpretado por uma máquina virtual (JVM).
 
 <br>

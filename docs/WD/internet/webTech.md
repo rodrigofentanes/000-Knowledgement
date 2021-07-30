@@ -1,4 +1,10 @@
-# :back: [Introdução às tecnologias web](../../../README.md#web-development)
+# :back: [README](../../../README.md#web-development)
+
+<h1 align="center">
+    Tecnologias Web
+</h1> 
+
+<br>
 
 ## O que é o HTML (Hypertext Markup Language):
 * HTML não é uma linguagem de programação.
