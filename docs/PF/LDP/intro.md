@@ -19,7 +19,11 @@ Abstração é a habilidade de concentrar nos aspectos essenciais de um contexte
 
 # Fluxograma
 Sendo uma ferramenta, o fluxograma, é utilizada para representar graficamente o algoritmo, isto é, a sequência lógica e coerente do **fluxo de dados**. Pode ser visto como um tipo de diagrama e pode ser entendido como uma representação esquemática de um processo. Podemos entendê-lo, na prática, como a documentação dos passos necessários para a execução de um processo qualquer.
-<!-- ![plot](files/ex1.png) -->
+
+<br>
+
+## Links interessantes:
+-   https://www.conceptdraw.com/How-To-Guide/flow-chart-symbols
 
 <br>
 
@@ -56,7 +60,7 @@ Sendo uma ferramenta, o fluxograma, é utilizada para representar graficamente o
 
 | Símbolo | Nome | Descrição |
 | :-: | :-: | :-: |
-| ![plot](files/dados.png) | Dados | Indica as entradas e saídas do processo. |
+| ![plot](files/dados.png) | Dados (I/O) | Indica as entradas e saídas do processo. |
 | ![plot](files/documento.png) | Documento | Mostra um processo que gera um documento. |
 | ![plot](files/variosDocumentos.png) | Vários documentos | Mostra um processo que gera vários documentos. |
 | ![plot](files/exibicao.png) | Exibição | Indica um passo do processo onde a informação é exibida para uma pessoa. |

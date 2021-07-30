@@ -53,6 +53,15 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 <details>
     <summary>
+        Paradigmas
+    </summary>
+    
+-   [Introdução](docs/PF/P/intro.md)
+
+</details>
+
+<details>
+    <summary>
         Arquitetura de sistemas
     </summary>
     
