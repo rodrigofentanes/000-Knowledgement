@@ -11,11 +11,11 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Unix Based Operational Systems
     </summary>
 
--   [Unix](docs/OS/unixBasedOS/unix.md#readme.md) 
--   [Linux/Unix cheat sheet](docs/OS/unixBasedOS/terminalCheatSheet.md#readme.md)
--   [Controle de acesso à arquivos e diretórios](docs/OS/unixBasedOS/fileAccess.md#readme.md)
--   [Processos](docs/OS/unixBasedOS/process.md#readme.md)
--   [Otimizando o terminal](docs/OS/unixBasedOS/coolTerminal.md#readme.md)
+-   [Unix](docs/OS/unixBasedOS/unix.md#back-readme) 
+-   [Linux/Unix cheat sheet](docs/OS/unixBasedOS/terminalCheatSheet.md#back-readme)
+-   [Controle de acesso à arquivos e diretórios](docs/OS/unixBasedOS/fileAccess.md#back-readme)
+-   [Processos](docs/OS/unixBasedOS/process.md#back-readme)
+-   [Otimizando o terminal](docs/OS/unixBasedOS/coolTerminal.md#back-readme)
 
 </details>
 
@@ -28,7 +28,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Matemática
     </summary>
     
--   [Introdução](docs/PF/M/intro.md#readme.md)
+-   [Introdução](docs/PF/M/intro.md#back-readme)
 
 </details>
 
@@ -37,8 +37,8 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Lógica de programação
     </summary>
     
--   [Introdução](docs/PF/LDP/intro.md#readme.md)
--   [Fluxograma](docs/PF/LDP/fluxograma.md#readme.md)
+-   [Introdução](docs/PF/LDP/intro.md#back-readme)
+-   [Fluxograma](docs/PF/LDP/fluxograma.md#back-readme)
 
 </details>
 
@@ -48,7 +48,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Estrutura de dados
     </summary>
     
--   [Introdução](docs/PF/EDD/intro.md#readme.md)
+-   [Introdução](docs/PF/EDD/intro.md#back-readme)
 
 </details>
 
@@ -57,7 +57,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Paradigmas
     </summary>
     
--   [Introdução](docs/PF/P/intro.md#readme.md)
+-   [Introdução](docs/PF/P/intro.md#back-readme)
 
 </details>
 
@@ -66,7 +66,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Arquitetura de sistemas
     </summary>
     
--   [Introdução](docs/PF/ADS/intro.md#readme.md)
+-   [Introdução](docs/PF/ADS/intro.md#back-readme)
 
 </details>
 
@@ -79,8 +79,8 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Fundamentos
     </summary>
 
--   [Controle de versão](docs/VCS/Intro/controleDeVersao.md#readme.md)
--   [Repository hosting service](docs/VCS/Intro/rhs.md#readme.md)
+-   [Controle de versão](docs/VCS/Intro/controleDeVersao.md#back-readme)
+-   [Repository hosting service](docs/VCS/Intro/rhs.md#back-readme)
 
 </details>
 
@@ -89,10 +89,10 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Git
     </summary>
 
--   [Introdução](docs/VCS/git/intro.md#readme.md)
--   [Comandos Git](docs/VCS/git/comandosGit.md#readme.md)
--   [Configuração](docs/VCS/git/config.md#readme.md)
--   [.gitignore](docs/VCS/git/gitignore.md#readme.md)
+-   [Introdução](docs/VCS/git/intro.md#back-readme)
+-   [Comandos Git](docs/VCS/git/comandosGit.md#back-readme)
+-   [Configuração](docs/VCS/git/config.md#back-readme)
+-   [.gitignore](docs/VCS/git/gitignore.md#back-readme)
 
 </details>
 
@@ -105,7 +105,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Java
     </summary>
 
--   [Introdução](docs/PL/Java/intro.md#readme.md)
+-   [Introdução](docs/PL/Java/intro.md#back-readme)
 
 </details>
 
@@ -114,7 +114,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         JavaScript
     </summary>
     
--   [Introdução](docs/PL/JavaScript/intro.md#readme.md)
+-   [Introdução](docs/PL/JavaScript/intro.md#back-readme)
 
 </details>
 
@@ -123,7 +123,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Apex
     </summary>
 
--   [Introdução](docs/PL/Apex/intro.md#readme.md)
+-   [Introdução](docs/PL/Apex/intro.md#back-readme)
 
 </details>
 
@@ -136,7 +136,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Fundamentos
     </summary>
     
--   [Introdução](docs/DB/Fundamentos/intro.md#readme.md)
+-   [Introdução](docs/DB/Fundamentos/intro.md#back-readme)
 
 </details>
 
@@ -145,8 +145,8 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         SQL SERVER
     </summary>
     
--   [Introdução](docs/DB/SQLSERVER/intro.md#readme.md)
--   [SQL Server Cheat Sheet](docs/DB/SQLSERVER/SQLServerCheatSheet.md#readme.md)
+-   [Introdução](docs/DB/SQLSERVER/intro.md#back-readme)
+-   [SQL Server Cheat Sheet](docs/DB/SQLSERVER/SQLServerCheatSheet.md#back-readme)
 
 </details>
 
@@ -159,10 +159,10 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Internet
     </summary>
 
--   [Como funciona a internet](docs/WD/internet/comoFuncionaInternet.md#readme.md)
--   [Funcionamento de uma aplicação web](docs/WD/internet/comoFuncionaAppWeb.md#readme.md)
--   [Protocolo HTTP](docs/WD/internet/comoFuncionaAppWeb.md#readme.md)
--   [Introduçãos às tecnologias web](docs/WD/internet/webTech.md#readme.md)
+-   [Como funciona a internet](docs/WD/internet/comoFuncionaInternet.md#back-readme)
+-   [Funcionamento de uma aplicação web](docs/WD/internet/comoFuncionaAppWeb.md#back-readme)
+-   [Protocolo HTTP](docs/WD/internet/comoFuncionaAppWeb.md#back-readme)
+-   [Introduçãos às tecnologias web](docs/WD/internet/webTech.md#back-readme)
 
 </details>
 
@@ -171,8 +171,8 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         HTML
     </summary>
 
--   [Hyper Text Markup Language](docs/WD/HTML/html.md#readme.md)
--   [Produtividade](docs/WD/HTML/produtividadeHtml.md#readme.md)
+-   [Hyper Text Markup Language](docs/WD/HTML/html.md#back-readme)
+-   [Produtividade](docs/WD/HTML/produtividadeHtml.md#back-readme)
 
 </details>
 
@@ -181,7 +181,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         CSS
     </summary>
 
--   [Introdução](docs/WD/CSS/intro.md#readme.md)
+-   [Introdução](docs/WD/CSS/intro.md#back-readme)
 
 </details>
 
@@ -194,7 +194,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         RegEx
     </summary>
 
--   [Regular Expressions](docs/MTV/regex/RegularExpressions.md#readme.md)
+-   [Regular Expressions](docs/MTV/regex/RegularExpressions.md#back-readme)
 
 </details>
 
@@ -203,8 +203,8 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         API (Application Programming Interface)
     </summary>
 
--   [Introdução](docs/MTV/API/intro.md#readme.md)
--   [REST](docs/MTV/API/REST.md#readme.md)  
+-   [Introdução](docs/MTV/API/intro.md#back-readme)
+-   [REST](docs/MTV/API/REST.md#back-readme)  
 
 </details>
 
@@ -217,7 +217,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Fundamentos
     </summary>
 
--   [Introdução](docs/SF/intro.md#readme.md)
+-   [Introdução](docs/SF/intro.md#back-readme)
 
 </details>
 
@@ -226,7 +226,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Soluções
     </summary>
 
--   [Validações](docs/SF/valida.md#readme.md)
+-   [Validações](docs/SF/valida.md#back-readme)
 
 </details>
 
