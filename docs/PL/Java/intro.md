@@ -61,7 +61,7 @@ A pltaforma Java é dividida em:
 <br>
 
 ## Plataforma x Linguagem
-A linguagem de programação Java é a linguagem convencional da Plataforma Java, mas não é sua única linguagem.
+A linguagem de programação Java é a linguagem convencional da Plataforma Java, mas não é sua única linguagem (Groovy, Jython, JRuby).
 
 Uma grande vantagem da plataforma é a de não estar presa a um único sistema operacional ou hardware, pois seus programas rodam através de uma máquina virtual que por der emulada. Por isso precisamos do JRE para rodar um programa Java, pois o JRE possui todos os componentes, incluindo a JVM, para que possamos conseguir emular um programa em Java.
 
