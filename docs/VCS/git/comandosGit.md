@@ -28,7 +28,7 @@
 | `git commit -m "alguma menssagem"` |  | `-m` associa a mensagem "*alguma menssagem*" ao commit. <br><br> **Nota:** Todo commit deve conter a flag `-m` e sua respectiva mensagem |
 | `git rm <arquivo.txt>` | remove | remove arquivos e adiciona estas deleções ao stage git. |
 | `git checkout` |  | Utilizado para se mover dentro do sistema do git, ou seja, "viajar" entre commits, branches, etc. <br><br> Ao fazer um checkout dentro de uma branch resultante de um fetch, o git irá nos avisar que estamos em um estado HEAD desvinculado (detached HEAD). |
-| `git checkout <branch>` |  | viaja até a `<branch>` |
+| `git checkout <branch>` |  | viaja até a `<branch>`. <br><br> É importante salientar que ao viajar de uma branch para outra os arquivos "untracked" no "work directory" vão junto.  |
 | `git checkout -b <nova-branch>` |  | cria uma `<nova-branch>` e automaticamente viaja até ela. |
 | `git checkout 4442~1 arquivo.txt` |  | viaja para o commit 4442 <br><br> `~1` passa o commit 4442 para o status de `OK`, ou seja, recupera os arquivos deletados neste commit e, neste caso, recupera o `arquivo.txt` |
 | `git remote` | remote | Listar as conexões remotas que você tem com outros repositórios.  <br><br> O comando git remote permite criar, ver e excluir conexões com outros repositórios. <br><br> As conexões remotas são mais parecidas com marcadores em vez de links diretos para outros repositórios. Em vez de fornecer acesso em tempo real a outro repositório, eles funcionam como nomes convenientes que podem ser usados para fazer referência a uma URL não tão conveniente. <br><br> O comando git remote é essencialmente uma interface para gerenciar uma lista de entradas remotas que são armazenadas no arquivo `./.git/config` do repositório. |
@@ -55,7 +55,7 @@
 | `git reset` |  |  |
 | `git revert` |  |  |
 | `git clean` |  |  |
-| `` |  |  |
+| `git merge` |  | Funde a branch em que estamos com a branch indicada. <br><br> Um merge pode ser `fast foward`,   |
 | `` |  |  |
 | `` |  |  |
 | `` |  |  |
