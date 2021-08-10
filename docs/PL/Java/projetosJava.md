@@ -29,4 +29,27 @@ Nesta pasta emcontraremos os packages (pacotes) do projeto, exemplo "**br.com.um
 <br>
 <br>
 
-# 
+# Ferramentas de Build (Automação de processos, compilação)
+
+## Gradle
+Usa a linguagem de programação Groovy.
+
+Ao utilizar uma ferramenta commo po Gradle é interessante que criemos um wrapper da versão que estamos utilizando, para que todos os desenvolvedores, quando tiverem acesso ao projeto, utiliem nossa mesma versão contida no wraper gerado pelo comando `gradle wrapper` e dessa forma podemos fazer `./gradlew -v` para ver a versão do nosso wrapper.
+
+<br>
+
+## Maven
+Baseado em XML, é mais antigo que o Gradle.
+
+Para criar um wrapper no maven fazemos `mvn -N io.takari:maven:wrapper` e então `./mvnw -v` para checar a versão do wrapper.
+
+<br>
+<br>
+
+# Criação de projetos em Java
+
+## Projetos Spring
+A partir do endereço https://start.spring.io/ é possível inicializar um projeto Java com Spring Boot.
+
+<br>
+<br>
