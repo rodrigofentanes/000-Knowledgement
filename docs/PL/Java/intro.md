@@ -7,7 +7,34 @@
 <br>
 
 # Introdução
-Diferentes das linguagens de programação compiladas, onde a compilação do código se dá ainda em tempo de desenvolvimento, a linguagem Java é comilada para um bytecode que é interpretado por uma máquina virtual (JVM).
+Diferentes de outras linguagens de programação, que são **compiladas** para **código nativo** ainda em tempo de desenvolvimento, a linguagem Java é comilada para um **bytecode** que é interpretado por uma **máquina virtual** (JVM).
+
+<br>
+
+## Compilador
+Um compilador é um **programa** que, a partir de um **código fonte**, cria um programa semanticamente equivalente, porém escrito em outra linguagem, **código objeto**. Um compilador traduz um programa de uma linguagem textual para um linguagem de máquina, específica para um processador e sistema operacional.
+
+O nome **compilador** é usado principalmente para os programas que **traduzem** o **código fonte** de uma `linguagem de programação de alto nível` para uma `linguagem de programação de baixo` nível (por exemplo, **Assembly** ou **código de máquina**).
+
+<br>
+
+## Bytecode
+É o **código originado** da compilação de programas **Java**.
+
+O **bytecode** é o programa interpretado e executado pela **máquina virtual Java** (JVM).
+
+<br>
+
+## JVM (Java Virtual Machine)
+Primeiramente, uma **Virtual Machine** (VM), ou máquina virtual, é um software que simula uma máquina física e consegue executar vários programas, gerenciar processos, memória e arquivos. Tudo isso faz parte de uma plataforma com memória, processador e outros recursos totalmente virtuais, sem dependência do hardware. 
+
+Já a JVM é a máquina virtual do Java, responsável por executar o bytecode (.class).
+
+Em linguagens compiladas diretamente para um sistema operacional (SO) específico, esse programa não irá executar em outro SO, havendo a necessidade de compilar uma versão do software para cada SO.
+
+Com o Java, compilamos para a JVM, o bytecode será executado pela máquina virtual, e não diretamente pelo SO, assim, o software escrito em java possui portabilidade para qualquer sistema operacional, porém, cada JVM deve ser construída para um SO específico.
+
+![plot](files/JVM.png)
 
 <br>
 
@@ -29,13 +56,6 @@ Diferentes das linguagens de programação compiladas, onde a compilação do c�
 É o kit de desenvolvimento Java responsável por compilar o código-fonte (.java) em um bite code (.class).
 
 **Obs.:** O JDK é um conjunto de ferramentas para desenvolver programas baseados em Java e este ambiente é voltado para os desenvolvedores. Ou seja, a JDK faz parte do funcionamento das IDE's que auxiliam no desenvolvimento em Java, por exemplo o IntelliJ, Eclipse, NetBeans, VSCode entre outros.
-
-<br>
-
-## JVM (Java Virtual Machine)
-É a máquina virtual do Java responsável por executar o bytecode (.class).
-
-![plot](files/JVM.png)
 
 <br>
 
