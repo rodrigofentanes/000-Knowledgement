@@ -57,10 +57,6 @@ Para criar um wrapper no maven fazemos `mvn -N io.takari:maven:wrapper` e então
 # Spring Boot
 A partir do endereço https://start.spring.io/ é possível inicializar um projeto Java com Spring Boot.
 
-Para carregar um projeto Sping Boot numa IDE o ideal é selecionarmos o arquivo entitulado **pom.xml** e este se encarregará de carregar o restante do projeto.
-
-<br>
-
 ## Group
 É um conceito de java que discrimina o domínio online da empresa que está desenvolvendo o projeto, por exemplo, o 'google.com.br' teria o Group 'br.com.google'
 
@@ -71,8 +67,32 @@ Para carregar um projeto Sping Boot numa IDE o ideal é selecionarmos o arquivo 
 
 <br>
 
-## Rodando um projeto
+## Carregar um projeto (IDE)
+
+Para carregar um projeto Sping Boot numa IDE o ideal é selecionarmos o arquivo entitulado **pom.xml** (Maven) ou **build-gradle** (Gradle) e este se encarregará de carregar o restante do projeto.
+
+<br>
+
+## Construir um projeto (build)
 -   Maven
     -   `<nomeDoProjeto>` --> Lifecycle --> install
+    -   Quando o Maven termina de fazer a build do projeto, com o passo acima, ele cria uma pasta entitulada "target".
+-   Gradle
+    -   `<nomeDoProjeto>` --> Tasks --> build --> build;
+    -   Quando o Gradle termina de fazer a build do projeto, com o passo acima, ele cria uma pasta entitulada "build".
+
+<br>
+
+## Executar um projeto (run)
+-   Maven
+    -   `<nomeDoProjeto>` --> Plugins --> spring-boot --> spring-boot:run
+    -   A IDE irá subir o projeto numa porta, 8080 normalmente, daí é só ir no navegador e acessar o localhost:8080 para visualizar o conteúdo.
+    - Este processo também pode ser feito via linha de comando, basta executar o arquivo "**.jar**" que está dentro da pasta "**target**" de nosso projeto com o comando:
+        -   `java -jar target/nomeDoProjeto.jar`
+-   Gradle
+    -   `<nomeDoProjeto>` --> Application --> bootRun;
+    -   A IDE irá subir o projeto numa porta, 8080 normalmente, daí é só ir no navegador e acessar o localhost:8080 para visualizar o conteúdo.
+    - Este processo também pode ser feito via linha de comando, basta executar o arquivo "**.jar**" que está dentro da pasta "**build**" de nosso projeto com o comando:
+        -   `java -jar build/libs/nomeDoProjeto.jar`
 
 <br>

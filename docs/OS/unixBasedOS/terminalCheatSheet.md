@@ -126,6 +126,9 @@
 | `ping <domain-name-ou-ping>` |  | envia pacotes para o endereço especificado |
 | `ping host <ping>` |  | Além de testar a conectividade, também tentará resolver o hostname da máquina pingada. |
 | `ping -t <endereço>` |  | Ficará enviando pacotes até o usuário forçar a parada (com Ctrl + C). |
+| `netstat -lnp | grep 8080` |  | Identifica qual o processo que está rodando na porta 8080. |
+| `kill -9 22134` |  | Destrói o processo com id '22134'. |
+
 
 
 <br><br>
