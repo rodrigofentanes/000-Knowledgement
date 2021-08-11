@@ -6,6 +6,14 @@
 
 <br>
 
+# IDE
+Para trabalhar com projetos em Java o ideal é que utilizemos uma IDE voltada para isso. Boas IDEs para desenvolver em java são:
+-   **IntelliJ IDEA**
+-   **Eclipse**
+
+<br>
+<br>
+
 # Arquivos
 Um projeto Java terá uma pasta com seu nome, exemplo "**meuProjeto**".
 
@@ -46,10 +54,25 @@ Para criar um wrapper no maven fazemos `mvn -N io.takari:maven:wrapper` e então
 <br>
 <br>
 
-# Criação de projetos em Java
-
-## Projetos Spring
+# Spring Boot
 A partir do endereço https://start.spring.io/ é possível inicializar um projeto Java com Spring Boot.
 
+Para carregar um projeto Sping Boot numa IDE o ideal é selecionarmos o arquivo entitulado **pom.xml** e este se encarregará de carregar o restante do projeto.
+
 <br>
+
+## Group
+É um conceito de java que discrimina o domínio online da empresa que está desenvolvendo o projeto, por exemplo, o 'google.com.br' teria o Group 'br.com.google'
+
+<br>
+
+## Artifact
+É o nome do projeto em que estamos trabalhando.
+
+<br>
+
+## Rodando um projeto
+-   Maven
+    -   `<nomeDoProjeto>` --> Lifecycle --> install
+
 <br>
