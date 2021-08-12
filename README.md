@@ -106,6 +106,8 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
     </summary>
 
 -   [Introdução](docs/PL/Java/intro.md#back-readme)
+-   [Projetos em Java](docs/PL/Java/projetosJava.md#back-readme)
+-   [Características de um programa Java](docs/PL/Java/programaJava.md#back-readme)
 
 </details>
 

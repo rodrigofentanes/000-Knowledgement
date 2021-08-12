@@ -12,6 +12,8 @@ Diferentes de outras linguagens de programação, que são **compiladas** para *
 <br>
 
 ## Compilador
+O compilador java chamasse **javac**. Ele é o responsável por transformar o `código java` em `bytecode`. 
+
 Um compilador é um **programa** que, a partir de um **código fonte**, cria um programa semanticamente equivalente, porém escrito em outra linguagem, **código objeto**. Um compilador traduz um programa de uma linguagem textual para um linguagem de máquina, específica para um processador e sistema operacional.
 
 O nome **compilador** é usado principalmente para os programas que **traduzem** o **código fonte** de uma `linguagem de programação de alto nível` para uma `linguagem de programação de baixo` nível (por exemplo, **Assembly** ou **código de máquina**).
@@ -32,7 +34,7 @@ Já a JVM é a máquina virtual do Java, responsável por executar o bytecode (.
 
 Em linguagens compiladas diretamente para um sistema operacional (SO) específico, esse programa não irá executar em outro SO, havendo a necessidade de compilar uma versão do software para cada SO.
 
-Com o Java, compilamos para a JVM, o bytecode será executado pela máquina virtual, e não diretamente pelo SO, assim, o software escrito em java possui portabilidade para qualquer sistema operacional, porém, cada JVM deve ser construída para um SO específico.
+Com o Java compilaremos para um bytecode que será executado pela máquina virtual JVM e não diretamente para o SO, assim, o software escrito em java possui portabilidade para qualquer sistema operacional, porém, cada JVM deve ser construída para um SO específico.
 
 ![plot](files/JVM.png)
 
@@ -52,15 +54,15 @@ Com o Java, compilamos para a JVM, o bytecode será executado pela máquina virt
 
 <br>
 
-## JDK (Java Development Kit)
-É o kit de desenvolvimento Java responsável por compilar o código-fonte (.java) em um bite code (.class).
-
-**Obs.:** O JDK é um conjunto de ferramentas para desenvolver programas baseados em Java e este ambiente é voltado para os desenvolvedores. Ou seja, a JDK faz parte do funcionamento das IDE's que auxiliam no desenvolvimento em Java, por exemplo o IntelliJ, Eclipse, NetBeans, VSCode entre outros.
+## JRE (Java Runtime Environment)
+É o ambiente **mínimo** de execução do Java. Ele fornece as bibliotecas padrões do Java para o JDK compilar o seu código e para a JVM executar o seu programa, ou seja, o JRE é composto pelo JVM, bibliotecas, APIs java e outros componentes para suporte a plataforma java.
 
 <br>
 
-## JRE (Java Runtime Environment)
-É o ambiente de execução do Java que fornace as bibliotecas padrões do Java para o JDK compilar o seu código e para a JVM executar o seu programa.
+## JDK (Java Development Kit)
+É o kit de desenvolvimento Java responsável por compilar o código-fonte (.java), através do compilador javac, em um bite code (.class). O JDK é composto pelo compilador java (javac), bibliotecas da linguagem, ferramentas e JRE.
+
+**Obs.:** O JDK é um conjunto de ferramentas para desenvolver programas baseados em Java e este ambiente é voltado para os desenvolvedores. Ou seja, a JDK faz parte do funcionamento das IDE's que auxiliam no desenvolvimento em Java, por exemplo o IntelliJ, Eclipse, NetBeans, VSCode entre outros.
 
 <br>
 
@@ -88,17 +90,28 @@ Uma grande vantagem da plataforma é a de não estar presa a um único sistema o
 <br>
 
 ## Java SE
-É a base da plataforma Java e trás consigo algumas classes comuns à todas as outras plataformas.
+É a base da plataforma Java e trás consigo algumas classes comuns à todas as outras plataformas. É a distribuição mínima da plataforma de desenvolvimento de aplicações Java.
 
 <br>
 
 ## Java EE
-É, provavelmente, a mais conhecida e cuida da parte do desenvolvimento web.
+É, provavelmente, a mais conhecida e cuida da parte do desenvolvimento web. É uma extensão do Java SE que possui suporte ao desenvolvimento de sistemas coorporativos.
+
+Além do mínimo da plataforma, o Java EE possui diversas especificações de partes da infra estrutura de aplicações, como acesso a banco de dados, mensageria, serviços web, parser de arquivos e outras.
+
+Servidores de aplicações Java EE sabem seguir essas especificações e implementar os recursos para os usuários. Ex.: JBoss (RedHat), Weblogic (Oracle), WebSphere (IBM), Glassfish (Implementação opensource de referẽncia)
 
 <br>
 
 ## Java ME
 Cuida da parte do desenvolvimento de dispositivos móveis e embarcados.
+
+<br>
+
+## Jakarta EE
+Com a falta de investimentos da Oracle no Java, ela cedeu todo o código, implementações e especificações do Java EE para a Eclipse Foundation, mas como o nome Java EE é uma marca registrada, foi escolhido o nome Jakarta EE.
+
+Agora, a evolução das especificações e padrões do Java será feito sob o nome Jakarta EE, com compatibilidade com o Java EE.
 
 <br>
 <br>
