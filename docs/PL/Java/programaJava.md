@@ -47,7 +47,7 @@ Note a palavra **public**, ela é uma **palavra reservada** utilizada para defin
 
 <br>
 
-## Contrutores
+## Construtores
 Um construtor é um método "especial" que leva o mesmo nome da classe em que está inserido e especifica como iremos "construir" esta classe quando formos instaciá-la.
 
 <br>
@@ -155,7 +155,7 @@ Veja abaixo os tipo primitivos em Java e seus valores default:
 | float | 0.0f | 32 | 65f ; 65.5f |
 | double | 0.0d | 64 | 1024.99 ; 10.2456 |
 | char | 'u0000' | 16 | 'A' ; 15 |
-| String (or any object) | null |  |  |
+| String (or any object) | null |  | É uma classe e representa uma sequência de caractéres |
 | boolean | false |  | true ; false |
 
 
@@ -168,7 +168,7 @@ Podem receber valor `nulo`.
 
 <br>
 
-## Auto-boxing (Wrappers)
+### Auto-boxing (Wrappers)
 | Auto-boxing| Default Value | Lenght (bits) | Limits and Exemples |
 | :-: | :-: | :-: | :-: |
 | Byte | 0 | 8 | -128 BETWEEN 127 |
@@ -182,7 +182,7 @@ Podem receber valor `nulo`.
 
 <br>
 
-## Unboxing (Wrappers)
+### Unboxing (Wrappers)
 Acontece quando construímos um objeto e atribuimos este a um tipo primitivo de mesmo tipo.
 
 ```java
@@ -232,7 +232,7 @@ var numero = 1;
 <br>
 
 ## Casting
-
+Ocorre ao "promovermos" uma variável de um tipo para outro tipo.
 
 <br>
 <br>
@@ -244,6 +244,7 @@ Superficialmente, podemos dizer que uma função é a "função" que existe fora
 
 Como em Java tudo funciona através de classes então sempre chamaremos suas funções de métodos.
 
+## main
 Abaixo veremos o principal método java, o `main`:
 
 ```java
@@ -252,7 +253,7 @@ public static void main(String[] args) {
 }
 ```
 
-Este método é responsável por ser o centro de um programa Java. O método `main` sempre receberá dois parâmetros/ATRIBUTOS/argumentos, um chamado de `String[]` e o outro chamado `args`.
+Este método é o centro de um programa Java. O método `main` sempre receberá o parâmetro/atributo/argumento `args`, que é uma variável vetor do tipo String (`String []`). E, normalmente, aponta para uma posição da memória.
 
 A palavra reservada `void` é utilizada para indicar que um método não ira retornar um valor, ou seja, ira retornar "vazio".
 
@@ -384,5 +385,302 @@ public class Programa {
 }
 ```
 
+<br>
+<br>
+
+# String
+Como já visto anteriormente, String é uma classe que representa uma sequência de caractéres. Ela vem dentro do pacote **java.lang**.
+
+Exesitem diversas formas de utilizar uma string, veja:
+
+```java
+package com.rodrigofentanes.classes;
+
+public class Programa {
+    public static void main(String[] args) {
+        var nome = "Rodrigo";
+        var sobrenome = "Fentanes";
+        final var nomeCompleto = nome + sobrenome;
+
+        System.out.println(nome);
+        System.out.println("Nome: " + nome);
+        System.out.println("Nome completo: " + nomeCompleto);
+        System.out.println("Nome completo: " + nomeCompleto);
+
+        var nomeDaVariavel = new String("Minha string"); // isso é redundante
+        
+        // Como visto anteriormente, todos os tipos "Não primitivos" herdam métodos e outras características que podem nos ajudar ao construir nossas soluções. Vemos abaixo alguns métodos próprios do tipo String: 
+
+        System.out.println("Char na posição: " + nodaDaVariavel.charAt(5));
+
+        System.out.println("Quantidade de caracteres: " + nodaDaVariavel.lenght());
+
+        // Existem outros métodos próprios da classe que caracteriza o tipo String que são muito úteis.
+
+        // É possível colocar o texto formatado de forma mais legível para quem está codificando, dessa forma temos
+        final var mensgem = String.format("Número: %.2f", 1.2345d); // Formata um número e retorna apenas duas casas após o ponto flutuante.
+
+        // StringBuilder
+        var texto = "Um text";
+        final var builder = new StringBuilder(texto);
+        System.out.println(builder.append("o continuação do texto!")); // printa "Um texto continuação do texto!"
+
+        final var reverse = builder.reverse();
+        System.out.println(reverse); // printa o texto "!otxet od oãçaunitnoc otxet mU"
+
+        final var insert = reverse.insert(0, "#").insert(reverse.lenght(), "#");
+        System.out.println(insert); // printa o texto "#!otxet od oãçaunitnoc otxet mU#"
+
+    }
+}
+```
+## Cheat Sheet (Tipos não primitivos)
+
+| Classe | método | Exemplo | Descrição |
+| :-: | :-: | :-: | :-: |
+| String | charAt | variavel.charAt(5); | Retorna o caractere na posição 5 |
+| String | lenght | variavel.lenght(); | Retorna o tamanho da string |
+| String | trim | variavel.trim(); | Retorna retira os espaços extras em branco |
+| String | toLowerCase | variavel.toLowerCase(); | Retorna a string com todos os caracteres minúsculos |
+| String | toUpperCase | variavel.toUpperCase(); | Retorna a string com todos os caracteres Maiúsculos |
+| String | contains | variavel.contains("N"); | Verifica se a string contém determinado caractere e retrona `true` ou `false` |
+| String | replace | variavel.replace("n", "!"); | Troca determinado caractere por outro, Neste caso onde tem "n" terá "exclamação" |
+| String | equals | variavel.equals("Um texto"); | Verifica se o a string do equals a mesma da variável e retorna `true` ou `false`. É case sensitive. |
+| String | equalsIgnoreCase | variavel.equalsIgnoreCase("Um texto"); | Verifica se o a string do equals a mesma da variável e retorna `true` ou `false`. Não é case sensitive. |
+| String | substring | variavel.substring(1, 6); | Retorna apernas o valor dentro da posição especificada. |
+| String | format | variavel.format("O cliente possui o nome s% e o sobrenome %s", nome, sobrenome); | Mais exemplos em: https://dzone.com/articles/java-string-format-examples <br><br> https://www.javatpoint.com/java-string-format |
+| String | toCharArray | variavel.toCharArray(); |  |
+| String | split | variavel.split(); |  |
+| String | concat | variavel.concat(); |  |
+| String | replaceAll | variavel.replaceAll(); | Nos possibilita trabalhar com regex |
+
+<br>
+<br>
+
+# Laços, condicionais e operadores lógicos
+
+## Operadores
+
+| Operador | Tipo | Exemplo | Descrição |
+| :-: | :-: | :-: | :-: |
+| = |  | `x = b` | Atribui o valor de 'b' à 'x' |
+| == |  | `x == b` | verifica se 'x' é igual a 'b' |
+| != |  | `x != b` | verifica se 'x' é diferente de 'b' |
+| ! |  | `!b`  | nega o valor de 'b' |
+| + |  | `a + b` | soma |
+| - |  | `a - b`  | subtração |
+| * |  | `a * b`  | multiplicação |
+| / |  | `a / b`  | divisão, divide a por b |
+| % |  | `a % b`  | módulo, retorna o resto da divisão |
+| *= |  | `x *= 2`  | é o mesmo que escrever `x = x * 2` |
+| > |  | a > b | maior que |
+| < |  | a < b | menor que |
+| >= |  | a >= b | maior ou igual |
+| <= |  | a <= b | menor ou igual |
+| && | Sort circuit | a == b && a < x | É o operador lógico "E", pode ser utilizado também como uma forma mais performática de fazer ifs encadeados. No caso do exemplo, "a" é igual a "b" E "a" é menor que "x". É importante ressalta que se uma condição anterior a outra for verdadeira, ele não continuará verificando as próximas e entrará na nossa estrutura. |
+| \|\| | Sort circuit | a == b \|\| a < x | Tanto faz se é um ou outro. Se "a" é igual a "b" OU "a" é menor que "x". É importante ressalta que se uma condição anterior a outra for verdadeira, ele não continuará verificando as próximas e entrará na nossa estrutura. |
+| \| | Non sort circuit | a == b \| a < x | Ele vai verificar todas condições mesmo que a primeira for verdadeira. |  
+| ++ | incremento | a++ | "a" mais 1 |  
+| ++ | decremento | a-- | "a" menos ' |  
+
+<br>
+
+## if
+```java
+package com.rodrigofentanes;
+
+public class Programa {
+    public static void main(String[] args) {
+        var condicao = true;
+
+        if (condicao){
+            // faça isso pois a condição a verdadeira
+        }else{
+            // faça isso pois a condição é falsa
+        }
+
+        if (condicao){
+            // se condicao verdadeira
+        } else if (condicao == false) {
+            // se outra condicao verdadeira
+        } else if (condicao == 10) {
+            // se outra condicao verdadeira
+        } else {
+            // se nenhuma das condições acima for verdadeira
+        }
+    }
+}
+```
+
+<br>
+
+## Ternário
+```java
+package com.rodrigofentanes;
+
+public class Programa {
+    public static void main(String[] args) {
+        final var condicao = false;
+        final var ternario = condicao ? "é verdadeira" : "é falsa";
+        System.out.println(ternario); // vai imprimir "é falsa"
+        
+    }
+}
+```
+
+<br>
+
+## for
+O `for` é uma estrutura de três partes:
+-   A condição inicial
+-   A condição que será verificada em TODAS, inclusive no início, de todas as repetições/interações de um `for` e , sendo a condição verdadeira, entramos na nossa estrutura de laço.
+-   A ação de será executada ao final de cada interação.
+
+```java
+package com.rodrigofentanes;
+
+public class Programa {
+    public static void main(String[] args) {
+        for(int i = 0; i <= 10; i = i++){
+            //faz isso
+        }
+    }
+}
+```
+
+<br>
+
+## while
+Enquanto algo for verdadeiro, faça. Primeiro testa depois faz.
+
+```java
+package com.rodrigofentanes;
+
+public class Programa {
+    public static void main(String[] args) {
+        var i = 0;
+        while(i <= 10){
+            i++;
+        }
+    }
+}
+```
+
+<br>
+
+## do while
+Faça, enquanto isso for verdade. Primeiro faz depois testa.
+
+```java
+package com.rodrigofentanes;
+
+public class Programa {
+    public static void main(String[] args) {
+        var i = 0;
+        do{
+            i++;
+        }while(i <= 10);
+    }
+}
+```
+
+<br>
+
+## forEach
+"Para cada" faça.
+
+```java
+package com.rodrigofentanes;
+
+public class Programa {
+    public static void main(String[] args) {
+        IntStream.of(1,2,3,4,5).forEach( n -> {
+            // faça isso
+        });
+
+        IntStream.range(0,3).forEach( n -> {
+            // faça isso
+        });
+    }
+}
+```
+
+<br>
+<br>
+
+# Convenções de nomes
+
+## Nomes de métodos
+Segue o padrão `nomeDoMetodo`.
+
+<br>
+
+## Nomes de classes
+Classes seguem o padrão "CamelCase" (`NomeDaClasse`).
+
+<br>
+
+## Nomes de variáveis
+Nomes de variáveis devem ser descritivos e sucintos e deve seguir o padrão `nomeDaVariavel`. 
+
+É fortemente contra indicado a utilização de variáveis como `letraA` ou `nome1` ou `x`.
+
+É contra indicado incluir caractéres especiais nos nomes de variável, exemplo: `nome_da_variavel` ou `variável` ou `variavel$`.
+
+Não devemos fazer: `variável`
+
+<br>
+
+## Ferramentas de verificação/padronização
+É FORTEMENTE INDICADA A UTILIZAÇÃO DESSAS FERRAMENTAS. É importante ressaltar que elas não só indicam erros e inconsistências, pois em sua documentação elas também costumam explicar o porquê, sendo assim, por consequência, ferramentas que estimulam a formação de um bom programador.
+
+Exemplos:
+-   Checkstyle Gradle Plugin;
+-   PMD Gradle Plugin;
+
+Para incluí-los num projeto basta inserir, no caso do gradle, no arquivo "build.gradle" como no código abaixo:
+
+```java
+plugins {
+    id 'java'
+    id 'checkstyle'
+    id 'pmd'
+}
+
+// Neste mesmo arquivo, configurar também será necessário:
+
+ckeckstyle {
+    // configuração
+}
+
+pmd {
+    // configuração
+}
+```
+
+É válido lembrar que muitas dessas ferramentas já estão disponíveis no build de ferramentas do gradle por exemplo.
+
+Também é necessário
+
+<br>
+<br>
+
+# Debug
+É a prática de análisar, da melhor forma, linha a linha dos códigos de um programa.
+
+## Break point
+A maioria das IDEs tem esta funcionalidade. No início de cada linha, é possível adicionar um "ponto" vermelho no código. Esses pontos significam que queremos parar de executar o código naquela linha, para observar algo, e depois continuar (rerun).
+
+Também é possível ir avançando e voltando linhas a partir de um break point, entrar em funções, mudar nomes de variáveis, etc. E isso tudo é feito em tempo de execução.
+
+Normalmente, precisamos rodar um "debug" ao invés de "run" quando queremos utilizar dessa funcionalidade.
+
+<br>
+<br>
+
+# Tratamento de dados
+
+## Dados do tipo Data
 
 
+<br>
