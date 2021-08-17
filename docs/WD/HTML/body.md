@@ -36,8 +36,8 @@
     <a href="https://source.unsplash.com/random" target="_blank" title="This is a hover description">External link - Remote image - Hover description - Título semântico</a>
     
     <!-- Images -->
-    <img src="./img/1-web-works.png" alt="Internal image" width="200">
-    <img src="https://source.unsplash.com/random" alt="External random image" width="200">
+    <img src="./img/1-web-works.png" alt="Internal image" title="Some hover mensage" width="200">
+    <img src="https://source.unsplash.com/random" alt="External random image" title="Some hover mensage" width="200">
 
     <!-- Lista desordenada -->
     <ul>
