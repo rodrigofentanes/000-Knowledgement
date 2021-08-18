@@ -682,5 +682,106 @@ Normalmente, precisamos rodar um "debug" ao invés de "run" quando queremos util
 
 ## Dados do tipo Data
 
+| Classe | Método | Exemplo | Descrição |
+| :-: | :-: | :-: | :-: |
+| java.util.Date | after | after(Date) | Retorna um `boolean`. Checa se o objeto Data de referência é posterior ao comparado |
+| java.util.Date | before | before(Date) | Retorna um `boolean`. Checa se o objeto Data de referência é anterior ao comparado |
+| java.util.Date | compareTo | compareTo(Date) | Retorna um `int`. Compara dois objetos Data |
+| java.util.Date | equals | equals(Date) | Retorna um `boolean`. Checa se os objetos são iguais |
+| java.util.Date | getTime | getTime() | Retorna um `long`. Retorna a data em milissegundos |
+| java.util.Date | setTime | setTime(long) | Retorna `void`. Define uma data com base em milissegundos |
+| java.util.Date | from | from(Instant) | Retorna `static Date`. Define uma data com base em um **Instant** |
+| java.util.Date | toInstant | toInstant() | Retorna `Instant`. Retorna um Instant com base em um Date. <br><br> A classe **instant** é imutável e Thread Safe, ela modela um ponto instantâneo de uma linha do tempo. É indicado para gravar marcações temporais em eventos da sua aplicação. |
+
+O `java.util.Date` é a classe responsável por lidar com datas e é também uma das classes mais antigas da linguagem.
+
+Contrutoras da classe `java.util.Date`:
+
+```java
+/* construtores depreciados */
+
+Date(int year, int month, int date)
+
+Date(int year, int month, int date, ins hrs, int min)
+
+Date(int year, int month, int date, ins hrs, int min, int sec)
+
+Date(String s)
+
+/* construtores recomendados */
+
+Date() // Este construtor vai alocar um objeto da classe Date e o iniciará com o milissegundo mais próximo do período da sua execução.
+
+Date(long date) // Diferente do construtor anterior, este construtor espera que você passe os milissegundos com base padrão de tempo (epoch) que usa como referência '1 de janeiro de 1970 00:00:00'
+
+// O timestamp epoch é um padrão largamente aceito para representar uma data como um inteiro 32-bits a partir do início do Unix Epoch, isso nos ofere compatibilidade entre libguagens
+
+System.currentTimeMillis() // Este método estático vai nos retornar o milissegundo mais próximo de sua execução com base no sistema operacional
+
+```
+
+```java
+import java.util.Date;
+
+public class Exemplo {
+    public static void main (String[] args){
+        // Date()
+        Date novaData = new Date();
+        System.out.println(novaData); // retorna: 'Thu Jul 08 09:55:08 BRT 2021'
+
+        // Date(long date)
+        Long currentTimeMillis = System.currentTimeMillis();
+        System.out.println(currentTimeMillis); // retorna: '1563127311564'
+        Date outraData = new Date(currentTimeMillis);
+        System.out.println(outraData); // retorna: ' Sun Jul 14 15:01:51 BRT 2019'
+    }
+}
+```
+## after & before
+```java
+import java.util.Date;
+
+public class Exemplo {
+    public static void main (String[] args){
+        Date dataNoPassado = new Date(1563127311564L);
+        Date dataNoFuturo = new Date(1613127311564L);
+        Date mesmaDataNoFuturo = new Date(1613127311564L);
+
+        boolean isEquals = dataNoFuturo.equals(mesmaDataNoFuturo); //true
+        boolean isEquals = dataNoFuturo.equals(dataNoPassado); //false
+        
+        boolean compareToCase1 = dataNoPassado.compareTo(dataNoFuturo); // -1
+        boolean compareToCase2 = dataNoFuturo.compareTo(dataNoPassado); // 1
+        boolean compareToCase3 = dataNoFuturo.compareTo(mesmaDataNoFuturo); // 0
+    }
+}
+```
+
+## compareTo & equals
+```java
+import java.util.Date;
+
+public class Exemplo {
+    public static void main (String[] args){
+        Date dataNoPassado = new Date(1563127311564L);
+        Date dataNoFuturo = new Date(1613127311564L);
+
+        boolean isAfter = dataNoPassado.after(dataNoFuturo); //false
+        boolean isBefore = dataNoPassado.before(dataNoFuturo); // true
+    }
+}
+```
+
+## toInstant (Classe Instant)
+```java
+import java.util.Date;
+
+public class Exemplo {
+    public static void main (String[] args){
+        Date dataInicio = new Date(1563127311564L); // Tue Dec 22:26:47 BRST 2017
+        Instant instante = dataInicio.toInstant(); // 2017-12-13T00:26:47.691Z
+    }
+}
+```
 
 <br>
