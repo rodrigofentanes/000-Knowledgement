@@ -727,17 +727,23 @@ public class Exemplo {
     public static void main (String[] args){
         // Date()
         Date novaData = new Date();
-        System.out.println(novaData); // retorna: 'Thu Jul 08 09:55:08 BRT 2021'
+        System.out.println(novaData); 
+        // Thu Jul 08 09:55:08 BRT 2021
 
         // Date(long date)
         Long currentTimeMillis = System.currentTimeMillis();
-        System.out.println(currentTimeMillis); // retorna: '1563127311564'
+        System.out.println(currentTimeMillis); 
+        // 1563127311564
         Date outraData = new Date(currentTimeMillis);
-        System.out.println(outraData); // retorna: ' Sun Jul 14 15:01:51 BRT 2019'
+        System.out.println(outraData); 
+        // Sun Jul 14 15:01:51 BRT 2019
     }
 }
 ```
-## after & before
+
+<br>
+
+### after & before
 ```java
 import java.util.Date;
 
@@ -757,7 +763,9 @@ public class Exemplo {
 }
 ```
 
-## compareTo & equals
+<br>
+
+### compareTo & equals
 ```java
 import java.util.Date;
 
@@ -772,16 +780,268 @@ public class Exemplo {
 }
 ```
 
-## toInstant (Classe Instant)
+<br>
+
+### toInstant (Classe Instant)
 ```java
 import java.util.Date;
 
 public class Exemplo {
     public static void main (String[] args){
-        Date dataInicio = new Date(1563127311564L); // Tue Dec 22:26:47 BRST 2017
-        Instant instante = dataInicio.toInstant(); // 2017-12-13T00:26:47.691Z
+        Date dataInicio = new Date(1563127311564L); 
+        // Tue Dec 22:26:47 BRST 2017
+
+        Instant instante = dataInicio.toInstant(); 
+        // 2017-12-13T00:26:47.691Z
     }
 }
 ```
 
 <br>
+
+## java.util.calendar
+Existe para facilitar alguns recursos que a classe `Date` oferecia e foram depreciados exatamente pelo fato da `calendar` chegar com facilidades.
+
+Calendar é uma classe abstrata que provê métodos para converter data entre um instante específico.
+
+O calendar possui alguns campos específicos para manipulação como MONTH, YEAR, HOUR, etc.
+
+<br>
+
+### Classe calendar
+![plot](files/classCalendar.png)
+
+<br>
+
+### Capturando o instante com calendar
+```java
+import java.util.Calendar;
+
+public class Exemplo {
+    public static void main (String[] args){
+        Calendar agora = Calendar.getInstance(); // 
+    }
+}
+```
+
+<br>
+
+### Manipulando datas
+```java
+import java.util.Calendar;
+
+public class Exemplo {
+    public static void main (String[] args){
+        Calendar agora = Calendar.getInstance();
+        System.out.println("A data corrente é: " + agora.getTime); 
+        // Sun Jul 14 20:50:31 BRT 2019
+
+        agora.add(Calendar.DATE, -15);
+        System.out.println("15 dias atrás: " + agora.getTime); 
+        // Sat Jun 29 20:50:31 BRT 2019
+        
+        agora.add(Calendar.MONTH, 4);
+        System.out.println(a"4 meses depois: " + gora.getTime); 
+        // Teu OCT 29 20:50:31 BRT 2019
+        
+        agora.add(Calendar.YEAR, 2);
+        System.out.println("2 anos depois: " + agora.getTime); 
+        // Fri Oct 29 20:50:31 BRT 2021
+    }
+}
+```
+
+<br>
+
+### Imprimindo da e horas (Alguns exemplos)
+```java
+import java.util.Calendar;
+
+public class Exemplo {
+    public static void main (String[] args){
+        Calendar agora = Calendar.getInstance();
+        System.out.println("%tc\n" + agora); 
+        // Dom Jul 14 20:58:11 brt 2019
+        
+        System.out.println("%tF\n" + agora); 
+        // 2019-07-14
+        
+        System.out.println("%tD\n" + agora); 
+        // 07/14/19
+        
+        System.out.println("%tr\n" + agora); 
+        // 08:58:11 pm
+        
+        System.out.println("%tT\n" + agora); 
+        // 20:58:11
+    }
+}
+```
+
+<br>
+
+## java.text.DateFormat & java.text.SimpleDateFormat
+Oferece maneiras de formatar e parsear a saída das datas.
+
+```java
+import java.text.DateFormat;
+import java.util.Date;
+
+public class Exemplo {
+    public static void main (String[] args){
+        Date agora = new Date();
+
+        String dateToStr = DateFormat.getInstance().format(agora)
+
+        System.out.println(dateToStr);
+        // 14/07/2019 22:40
+
+        dateToStr = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.SHORT).format(agora);
+
+        System.out.println(dateToStr);
+        // 14 de Julho de 2019 22:40
+
+        dateToStr = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG).format(agora);
+
+        System.out.println(dateToStr);
+        // 15 de Julho de 2019 22h13min55s BRT
+    }
+}
+```
+
+O SimpleDateFormat trás uma grande facilidade que é definir um padrão de formatação para a saída de data que você deseja, veja:
+
+```java
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Exemplo {
+    public static void main (String[] args){
+        Date agora = new Date();
+
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+
+        String dataFormatada = formatter.format(agora);
+
+        System.out.println(dataFormatada);
+        // 14/07/2019
+    }
+}
+```
+
+<br>
+
+## java.time
+É a forma atual de trabalhar com datas. 
+
+<br>
+
+### java.time.LocalDate
+É uma classe imutável para representar uma data. Seu formato padrão é `yyyy-MM-dd`
+
+```java
+import java.time.LocalDate;
+
+public class Exemplo {
+    public static void main (String[] args){
+        LocalDate hoje = LocalDate.now();
+        System.out.println(hoje);
+        // 2019-07-14
+        
+        LocalDate ontem = hoje.minusDays(1);
+        System.out.println(ontem);
+        // 2019-07-13
+    }
+}
+```
+
+<br>
+
+### java.time.LocalTime
+É uma classe imutável para representar um padrão de hora-minuto-segundo. 
+
+Pode representar até o nível de nanosegundos `12:22:10:123212345`
+
+```java
+import java.time.LocalDate;
+
+public class Exemplo {
+    public static void main (String[] args){
+        LocalDate agora = LocalTime.now();
+        System.out.println(agora);
+        // 23:53:58:421
+
+        LocalTime maisUmaHora = agora.plusHours(1);
+        System.out.println(maisUmaHora);
+        // 00:55:37:421
+    }
+}
+```
+
+<br>
+
+### java.time.LocalDateTime
+É uma classe imutável e utilizamos para trabalhar com horas e dias.
+
+É possível manipular hora e data com precisão da nanosegundos `2nd October 2007 at 12:22:10:123212345`
+
+```java
+import java.time.LocalDateTime;
+
+public class Exemplo {
+    public static void main (String[] args){
+        LocalDateTime agora = LocalDateTime.now();
+        System.out.println(agora);
+        // 2019-07-15T00:02:16:076
+
+        LocalDateTime futuro = agora.plusHours(1).plusDays(2).plusSeconds(12);
+        System.out.println(futuro);
+        // 2019-07-17T01:02:28.076
+    }
+}
+```
+
+<br>
+<br>
+
+# Tratamento de excessões
+Excessões são **todos** os erros que ocorrem durante o processamento de um método, estes erros podem ser **esperados** ou **não esperados**.
+
+Como o termo já diz, "Exceptions" são excessões. Falhas que não devem ocorrer rotineiramente no **fluxo de um sistema**.
+
+O ideal é criar excessões em cada método que é criado. Pois os erros podem ser esperados ou não. 
+
+Exemplo:
+```java
+public class Exemplo {
+    public static void main (String[] args){
+        public static void metodo(){
+            try{
+                new java.io.FileInputStream("arquivo.txt");
+            } catch (java.io.FileNotFoundException e){
+                System.println("Não foi possível abrir o arquivo para leitura");
+            }
+        }
+        // O método acima tenta criar um arquivo e se, por qualquer motivo, ocorrer um erro, então o sistema enviará a mensagem de erro descrita acima.
+    }
+}
+```
+
+O sistema de excessões é um encadeado de Classes e lembre-se, para cada erro disparado (exibido em tela) em um sistema construído em java, há uma exception para tratá-lo. 
+
+![plot](files/exceptionHeritance.png)
+
+<br>
+
+## Checked Exceptions
+São excessões esperadas, cujo fluxo ou método de um sistema foi preparado para receber. Um bom exemplo é uma excessão de negócio, onde se deseja informar um erro caso a excessão esperada ocorra.
+
+<br>
+
+## Unchecked Exceptions
+São execessões não esperadas para o fluxo ou método de um sistema, um bom exemplo é a famosa NullPointExeception que ocorre quando se tenta acessar uma referência de memória vazia, ou recuperar uma instância que não existe, dentre outros motivos.
+
+<br>
+
+## Bloco "try" "catch"
+O bloco try catch sempre é utilizado quando no processo que será executado dentro de um método é esperado um erro, então cria-se um bloco "protegido" onde qualquer erro que ocorra dentro do trecho "try" seja direcionado para o trecho "catch" e sofrerá o devido tratamento de erro.
