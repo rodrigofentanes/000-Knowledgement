@@ -7,16 +7,41 @@
 <br>
 
 # Introdução
-Estrutura de dados é uma estrutura organizada de dados na memória de um computador ou em qualquer dispositivo de armazenamento, de forma que os dados possam ser utilizados de forma correta.
+Estrutura de dados é uma estrutura organizada de dados na memória de um computador ou em qualquer dispositivo de armazenamento, de forma que os dados possam ser utilizados de forma correta, ou seja, estrutura de dados é a forma como estruturamos os dados na memória do computador.
 
 Essas estruturas encontram muitas aplicações no desenvolvimento de sistemas, sendo que algumas são altamente especializadas e utilizadas em taredas específicas.
+
+Podemos dizer que estruturas de dados são mecanismos de organização de dados que atendem diferentes requisitos de processamento.
 
 Existem diversas formas de aplicação destas estrutruras dentro de sistemas. Ao utilizar, através de algoritmos, estruturas adequadas, podemos trabalhar com uma grande quantidade de dados, como aplicações em bancos de dados ou serviços de busca.
 
 O site abaixo possui alguns exemplos de estruturas em portugol:
 https://portugol-webstudio.cubos.io/
 
-<br><br>
+<br>
+<br>
+
+# bit
+É uma unidade de memória
+
+<br>
+<br>
+
+# byte
+
+
+<br>
+<br>
+
+# Nó
+É um espaço em memória que armazena tanto o dado que "queremos" quanto uma referência para um próximo nó.
+
+## Encadeamento de nó
+
+![plot](files/encNo.png)
+
+<br>
+<br>
 
 # Algoritmo
 Em estrutura de dados, algoritmo é um conjunto de instruções estruturadas e ordenadas. Seu objetivo é realizar uma tarefa ou operação específica.
@@ -28,7 +53,93 @@ Os algoritmos são utilizados para manipulas dados nas estruturas de várias for
 -   Percorrer todos os itens constituintes da estrutura para visualização;
 -   Classificar, que se resume em colocar os itens de dados em uma determinada ordem (numérica, alfabética, etc);
 
-<br><br>
+<br>
+<br>
+
+# Generics
+Serve para:
+-   Evitar casting excessivo;
+-   Evitar códigos redundantes;
+-   Encontrar erros em tempo de compilação;
+-   Introduzido desde o Java SE 5.0
+
+Exemplo:
+```java
+Lista<String> minhaLista = new Lista<>();
+
+public class Lista<T>{
+    private T t;
+    ...
+}
+
+```
+
+<br>
+<br>
+
+## Wildcards
+-   Unknown Wildcards (Unbounded)
+-   Bounded Wildcard (Upper Bounded / Lower Bounded)
+
+## Unknown Wildcards
+Exemplo:
+```java
+// Imprime uma lista de qualquer tipo
+public void imprimeLista (List<?> lista) {
+    for(Object obj : lista){
+        System.out.println(obj);
+    }
+}
+
+List<Aluno> minhaLista = new List<Aluno>();
+imprimeLista(minhaLista);
+
+```
+
+## Upper Bounded Wildcards
+Exemplo:
+```java
+// Só é possivel passar listas de Pessoa e hedeiros de Pessoa 
+public void imprimeLista (List<? extends Pessoa> listaPessoas) {
+    for(Pessoa p : listaPessoas){
+        System.out.println(p);
+    }
+}
+
+List<Aluno> minhaLista = new List<Aluno>();
+imprimeLista(minhaLista);
+
+```
+
+## Lower Bounded Wildcards
+Exemplo:
+```java
+// Não aceita hedeiros da classe Pessoa, apenas da classe Pessoa "para cima". 
+public void imprimeLista (List<? super Pessoa> listaPessoas) {
+    for(Pessoa p : listaPessoas){
+        System.out.println(p);
+    }
+}
+
+List<Aluno> minhaLista = new List<Aluno>();
+imprimeLista(minhaLista);
+
+```
+
+## Convenção para Siglas
+-   k para "Key":
+    -   `Map<K,V>`
+-   V para "Value":
+    -   `Map<k,V>`
+-   E para "Element":
+    -   `List<E>`
+-   T para "Type":
+    -   `List<T>`
+    -   Collections#addAll
+-   ? para genérico
+
+<br>
+<br>
 
 # Tipos de estruturas de dados
 As principais estruturas de dados utilizadas em algoritmos são:
@@ -185,7 +296,17 @@ Em português UEPS (Último a Entrar é o Primeiro a Sair), apresenta o seguinte
 ## FIFO (Fist In Fist Out )
 Em português PEPS (Primeiro a Entrar é o Primeiro a Sair), apresenta o seguinte critério: o primeiro elemento a ser retirado é o primeiro que tiver sido inserido.
 
-<br><br>
+<br>
+<br>
+
+## Método Top
+
+## Método Pop
+
+## Método Push
+
+## Método isEmpty
+Informa se a pilha está vazia.
 
 # Fila
 A estrutura do tipo fila admite remoção de elementos e inserção de novos sujeita à seguinte regra de operação:

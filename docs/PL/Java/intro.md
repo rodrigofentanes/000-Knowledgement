@@ -140,3 +140,4 @@ Existem várias mas as duas principais são:
 
 ## IntelliJ IDEA
 É uma IDE escrita em Java para o desenvolvimento de software de computador. Está disponível como uma edição da comunidade licenciada Apache 2 e em uma edição comercial proprietária.
+

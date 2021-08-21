@@ -158,6 +158,11 @@ Veja abaixo os tipo primitivos em Java e seus valores default:
 | String (or any object) | null |  | É uma classe e representa uma sequência de caractéres |
 | boolean | false |  | true ; false |
 
+<br>
+<br>
+
+![plot](files/tiposDadosJava.png) 
+
 
 <br>
 
@@ -233,6 +238,16 @@ var numero = 1;
 
 ## Casting
 Ocorre ao "promovermos" uma variável de um tipo para outro tipo.
+
+<br>
+<br>
+
+## Atribuição e Referência
+As atribuições em Java sempre serão por cópia de valor.
+
+Com tipo primitivo, copiamos **o valor em memória**.
+
+Com objetos, copiamos **o valor da referẽncia em memória**, sem duplicar o objeto, ou seja, ele aponta para o outro objeto.
 
 <br>
 <br>
