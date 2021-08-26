@@ -1,23 +1,60 @@
 # :back: [README](../../../README.md#programming-fundamentals)
-# :back: [LDP - Intro](intro.md#fluxograma)
 
 <h1 align="center">
-    Introdução à lógica de programação
+    Introdução à programação
 </h1> 
 
 <br>
 
-# Fluxograma
-Sendo uma ferramenta, o fluxograma, é utilizada para representar graficamente o algoritmo, isto é, a sequência lógica e coerente do **fluxo de dados**. Pode ser visto como um tipo de diagrama e pode ser entendido como uma representação esquemática de um processo. Podemos entendê-lo, na prática, como a documentação dos passos necessários para a execução de um processo qualquer.
+# Algoritmos
+A definição de algorítmos pode se especificar a depender do escopo.
 
 <br>
 
-## Links interessantes:
--   https://www.conceptdraw.com/How-To-Guide/flow-chart-symbols
+## Em **lógica de programação**
+Um algoritmo é uma sequência de passos para resolver um problema.
+
+<br>
+
+## Em **estrutura de dados**
+Um algoritmo é um conjunto de instruções estruturadas e ordenadas. Seu objetivo é realizar uma tarefa ou operação específica.
+
+<br>
+<br>
+
+# Abstração
+Abstração é a habilidade de concentrar nos aspectos essenciais de um contexto qualquer, ignorando características menos importantes ou acidentais, ou seja, nada mais é que abordar um problema extenso da forma mais simples possível.
+
+<br>
+<br>
+
+# Pseudocódigo
+É uma forma genérica de escrever um algoritmo, utilizando uma linguagem simples, como a linguagem falada ou escrita nativamente, de forma que possa ser entendida por qualquer pessoa, ou seja, é como escrever num papel qualquer o passo-a-passo das tarefas a serem feitas durante o dia por exemplo.
+
+<br>
+<br>
+
+# Concatenação
+É a operação de unir dois ou mais conteúdos.
+
+```java
+String x = "Uma frase qualquer ";
+int b = 2; 
+System.out.println("Texto " + x + b);
+// A saída será:
+// 'Texto Uma frase qualquer 2'
+```
+
+<br>
+<br>
+
+# Fluxograma
+Sendo uma ferramenta, o fluxograma, é utilizada para **representar graficamente o algoritmo**, isto é, a sequência lógica e coerente do **fluxo de dados**. Pode ser visto como um tipo de diagrama e pode ser entendido como uma representação esquemática de um processo. Podemos entendê-lo, na prática, como a documentação dos passos necessários para a execução de um processo qualquer.
 
 <br>
 
 ## Operação
+
 | Símbolo | Nome | Descrição |
 | :-: | :-: | :-: |
 | ![plot](files/comecoFim.png) | Começo e fim | Indica o começo ou fim de um processo . |
@@ -73,7 +110,8 @@ Sendo uma ferramenta, o fluxograma, é utilizada para representar graficamente o
 | ![plot](files/agrupar.png) | Agrupar | Indica uma etapa e que os dados devem ser organizados de uma forma padrão. |
 | ![plot](files/classificar.png) | Classificar | Representa uma etapa do processo em que os dados devem ser classificados em uma ordem pré-definida. |
 
-<br><br>
+<br>
+<br>
 
 # Tipos de fluxograma
 
@@ -88,6 +126,3 @@ Sendo uma ferramenta, o fluxograma, é utilizada para representar graficamente o
 Mostra a sequência de atividades de um processo entre as áreas ou seções por onde ele acontece. É muito útil para processos transversais, que passam por diversas áreas até ser concluído. Nele se inclui também os responsáveis pelos setores e pode até indicar gargalos no processo.
 
 ![plot](files/fluxogramaFuncional.png) 
-
-<br><br>
-

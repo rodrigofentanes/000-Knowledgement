@@ -7,46 +7,14 @@
 <br>
 
 # Introdução
-Estrutura de dados é uma estrutura organizada de dados na memória de um computador ou em qualquer dispositivo de armazenamento, de forma que os dados possam ser utilizados de forma correta, ou seja, estrutura de dados é a forma como estruturamos os dados na memória do computador.
+Estrutura de dados é uma estrutura organizada de dados na memória de um computador ou em qualquer dispositivo de armazenamento, de forma que os dados possam ser utilizados de forma correta, ou seja, é a forma como estruturamos os dados na memória do computador para utilizar os recursos disponíveis da melhor forma possível.
 
-Essas estruturas encontram muitas aplicações no desenvolvimento de sistemas, sendo que algumas são altamente especializadas e utilizadas em taredas específicas.
-
-Podemos dizer que estruturas de dados são mecanismos de organização de dados que atendem diferentes requisitos de processamento.
-
-Existem diversas formas de aplicação destas estrutruras dentro de sistemas. Ao utilizar, através de algoritmos, estruturas adequadas, podemos trabalhar com uma grande quantidade de dados, como aplicações em bancos de dados ou serviços de busca.
+Estruturas de dados são mecanismos de organização de dados que atendem diferentes requisitos de processamento.
 
 O site abaixo possui alguns exemplos de estruturas em portugol:
 https://portugol-webstudio.cubos.io/
 
-<br>
-<br>
-
-# bit
-É uma unidade de memória
-
-<br>
-<br>
-
-# byte
-
-
-<br>
-<br>
-
-# Nó
-É um espaço em memória que armazena tanto o dado que "queremos" quanto uma referência para um próximo nó.
-
-## Encadeamento de nó
-
-![plot](files/encNo.png)
-
-<br>
-<br>
-
-# Algoritmo
-Em estrutura de dados, algoritmo é um conjunto de instruções estruturadas e ordenadas. Seu objetivo é realizar uma tarefa ou operação específica.
-
-Os algoritmos são utilizados para manipulas dados nas estruturas de várias formas, deste jeito é importante sabermos realizar um determinado conjunto de operações básicas, por exemplo:
+Os algoritmos são utilizados para manipular dados nas estruturas de várias formas, deste jeito é importante sabermos realizar um determinado conjunto de operações básicas, por exemplo:
 -   inserir dados;
 -   excluir dados;
 -   Localizar um elemento;
@@ -56,132 +24,111 @@ Os algoritmos são utilizados para manipulas dados nas estruturas de várias for
 <br>
 <br>
 
-# Generics
-Serve para:
--   Evitar casting excessivo;
--   Evitar códigos redundantes;
--   Encontrar erros em tempo de compilação;
--   Introduzido desde o Java SE 5.0
+# Unidades de medida de dados
 
-Exemplo:
-```java
-Lista<String> minhaLista = new Lista<>();
+## bit
+É uma **unidade de memória**.
 
-public class Lista<T>{
-    private T t;
-    ...
-}
+<br>
 
-```
+## byte
+É uma **unidade de informação digital** equivalente a oito bits.
+
+Cada byte representa um único caractere de texto num computador. O byte representa letras, símbolos, números, sinais de pontuação, caracteres especiais etc. e codifica variadas informações numa máquina.
+
+A codificação de caracteres denominada ASCII (American Standard Code for Information Interchange) adotou a informação de que 1 byte equivale a 8 bits, e usando a base binária (valores 0 ou 1), definiu 256 caracteres para representação de texto nos computadores, padronizando desta forma as operações entre diferentes dispositivos.
+
+Para exprimir quantidades de dados, são usadas as seguintes medidas:
+
+<div align="center">
+
+| Medida | Sígla | Equivalencia |
+| :-: | :-: | :- |
+| 1 Byte | B | 8 bits |
+| 1 kilobyte | KB | 1024 bytes |
+| 1 megabyte | MB | 1024 kilobytes |
+| 1 gigabyte | GB | 1024 megabytes |
+| 1 terabyte | TB | 1024 gigabytes |
+| 1 petabyte | PB | 1024 terabytes |
+| 1 exabyte | EB | 1024 petabytes |
+| 1 zettabyte | ZB | 1024 exabytes |
+| 1 yottabyte | YB | 1024 zettabytes |
+
+</div>
+
 
 <br>
 <br>
 
-## Wildcards
--   Unknown Wildcards (Unbounded)
--   Bounded Wildcard (Upper Bounded / Lower Bounded)
+# Estruturas auxiliáres
 
-## Unknown Wildcards
-Exemplo:
-```java
-// Imprime uma lista de qualquer tipo
-public void imprimeLista (List<?> lista) {
-    for(Object obj : lista){
-        System.out.println(obj);
-    }
-}
+## Nó
+É um espaço em memória que armazena tanto o dado que "queremos" quanto uma referência para um próximo elemento, ou seja, um nó aponta para o próximo nó.
 
-List<Aluno> minhaLista = new List<Aluno>();
-imprimeLista(minhaLista);
+<br>
 
-```
+## Encadeamento de nó
+Também chamado de alocação encadeada. Em uma estrutura de nó, é possível transitar para frente apenas.
 
-## Upper Bounded Wildcards
-Exemplo:
-```java
-// Só é possivel passar listas de Pessoa e hedeiros de Pessoa 
-public void imprimeLista (List<? extends Pessoa> listaPessoas) {
-    for(Pessoa p : listaPessoas){
-        System.out.println(p);
-    }
-}
+Nós são estruturas simples e servem apenas como "envelopes". Quem realmente fará a administração destes dados são as **estruturas de dados**. 
 
-List<Aluno> minhaLista = new List<Aluno>();
-imprimeLista(minhaLista);
+<br>
 
-```
-
-## Lower Bounded Wildcards
-Exemplo:
-```java
-// Não aceita hedeiros da classe Pessoa, apenas da classe Pessoa "para cima". 
-public void imprimeLista (List<? super Pessoa> listaPessoas) {
-    for(Pessoa p : listaPessoas){
-        System.out.println(p);
-    }
-}
-
-List<Aluno> minhaLista = new List<Aluno>();
-imprimeLista(minhaLista);
-
-```
-
-## Convenção para Siglas
--   k para "Key":
-    -   `Map<K,V>`
--   V para "Value":
-    -   `Map<k,V>`
--   E para "Element":
-    -   `List<E>`
--   T para "Type":
-    -   `List<T>`
-    -   Collections#addAll
--   ? para genérico
+![plot](files/encNo.png)
 
 <br>
 <br>
 
 # Tipos de estruturas de dados
 As principais estruturas de dados utilizadas em algoritmos são:
--   Vetores e Matrizes;
--   Registro
--   Lista
--   Pilha
--   Fila
--   Árvore
--   Tabela Hash
--   Grafos
+-   Array (Vetores e Matrizes);
+-   Registro;
+-   Lista;
+-   Pilha;
+-   Fila;
+-   Árvore;
+-   Tabela Hash;
+-   Grafos;
 
-<br><br>
+<br>
+<br>
 
-# Vetores e Matrizes
-Vetores e Matrizes, ou simplesmente **"Arrays"**, são estruturas de dados simples que podem auxiliar quando há muitas variáveis do mesmo tipo em um algoritmo.
+# Array
+Vetores e Matrizes, ou simplesmente **Arrays**, são estruturas de dados simples que podem auxiliar quando há muitas variáveis do mesmo tipo em um algoritmo.
 
 <br>
 
 ## Vetor
 Um **Vetor** é  um **arrays uni-dimensional**, é também uma estrutura de dados indexada que pode armazenar uma quantidade determinada de valores do mesmo tipo, ou seja, nada mais é que uma **variável** que armazena várias variáveis do mesmo tipo.
 
-Exemplo de declaração de vetor: 
+<br>
 
+### Declaração e alocação de vetores
+
+Alocação estática:
 ```java
 // todas declarações abaixo fazem, basicamente, a mesma coisa.
 
-int vetor[];
-vetor = new int[3];
+int v[]; // Declarando vetor 
+v = new int[5]; // alocação de espaço para vetor
 
-// OU
+int v[] = new int[5]; // declaração combinada
 
-int vetor[] = new int[3];
+int v = new int[5]; // declaração combinada
 
-//  OU
+int v[] = {1, 2, 3, 4}; // declaração explícita
+```
 
-int vetor = new int[3];
+Alocação Variável:
+```java
+int n = 5; // tamanho do vetor
+int v[] = new int[n]; // declaração e alocação de espaço para o vetor "v"
+int i; // índice ou posição
 
-//  OU
-
-int vetor[] = {1, 2, 3, 4};
-
+// processando os "n" elementos do vetor "v"
+for (i = 0; i < n; i++) {
+  v[i] = i; // na i-ésima posição do vetor "v" armazena o valor da variável "i"
+}
 ```
 
 <br>
@@ -189,8 +136,10 @@ int vetor[] = {1, 2, 3, 4};
 ## Matriz
 Uma **Matriz** pode ser um **array bi-dimensional**, **tri-dimensional**, **multi-dimensional**, etc.
 
-Exemplo de declaração de matriz bi-dimensional:
+<br>
 
+### Declaração e alocação de matrizes
+Declaração de matriz bi-dimensional:
 ```java
 int matriz[][] = new int[2][4]; // matriz com 2 linhas X 4 colunas
 
@@ -198,6 +147,9 @@ int matriz[][] = new int[2][4]; // matriz com 2 linhas X 4 colunas
 
 int matriz[][] = new int[3][3]; // matriz quadrada: 3 linhas X 3 colunas
 ```
+<br>
+<hr> <!-- --------------------------------------------- -->
+<br>
 
 ```java
 // Fazer isso:
@@ -229,6 +181,10 @@ int matriz[][] = {
  matriz[2][2] = 9;
 ```
 
+<br>
+<hr> <!-- --------------------------------------------- -->
+<br>
+
 ```java
 // Linhas de diferentes tamanhos:
 int matriz[][] = new int[2][];  // cria 2 linhas
@@ -243,7 +199,8 @@ int matriz[][] = new int[2][];  // cria 2 linhas
     };
 ```
 
-<br><br>
+<br>
+<br>
 
 # Registros
 Enquanto arrays nos permitem armazenar vários dados de um único tipo de dados, o recurso de registro nos permite armazenar mais de um tipo de dado.
@@ -343,3 +300,104 @@ São estruturas que permitem programar a relação entre objetos. Os objetos sã
 ![plot](files/grafo.png)
 
 <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Generics
+Serve para:
+-   Evitar casting excessivo;
+-   Evitar códigos redundantes;
+-   Encontrar erros em tempo de compilação;
+-   Introduzido desde o Java SE 5.0
+
+Exemplo:
+```java
+Lista<String> minhaLista = new Lista<>();
+
+public class Lista<T>{
+    private T t;
+    ...
+}
+
+```
+
+<br>
+<br>
+
+## Wildcards
+-   Unknown Wildcards (Unbounded)
+-   Bounded Wildcard (Upper Bounded / Lower Bounded)
+
+## Unknown Wildcards
+Exemplo:
+```java
+// Imprime uma lista de qualquer tipo
+public void imprimeLista (List<?> lista) {
+    for(Object obj : lista){
+        System.out.println(obj);
+    }
+}
+
+List<Aluno> minhaLista = new List<Aluno>();
+imprimeLista(minhaLista);
+
+```
+
+## Upper Bounded Wildcards
+Exemplo:
+```java
+// Só é possivel passar listas de Pessoa e hedeiros de Pessoa 
+public void imprimeLista (List<? extends Pessoa> listaPessoas) {
+    for(Pessoa p : listaPessoas){
+        System.out.println(p);
+    }
+}
+
+List<Aluno> minhaLista = new List<Aluno>();
+imprimeLista(minhaLista);
+
+```
+
+## Lower Bounded Wildcards
+Exemplo:
+```java
+// Não aceita hedeiros da classe Pessoa, apenas da classe Pessoa "para cima". 
+public void imprimeLista (List<? super Pessoa> listaPessoas) {
+    for(Pessoa p : listaPessoas){
+        System.out.println(p);
+    }
+}
+
+List<Aluno> minhaLista = new List<Aluno>();
+imprimeLista(minhaLista);
+
+```
+
+## Convenção para Siglas
+-   k para "Key":
+    -   `Map<K,V>`
+-   V para "Value":
+    -   `Map<k,V>`
+-   E para "Element":
+    -   `List<E>`
+-   T para "Type":
+    -   `List<T>`
+    -   Collections#addAll
+-   ? para genérico
+
+<br>
+<br>

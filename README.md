@@ -4,9 +4,11 @@
 
 Espaço utilizado para o meu aprendizado. Está em constante alteração e, em algum momento de reestruturação de pensamento, pode encontrar-se desorganizado.
 
+<br> 
+<br> 
 <hr> <!-- ------------------------------------------------ -->
 
-## Operating Systems
+# Operating Systems
 
 <details>
     <summary>
@@ -21,9 +23,10 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 </details>
 
+<br> 
 <hr> <!-- ------------------------------------------------ -->
 
-## Programming Fundamentals
+# Programming Fundamentals
 
 <details>
     <summary>
@@ -36,42 +39,26 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 <details>
     <summary>
-        Lógica de programação
+        Introdução à programação
     </summary>
     
--   [Introdução](docs/PF/LDP/intro.md#back-readme)
--   [Fluxograma](docs/PF/LDP/fluxograma.md#back-readme)
-
-</details>
-
-
-<details>
-    <summary>
-        Estrutura de dados
-    </summary>
-    
--   [Introdução](docs/PF/EDD/intro.md#back-readme)
+-   [Introdução](docs/PF/IAP/intro.md#back-readme)
+-   [Lógica de progração](docs/PF/IAP/LDP.md#back-readme)
+-   [Estrutura de dados](docs/PF/IAP/EDD.md#back-readme)
+-   [Arquitetura de sistemas](docs/PF/IAP/ADS.md#back-readme)
 
 </details>
 
 <details>
     <summary>
-        Paradigmas
+        Paradigmas da programação
     </summary>
     
--   [Introdução](docs/PF/P/intro.md#back-readme)
+-   [Introdução](docs/PF/PDP/intro.md#back-readme)
 
 </details>
 
-<details>
-    <summary>
-        Arquitetura de sistemas
-    </summary>
-    
--   [Introdução](docs/PF/ADS/intro.md#back-readme)
-
-</details>
-
+<br> 
 <hr> <!-- ------------------------------------------------ -->
 
 ## Version-Control Systems
@@ -98,6 +85,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 </details>
 
+<br> 
 <hr> <!-- ------------------------------------------------ -->
 
 ## Programming Languages
@@ -131,6 +119,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 </details>
 
+<br> 
 <hr> <!-- ------------------------------------------------ -->
 
 ## Databases
@@ -154,6 +143,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 </details>
 
+<br> 
 <hr> <!-- ------------------------------------------------ -->
 
 ## Web Development
@@ -189,6 +179,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 </details>
 
+<br> 
 <hr> <!-- ------------------------------------------------ -->
 
 ## Misc / Terms / Verbs
@@ -212,6 +203,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 </details>
 
+<br> 
 <hr> <!-- ------------------------------------------------ -->
 
 ## Salesforce
@@ -234,4 +226,5 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 </details>
 
+<br> 
 <hr> <!-- ------------------------------------------------ -->
