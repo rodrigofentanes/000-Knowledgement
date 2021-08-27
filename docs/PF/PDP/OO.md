@@ -7,7 +7,7 @@
 <br>
 
 # Introdução
-É um tripo de estrutura de dados que visa trazer "objetos/itens" do mundo real para o mundo computacional.
+É um tipo de estrutura de dados que visa trazer "objetos/itens" do mundo real para o mundo computacional.
 
 Utilizar uma linguagem orientada a objetos ou utilizar objetos em um sistema não torna seu sistema orientado a objetos. É possível ter programas em linguagem com suporte a POO (programação orientada a objetos) que utilizam componentes de POO e que a implementação é completamente estruturada. 
 

@@ -19,8 +19,8 @@ objetos são elementos instanciados (criados) na memória durante a execução d
 Objetos podem ser do tipo:
 -   Variável;
 -   Constante;
--   Vetor (coleção de tipos iguais);
--   Matriz (coleção diversa)
+-   Vetor;
+-   Matriz;
 
 <br>
 <br>
@@ -237,6 +237,16 @@ Descrição do exemplo acima:
 -   **Se não** então `y = false`;
 
 <br>
+
+## Ternário
+```java
+String resultado = (x > 3) ? "Sim" : "Não";
+```
+Descrição do exemplo acima:
+-   **Se** `x > 3` então `resultado = "Sim"`;
+-   **Se** `x <= 3` então `resultado = "Não"`;
+
+<br>
 <br>
 
 # Estrutura de repetição
@@ -268,4 +278,99 @@ Descrição do exemplo acima:
 3.   Faça `escreva o valor de i na tela`;
 4.   Ao final da execução do código dentro das chaves, faça `i + 1` e volte para o 2º passo para saber se é necessário executar novamente o código, prosseguindo assim com o laço;
 
+<br>
+<br>
 
+# Generics
+Serve para:
+-   Evitar casting excessivo;
+-   Evitar códigos redundantes;
+-   Encontrar erros em tempo de compilação;
+-   Introduzido desde o Java SE 5.0
+
+Exemplo:
+```java
+List<String> minhaLista = new List<>();
+
+public class List<T>{
+    private T t;
+    ...
+}
+```
+
+<br>
+<br>
+
+# Wildcards
+-   Unknown Wildcards (Unbounded)
+-   Bounded Wildcard (Upper Bounded / Lower Bounded)
+
+<br>
+
+## Convenção para Siglas
+
+<div align="center">
+
+| Sígla | Significado | Exemplo |
+| :-: | :-: | :-: |
+| k | Key | `Map<K,V>` |
+| V | Value | `Map<k,V>` |
+| E | Element | `List<E>` |
+| T | Type | `List<T>` <br> Collections#addAll |
+| ? | Genérico | `List<?>` |
+
+</div>
+
+<br>
+
+## Unknown Wildcards (Unbounded)
+Exemplo:
+```java
+// Imprime uma lista de qualquer tipo
+public void imprimeLista (List<?> lista) {
+    for(Object obj : lista){
+        System.out.println(obj);
+    }
+}
+
+List<Aluno> minhaLista = new List<Aluno>();
+imprimeLista(minhaLista);
+
+```
+
+<br>
+
+## Bounded Wildcard (Upper Bounded)
+Exemplo:
+```java
+// Só é possivel passar listas de Pessoa e hedeiros de Pessoa 
+public void imprimeLista (List<? extends Pessoa> listaPessoas) {
+    for(Pessoa p : listaPessoas){
+        System.out.println(p);
+    }
+}
+
+List<Aluno> minhaLista = new List<Aluno>();
+imprimeLista(minhaLista);
+
+```
+
+<br>
+
+## Bounded Wildcard (Lower Bounded)
+Exemplo:
+```java
+// Não aceita hedeiros da classe Pessoa, apenas da classe Pessoa "para cima". 
+public void imprimeLista (List<? super Pessoa> listaPessoas) {
+    for(Pessoa p : listaPessoas){
+        System.out.println(p);
+    }
+}
+
+List<Aluno> minhaLista = new List<Aluno>();
+imprimeLista(minhaLista);
+
+```
+
+<br>
+<br>

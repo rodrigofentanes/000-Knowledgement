@@ -142,10 +142,6 @@ Uma **Matriz** pode ser um **array bi-dimensional**, **tri-dimensional**, **mult
 Declaração de matriz bi-dimensional:
 ```java
 int matriz[][] = new int[2][4]; // matriz com 2 linhas X 4 colunas
-
-/* OU */
-
-int matriz[][] = new int[3][3]; // matriz quadrada: 3 linhas X 3 colunas
 ```
 <br>
 <hr> <!-- --------------------------------------------- -->
@@ -156,7 +152,7 @@ int matriz[][] = new int[3][3]; // matriz quadrada: 3 linhas X 3 colunas
 
 int matriz[][] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
 
-// É o mesmo que fazer isso:
+// É o mesmo que fazer isso...
 
 int matriz[][] = {
         {1, 2, 3}, /* 1ª linha: */
@@ -164,7 +160,8 @@ int matriz[][] = {
         {7, 8, 9}  /* 3ª linha: */
     };
 
-// Ou o mesmo que fazer isso:
+// Ou isso...
+
 /* 1ª linha: */
  matriz[0][0] = 1;
  matriz[0][1] = 2;
@@ -189,25 +186,28 @@ int matriz[][] = {
 // Linhas de diferentes tamanhos:
 int matriz[][] = new int[2][];  // cria 2 linhas
 
- matriz[0] = new int[5];  // cria 5 colunas para a linha 0
- matriz[1] = new int[3];  // cria 3 colunas para a linha 1
+matriz[0] = new int[5];  // cria 5 colunas para a linha 0
+matriz[1] = new int[3];  // cria 3 colunas para a linha 1
 
- int matriz[][] = { 
-        {1, 2}, 
-        {4, 5, 6, 7, 8}, 
-        {9, 10, 11} 
-    };
+int matriz[][] = {
+    {1, 2}, 
+    {4, 5, 6, 7, 8}, 
+    {9, 10, 11} 
+};
 ```
 
 <br>
 <br>
 
 # Registros
-Enquanto arrays nos permitem armazenar vários dados de um único tipo de dados, o recurso de registro nos permite armazenar mais de um tipo de dado.
+Enquanto arrays nos permitem armazenar vários dados de um único tipo de dado, o recurso de registro nos permite armazenar mais de um tipo de dado.
 
 Um registro é composto por campos que especificam cada uma das informações que o compõem.
 
 Exemplo, registro "pessoa":
+
+<div align="center">
+
 | Campo | Informação |
 | :-: | :-: |
 | cpf | 111-777-888-22 |
@@ -215,33 +215,47 @@ Exemplo, registro "pessoa":
 | endereço | Rua Augusta |
 | contato | +55(011)98888-6666 |
 
-Toda estrutura de um registro tem um nome (ex.: pessoa), e seus campos (ex.: nome) podem ser acessados por meio do uso do operador ponto ( . ). Por exemplo, para acessar o nome de uma pessoa, poderíamos utilizar a seguinte declaração: 
+</div>
 
-**pessoa.nome**
+Toda estrutura de um registro tem um nome (ex.: pessoa), e seus campos (ex.: nome) podem ser acessados por meio do uso do operador **ponto** ( `.` ) e para acessar o nome de uma pessoa, poderíamos utilizar a seguinte declaração: 
 
-<br><br>
-
-# Listas
-A diferença entre listas e arrays é a de que as listas possuem tamanho ajustável, enquanto arrays possuem tamanho fixo.
+`pessoa.nome`
 
 <br>
+<br>
 
-## Lista de estrutura ligada
-Na estutura do tipo lista existem os nós (veja os nós como os índices dos vetores) onde cada um dos nós conece o valor que está sendo armazenado em seu interior além de conhecer o elemento posterior a ele: por isso ela é chamada de "lista ligada", pois os nós são amaarados com essa indicação de qual é o próximo nó.
+# Listas
+A diferença entre listas e arrays é que as listas possuem tamanho ajustável, enquanto arrays possuem tamanho fixo. Na computação, existem dois tipos de lista: 
+-   Lista de estrutura ligada;
+-   Lista de estrutura duplamente ligada;
+
+<br>
+<br>
+
+# Lista de estrutura ligada
+São unidirecionais, é possível ir apenas para frente.
+
+Na estutura do tipo lista existem os nós (veja os nós como os índices dos vetores) onde cada um dos nós conhece o valor que está sendo armazenado em seu interior além de conhecer o elemento posterior a ele: por isso ela é chamada de "lista ligada", pois os nós são amarrados com essa indicação de qual é o próximo nó.
 
 ![plot](files/listaLigada.png) 
 
-## Lista de estrutura duplamente ligada
-A grande diferença das listas duplamente ligadas para as listas ligadas é que elas são bidirecionais. Vimos que, naturalmente, não conseguimos "andar para trás" em listas ligadas, pois os nós de uma lista ligada sabem somente quem é o próximo elemento. Nas listas duplamente ligadas, os nós sabem quem é o próximo elemento e também sabem quem é o elemento anterior, o que permite a navegação reversa.
+<br>
+<br>
+
+# Lista de estrutura duplamente ligada
+São bidirecionais, é possível ir para frente e para trás. 
+
+Vimos que, naturalmente, não conseguimos "andar para trás" em listas ligadas, pois os nós de uma lista ligada sabem somente quem é o próximo elemento. Nas listas duplamente ligadas, os nós sabem quem é o próximo elemento e também sabem quem é o elemento anterior, o que permite a navegação reversa.
 
 ![plot](files/listaDuplamenteLigada.png)
 
-<br><br>
+<br>
+<br>
 
 # Pilhas / Stack / Empilhamento
 Uma pilha é uma estrutura de dados que serve como uma coleção de elementos e permite o acesso a somente um item de dados armazenado.
 
-O acesso aos itens de uma pilha é restrito, ou seja, somente um item pode ser lido ou removido por vez.
+O **acesso aos itens de uma pilha é restrito**, ou seja, **somente um item pode ser lido ou removido por vez**.
 
 <br>
 
@@ -256,25 +270,32 @@ Em português PEPS (Primeiro a Entrar é o Primeiro a Sair), apresenta o seguint
 <br>
 <br>
 
-## Método Top
+## Métodos de uma pilha
+Existem métodos próprios para a estrutura de pilha, veja: 
+-   `Top`
+    -   ...
+-   `Pop`
+    -   ...
+-   `Push`
+    -   ...
+-   `isEmpty`
+    -   Informa se a pilha está vazia.
 
-## Método Pop
-
-## Método Push
-
-## Método isEmpty
-Informa se a pilha está vazia.
+<br>
+<br>
 
 # Fila
-A estrutura do tipo fila admite remoção de elementos e inserção de novos sujeita à seguinte regra de operação:
--   O elemento remodivo é o que está na estrutura há mais tempo, ou seja, o primeiro objeto inserido na fila é também o primeiro a ser removido seguindo o conceito FIFO.
+A estrutura do tipo fila admite remoção de elementos e inserção de novos sujeito à seguinte regra de operação:
+-   O elemento removido é o que está na estrutura há mais tempo, ou seja, o primeiro objeto inserido na fila é também o primeiro a ser removido seguindo o conceito FIFO.
 
-<br><br>
+<br>
+<br>
 
 # Árvores
 É uma estrutura de dados que organiza seus elementos de forma hierárquica, onde existe um elemento que fica no topo da árvore, chamado de raiz, e existem os elementos subordinados à ele, que são chamados de nós ou folhas.  
 
-<br><br>
+<br>
+<br>
 
 # Tabela hash
 Uma tabela hash, de dispersão ou espalhamento é uma estrutura de dados especial, que associa chaves de pesquisa a valores.
@@ -285,119 +306,31 @@ Exemplo:
 
 ![plot](files/tabelaHashing.png)
 
-A tabela acima permite que noós associemos "valores" a "chaves".
+A tabela acima permite que nós associemos "valores" à "chaves".
 
-Valor: É a posição ou índice onde o elemento se encontra.
-Chave: Parte da informação que compõe o elemento a ser manipulado.
+<br>
+
+## Valor 
+É a posição ou índice onde o elemento se encontra.
+
+<br>
+
+## Chave
+É a parte da informação que compõe o elemento a ser manipulado.
 
 Dessa forma espalhar facilita a busca na estrutura de dados, pois a partir de uma chave podemos acessar de forma rápida uma posição do "array".
 
-<br><br>
+<br>
+<br>
 
 # Gráfos
-São estruturas que permitem programar a relação entre objetos. Os objetos são vértices ou "nós" do grafo. Os relacionamentos são arestas.
+São estruturas que permitem programar a relação entre objetos. 
+
+Os **objetos** são **vértices** ou **nós** do grafo. 
+
+Os **relacionamentos** são **arestas**.
 
 ![plot](files/grafo.png)
-
-<br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Generics
-Serve para:
--   Evitar casting excessivo;
--   Evitar códigos redundantes;
--   Encontrar erros em tempo de compilação;
--   Introduzido desde o Java SE 5.0
-
-Exemplo:
-```java
-Lista<String> minhaLista = new Lista<>();
-
-public class Lista<T>{
-    private T t;
-    ...
-}
-
-```
-
-<br>
-<br>
-
-## Wildcards
--   Unknown Wildcards (Unbounded)
--   Bounded Wildcard (Upper Bounded / Lower Bounded)
-
-## Unknown Wildcards
-Exemplo:
-```java
-// Imprime uma lista de qualquer tipo
-public void imprimeLista (List<?> lista) {
-    for(Object obj : lista){
-        System.out.println(obj);
-    }
-}
-
-List<Aluno> minhaLista = new List<Aluno>();
-imprimeLista(minhaLista);
-
-```
-
-## Upper Bounded Wildcards
-Exemplo:
-```java
-// Só é possivel passar listas de Pessoa e hedeiros de Pessoa 
-public void imprimeLista (List<? extends Pessoa> listaPessoas) {
-    for(Pessoa p : listaPessoas){
-        System.out.println(p);
-    }
-}
-
-List<Aluno> minhaLista = new List<Aluno>();
-imprimeLista(minhaLista);
-
-```
-
-## Lower Bounded Wildcards
-Exemplo:
-```java
-// Não aceita hedeiros da classe Pessoa, apenas da classe Pessoa "para cima". 
-public void imprimeLista (List<? super Pessoa> listaPessoas) {
-    for(Pessoa p : listaPessoas){
-        System.out.println(p);
-    }
-}
-
-List<Aluno> minhaLista = new List<Aluno>();
-imprimeLista(minhaLista);
-
-```
-
-## Convenção para Siglas
--   k para "Key":
-    -   `Map<K,V>`
--   V para "Value":
-    -   `Map<k,V>`
--   E para "Element":
-    -   `List<E>`
--   T para "Type":
-    -   `List<T>`
-    -   Collections#addAll
--   ? para genérico
 
 <br>
 <br>
