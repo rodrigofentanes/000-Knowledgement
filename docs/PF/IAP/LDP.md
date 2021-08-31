@@ -249,7 +249,7 @@ Descrição do exemplo acima:
 <br>
 <br>
 
-# Estrutura de repetição
+# Estruturas de repetição
 També conhecido como **laço de repetição**, é uma estrutura que permite excutar mais de uma vez o mesmo comando ou conjunto de comandos, de acordo com uma condição ou com um **contador**.
 
 <br>

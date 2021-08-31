@@ -1,13 +1,10 @@
 # :back: [README](../../../README.md#programming-languages)
 
 <h1 align="center">
-    Java
+    Introdução
 </h1> 
 
-<br>
-
-# Introdução
-Diferentes de outras linguagens de programação, que são **compiladas** para **código nativo** ainda em tempo de desenvolvimento, a linguagem Java é compilada para um **bytecode** que é interpretado por uma **máquina virtual** (JVM).
+Diferentes de outras linguagens de programação, que são **compiladas** para **código nativo** ainda em tempo de desenvolvimento, a linguagem Java é **compilada** para um **bytecode** e **interpretado** por uma **máquina virtual** (JVM).
 
 <br>
 <br>
