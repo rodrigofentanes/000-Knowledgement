@@ -7,7 +7,7 @@
 <br>
 
 # String
-Como já visto anteriormente, String é uma classe que representa uma sequência de caractéres. Ela vem dentro do pacote **java.lang**.
+String é uma classe que representa uma sequência de caractéres. Ela vem dentro do pacote **java.lang**.
 
 Exesitem diversas formas de utilizar uma string, veja:
 
@@ -27,7 +27,7 @@ public class Programa {
 
         var nomeDaVariavel = new String("Minha string"); // isso é redundante
         
-        // Como visto anteriormente, todos os tipos "Não primitivos" herdam métodos e outras características que podem nos ajudar ao construir nossas soluções. Vemos abaixo alguns métodos próprios do tipo String: 
+        // Todos os tipos "Wrappers" herdam métodos e outras características que podem nos ajudar ao construir nossas soluções. Vemos abaixo alguns métodos próprios do tipo String: 
 
         System.out.println("Char na posição: " + nodaDaVariavel.charAt(5));
 
@@ -52,7 +52,11 @@ public class Programa {
     }
 }
 ```
-## Cheat Sheet (Tipos não primitivos)
+
+<br>
+
+## Tabela de referência
+
  método | Exemplo | Descrição |
 | :-: | :-: | :-: |
 | charAt | variavel.charAt(5); | Retorna o caractere na posição 5 |
@@ -74,9 +78,7 @@ public class Programa {
 <br>
 <br>
 
-# Tratamento de dados
-
-## Dados do tipo Data
+# Dados do tipo Data
 
 | Classe | Método | Exemplo | Descrição |
 | :-: | :-: | :-: | :-: |
@@ -139,7 +141,7 @@ public class Exemplo {
 
 <br>
 
-### after & before
+## after & before
 ```java
 import java.util.Date;
 
@@ -161,7 +163,7 @@ public class Exemplo {
 
 <br>
 
-### compareTo & equals
+## compareTo & equals
 ```java
 import java.util.Date;
 
@@ -178,7 +180,7 @@ public class Exemplo {
 
 <br>
 
-### toInstant (Classe Instant)
+## toInstant (Classe Instant)
 ```java
 import java.util.Date;
 
@@ -194,8 +196,9 @@ public class Exemplo {
 ```
 
 <br>
+<br>
 
-## java.util.calendar
+# java.util.calendar
 Existe para facilitar alguns recursos que a classe `Date` oferecia e foram depreciados exatamente pelo fato da `calendar` chegar com facilidades.
 
 Calendar é uma classe abstrata que provê métodos para converter data entre um instante específico.
@@ -204,12 +207,12 @@ O calendar possui alguns campos específicos para manipulação como MONTH, YEAR
 
 <br>
 
-### Classe calendar
+## Classe calendar
 ![plot](files/classCalendar.png)
 
 <br>
 
-### Capturando o instante com calendar
+## Capturando o instante com calendar
 ```java
 import java.util.Calendar;
 
@@ -222,7 +225,7 @@ public class Exemplo {
 
 <br>
 
-### Manipulando datas
+## Manipulando datas
 ```java
 import java.util.Calendar;
 
@@ -249,7 +252,7 @@ public class Exemplo {
 
 <br>
 
-### Imprimindo da e horas (Alguns exemplos)
+## Imprimindo da e horas (Alguns exemplos)
 ```java
 import java.util.Calendar;
 
@@ -275,8 +278,9 @@ public class Exemplo {
 ```
 
 <br>
+<br>
 
-## java.text.DateFormat & java.text.SimpleDateFormat
+# java.text.DateFormat & java.text.SimpleDateFormat
 Oferece maneiras de formatar e parsear a saída das datas.
 
 ```java
@@ -326,13 +330,14 @@ public class Exemplo {
 ```
 
 <br>
+<br>
 
-## java.time
+# java.time
 É a forma atual de trabalhar com datas. 
 
 <br>
 
-### java.time.LocalDate
+## java.time.LocalDate
 É uma classe imutável para representar uma data. Seu formato padrão é `yyyy-MM-dd`
 
 ```java
@@ -353,7 +358,7 @@ public class Exemplo {
 
 <br>
 
-### java.time.LocalTime
+## java.time.LocalTime
 É uma classe imutável para representar um padrão de hora-minuto-segundo. 
 
 Pode representar até o nível de nanosegundos `12:22:10:123212345`
@@ -376,7 +381,7 @@ public class Exemplo {
 
 <br>
 
-### java.time.LocalDateTime
+## java.time.LocalDateTime
 É uma classe imutável e utilizamos para trabalhar com horas e dias.
 
 É possível manipular hora e data com precisão da nanosegundos `2nd October 2007 at 12:22:10:123212345`

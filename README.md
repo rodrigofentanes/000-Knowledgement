@@ -97,8 +97,13 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
     </summary>
 
 -   [Introdução](docs/PL/Java/intro.md#back-readme)
--   [Projetos em Java](docs/PL/Java/projetosJava.md#back-readme)
--   [Características de um programa Java](docs/PL/Java/programaJava.md#back-readme)
+-   [Tipos de Dados](docs/PL/Java/tipos.md#back-readme)
+-   [Linguagem de Programação](docs/PL/Java/LDPJava.md#back-readme)
+-   [Estrutura de Dados](docs/PL/Java/EDDJava.md#back-readme)
+-   [Modificadores de acesso](docs/PL/Java/modificaAcesso.md#back-readme)
+-   [Padrões de Projetos](docs/PL/Java/padroesDeProjetos.md#back-readme)
+-   [Tratamento de dados](docs/PL/Java/tratamentoDeDados.md#back-readme)
+-   [Tratamento de erros](docs/PL/Java/tratamentoDeErros.md#back-readme)
 
 </details>
 
