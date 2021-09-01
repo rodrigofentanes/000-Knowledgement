@@ -74,7 +74,7 @@ Também é necessário
 <br>
 <br>
 
-# Laços
+# Tomadas de decisão
 
 <br>
 
@@ -122,6 +122,9 @@ public class Programa {
 ```
 
 <br>
+<br>
+
+# Estruturas de repetição
 
 ## for
 O `for` é uma estrutura de três partes:
