@@ -122,29 +122,30 @@ public class Programa {
 ```
 
 <br>
-<br>
 
-# Estruturas de repetição
-
-## for
-O `for` é uma estrutura de três partes:
--   A condição inicial
--   A condição que será verificada em TODAS, inclusive no início, de todas as repetições/interações de um `for` e , sendo a condição verdadeira, entramos na nossa estrutura de laço.
--   A ação de será executada ao final de cada interação.
-
+## Switch
 ```java
 package com.rodrigofentanes;
 
 public class Programa {
-    public static void main(String[] args) {
-        for(int i = 0; i <= 10; i = i++){
-            //faz isso
+    public static void main (String [] args){
+        int numero = 10;
+        switch (numero){
+            case 10:
+                System.out.println("Dez"); //Imprime: Dez
+                break;
+            case 20:
+                System.out.println("Vinte");
+                break;
         }
     }
 }
 ```
 
 <br>
+<br>
+
+# Estruturas de repetição
 
 ## while
 Enquanto algo for verdadeiro, faça. Primeiro testa depois faz.
@@ -176,6 +177,26 @@ public class Programa {
         do{
             i++;
         }while(i <= 10);
+    }
+}
+```
+
+<br>
+
+## for
+O `for` é uma estrutura de três partes:
+-   A condição inicial
+-   A condição que será verificada em TODAS, inclusive no início, de todas as repetições/interações de um `for` e , sendo a condição verdadeira, entramos na nossa estrutura de laço.
+-   A ação de será executada ao final de cada interação.
+
+```java
+package com.rodrigofentanes;
+
+public class Programa {
+    public static void main(String[] args) {
+        for(int i = 0; i <= 10; i = i++){
+            //faz isso
+        }
     }
 }
 ```
