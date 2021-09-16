@@ -1,13 +1,12 @@
 # :back: [README](../../../README.md#fundamentos-da-programação)
 
 <h1 align="center">
-    Arquitetura de sistemas
+    Arquitetura de sistemas web
 </h1> 
 
 <br>
 
 # Introdução
-
 
 # Web Services
 Os serviços web são soluções para aplicações se comunicarem independentemente de linguagem, softwares e hardwares utilizados.
@@ -148,6 +147,8 @@ O REST trabalha cmo o **estado** atual do objeto.
 
 Podem trabalhar com os formatos XML, JSON ou outros.
 
+
+
 Vantagens do REST:
 -   Permite a integração entre aplicações e também entre cliente e servidor em páginas web e aplicações.
 -   Utiliza dos métodos HTTP para definir a operação que está sendo efetuada.
@@ -156,6 +157,8 @@ Vantagens do REST:
 Veja abaixo a estrutura rest:
 
 ![plot](files/estruturaRest.png)
+
+REST utiliza os métodos HTTP para representar a operação a ser realizada em um determinado recurso.
 
 Principais métodos HTTP:
 -   GET (Solicita a representação de um recurso)
@@ -241,4 +244,156 @@ consulta()
 # insere()
 ```
 
+<br>
+<br>
+
 # Conceito de Arquiterura em aplicações para internet
+
+<br>
+<br>
+
+# Tipos de arquitetrura
+
+## Monolito
+![plot](files/monolito.png)
+
+<div align="center">
+
+| Pros | Contras |
+| :-: | :-: |
+| Baixa complexidade | Stack única |
+| Monitoramento simplificado | Compartilhamento de recursos |
+| - | Acoplamento |
+| - | Mais complexo a escalabilidade |
+
+</div>
+
+## Microserviços #1
+![plot](files/microservicos1.png)
+
+<div align="center">
+
+| Pros | Contras |
+| :-: | :-: |
+| Stack dinâmica | Acoplamento |
+| Simples escalabilidade | Monitoramento mais complexo |
+| - | Provisionamento mais complexo |
+
+</div>
+
+<br>
+
+## Microserviços #2
+![plot](files/microservicos2.png)
+
+<div align="center">
+
+| Pros | Contras |
+| :-: | :-: |
+| Stack dinâmica | Monitoramento mais complexo |
+| Simples escalabilidade | Provisionamento mais complexo |
+| Desacoplamento | - |
+
+</div>
+
+<br>
+
+## Microserviços #3
+![plot](files/microservicos3.png)
+
+<div align="center">
+
+| Pros | Contras |
+| :-: | :-: |
+| Stack dinâmica | Provisionamento mais complexo |
+| Simples escalabilidade | Plataforma inteira depende do gerenciador de pipeline |
+| Desacoplamento | - |
+| Menor complexidade | - |
+
+</div>
+
+<br>
+
+## Gerenciamento de erros
+É um ponto em comum entre todos os tipos de arquitetura.
+
+Onde é mais complexo:
+-   Processos asíncronos (Microserviços #2)
+-   Pipeline
+
+Solução:
+-   Dead letter queue
+-   Filas de re-tentativas
+
+<br>
+
+## Gerenciamento de volume de acesso
+É um ponto em comum entre todos os tipos de arquitetura.
+
+<br>
+<br>
+
+# Internet das coisas / Internet of things (Iot)
+A internet das coisas tem o propósito de:
+-   Embutir sensores em objetos do dia-a-dia.
+-   Coletar dados dos sensores.
+-   Usar o dado para tomar decisão.
+
+A internet das coisas passa por trẽs fazes:
+-   **As coisas** (Onde coletamos dados)
+-   **A nuvem** (Onde armazenamos os dados)
+-   **A inteligência** (Onde utilizamos os dados para um propósito)
+
+![plot](files/iot.png)
+
+ Exemplo de iot:
+
+![plot](files/iotEx.png)
+
+## Computação ubíqua
+São tecnologias que se integram à vida do dia-a-dia, ao nosso cotidiano, até serem indistinguíveis dele.
+
+<br>
+<br>
+
+# Arquitetura de mensageria
+Arquiteturas de mensageria são similares à microserviços:
+
+![plot](files/mensageBroker.png)
+
+<div align="center">
+
+| Pros | Contras |
+| :-: | :-: |
+| Desacoplamento | Single point of failure |
+| Facil plug & play | Dificil monitoramento |
+| Comunicação assíncrona | - |
+| Simples escalabilidade | - |
+| Broadcasting | - |
+| Permite Event Source | - |
+
+</div>
+
+## Comunicação
+
+Exemplo de comunicação assíncrona simples:
+![plot](files/comAsync.png)
+
+Exemplo de comunicação assíncrona complexa:
+![plot](files/comAsync2.png)
+
+## Gerenciamento de erros
+Itens importantes ao gerenciar erros:
+-   Dead Letter queue (Filas de re-tentativas)
+-   Monitoramento entre serviços
+-   Rastreamento de fluxo
+
+## Inconsistência de dados
+
+![plot](files/inconsistencia.png)
+
+## Rastreamento de fluxo
+
+![plot](files/rastFlux.png)
+
+Business intelligenca

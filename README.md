@@ -8,7 +8,21 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 <br> 
 <hr> <!-- ------------------------------------------------ -->
 
-# Operating Systems
+<details>
+    <summary>
+        <h1 align="center">Meu conhecimento</h1>
+    </summary>
+
+-   [Unix](docs/OS/unixBasedOS/unix.md#back-readme) 
+-   [Linux/Unix cheat sheet](docs/OS/unixBasedOS/terminalCheatSheet.md#back-readme)
+-   [Controle de acesso à arquivos e diretórios](docs/OS/unixBasedOS/fileAccess.md#back-readme)
+-   [Processos](docs/OS/unixBasedOS/process.md#back-readme)
+-   [Otimizando o terminal](docs/OS/unixBasedOS/coolTerminal.md#back-readme)
+
+</details>
+
+
+# Sistemas Operacionais
 
 <details>
     <summary>
@@ -26,7 +40,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 <br> 
 <hr> <!-- ------------------------------------------------ -->
 
-# Programming Fundamentals
+# Fundamentos da programação
 
 <details>
     <summary>
@@ -62,34 +76,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 <br> 
 <hr> <!-- ------------------------------------------------ -->
 
-## Version-Control Systems
-
-<details>
-    <summary>
-        Fundamentos
-    </summary>
-
--   [Controle de versão](docs/VCS/Intro/controleDeVersao.md#back-readme)
--   [Repository hosting service](docs/VCS/Intro/rhs.md#back-readme)
-
-</details>
-
-<details>
-    <summary>
-        Git
-    </summary>
-
--   [Introdução](docs/VCS/git/intro.md#back-readme)
--   [Comandos Git](docs/VCS/git/comandosGit.md#back-readme)
--   [Configuração](docs/VCS/git/config.md#back-readme)
--   [.gitignore](docs/VCS/git/gitignore.md#back-readme)
-
-</details>
-
-<br> 
-<hr> <!-- ------------------------------------------------ -->
-
-## Programming Languages
+# Linguagens de programação
 
 <details>
     <summary>
@@ -128,7 +115,34 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 <br> 
 <hr> <!-- ------------------------------------------------ -->
 
-## Databases
+# Sitemas de controle de versionamento
+
+<details>
+    <summary>
+        Fundamentos
+    </summary>
+
+-   [Controle de versão](docs/VCS/Intro/controleDeVersao.md#back-readme)
+-   [Repository hosting service](docs/VCS/Intro/rhs.md#back-readme)
+
+</details>
+
+<details>
+    <summary>
+        Git
+    </summary>
+
+-   [Introdução](docs/VCS/git/intro.md#back-readme)
+-   [Comandos Git](docs/VCS/git/comandosGit.md#back-readme)
+-   [Configuração](docs/VCS/git/config.md#back-readme)
+-   [.gitignore](docs/VCS/git/gitignore.md#back-readme)
+
+</details>
+
+<br> 
+<hr> <!-- ------------------------------------------------ -->
+
+# Bancos de dados
 
 <details>
     <summary>
@@ -152,7 +166,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 <br> 
 <hr> <!-- ------------------------------------------------ -->
 
-## Web Development
+# Desenvolvimento Web
 
 <details>
     <summary>
@@ -188,7 +202,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 <br> 
 <hr> <!-- ------------------------------------------------ -->
 
-## Misc / Terms / Verbs
+# Misc / Terms / Verbs
 
 <details>
     <summary>
@@ -212,7 +226,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 <br> 
 <hr> <!-- ------------------------------------------------ -->
 
-## Salesforce
+# Salesforce
 
 <details>
     <summary>
@@ -232,5 +246,10 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 </details>
 
-<br> 
+<br>
+<br>
 <hr> <!-- ------------------------------------------------ -->
+<hr> <!-- ------------------------------------------------ -->
+<br>
+<br>
+

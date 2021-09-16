@@ -282,6 +282,8 @@ Descrição do exemplo acima:
 <br>
 
 # Generics
+A palavra "genérico" que caracteriza esta categoria significa que devemos informar os tipos de chaves e valor, podendo estes serem qualquer tipo.
+
 Serve para:
 -   Evitar casting excessivo;
 -   Evitar códigos redundantes;
