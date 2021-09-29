@@ -8,21 +8,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 <br> 
 <hr> <!-- ------------------------------------------------ -->
 
-<details>
-    <summary>
-        <h1 align="center">Meu conhecimento</h1>
-    </summary>
-
--   [Unix](docs/OS/unixBasedOS/unix.md#back-readme) 
--   [Linux/Unix cheat sheet](docs/OS/unixBasedOS/terminalCheatSheet.md#back-readme)
--   [Controle de acesso à arquivos e diretórios](docs/OS/unixBasedOS/fileAccess.md#back-readme)
--   [Processos](docs/OS/unixBasedOS/process.md#back-readme)
--   [Otimizando o terminal](docs/OS/unixBasedOS/coolTerminal.md#back-readme)
-
-</details>
-
-
-# Sistemas Operacionais
+# Operating Systems
 
 <details>
     <summary>
@@ -40,7 +26,21 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 <br> 
 <hr> <!-- ------------------------------------------------ -->
 
-# Fundamentos da programação
+# Programming
+
+<details>
+    <summary>
+        Geral
+    </summary>
+
+-   [Unix](docs/P/conceitos.md#back-readme)
+
+</details>
+
+<br> 
+<hr> <!-- ------------------------------------------------ -->
+
+# Programming Fundamentals
 
 <details>
     <summary>
@@ -76,7 +76,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 <br> 
 <hr> <!-- ------------------------------------------------ -->
 
-# Linguagens de programação
+# Programming Languages
 
 <details>
     <summary>
@@ -115,58 +115,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 <br> 
 <hr> <!-- ------------------------------------------------ -->
 
-# Sitemas de controle de versionamento
-
-<details>
-    <summary>
-        Fundamentos
-    </summary>
-
--   [Controle de versão](docs/VCS/Intro/controleDeVersao.md#back-readme)
--   [Repository hosting service](docs/VCS/Intro/rhs.md#back-readme)
-
-</details>
-
-<details>
-    <summary>
-        Git
-    </summary>
-
--   [Introdução](docs/VCS/git/intro.md#back-readme)
--   [Comandos Git](docs/VCS/git/comandosGit.md#back-readme)
--   [Configuração](docs/VCS/git/config.md#back-readme)
--   [.gitignore](docs/VCS/git/gitignore.md#back-readme)
-
-</details>
-
-<br> 
-<hr> <!-- ------------------------------------------------ -->
-
-# Bancos de dados
-
-<details>
-    <summary>
-        Fundamentos
-    </summary>
-    
--   [Introdução](docs/DB/Fundamentos/intro.md#back-readme)
-
-</details>
-
-<details>
-    <summary>
-        SQL SERVER
-    </summary>
-    
--   [Introdução](docs/DB/SQLSERVER/intro.md#back-readme)
--   [SQL Server Cheat Sheet](docs/DB/SQLSERVER/SQLServerCheatSheet.md#back-readme)
-
-</details>
-
-<br> 
-<hr> <!-- ------------------------------------------------ -->
-
-# Desenvolvimento Web
+# Web Development
 
 <details>
     <summary>
@@ -196,6 +145,57 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
     </summary>
 
 -   [Introdução](docs/WD/CSS/intro.md#back-readme)
+
+</details>
+
+<br> 
+<hr> <!-- ------------------------------------------------ -->
+
+# Version-Control Systems
+
+<details>
+    <summary>
+        Fundamentos
+    </summary>
+
+-   [Controle de versão](docs/VCS/Intro/controleDeVersao.md#back-readme)
+-   [Repository hosting service](docs/VCS/Intro/rhs.md#back-readme)
+
+</details>
+
+<details>
+    <summary>
+        Git
+    </summary>
+
+-   [Introdução](docs/VCS/git/intro.md#back-readme)
+-   [Comandos Git](docs/VCS/git/comandosGit.md#back-readme)
+-   [Configuração](docs/VCS/git/config.md#back-readme)
+-   [.gitignore](docs/VCS/git/gitignore.md#back-readme)
+
+</details>
+
+<br> 
+<hr> <!-- ------------------------------------------------ -->
+
+# Databases
+
+<details>
+    <summary>
+        Fundamentos
+    </summary>
+    
+-   [Introdução](docs/DB/Fundamentos/intro.md#back-readme)
+
+</details>
+
+<details>
+    <summary>
+        SQL SERVER
+    </summary>
+    
+-   [Introdução](docs/DB/SQLSERVER/intro.md#back-readme)
+-   [SQL Server Cheat Sheet](docs/DB/SQLSERVER/SQLServerCheatSheet.md#back-readme)
 
 </details>
 
@@ -246,10 +246,5 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 </details>
 
-<br>
-<br>
+<br> 
 <hr> <!-- ------------------------------------------------ -->
-<hr> <!-- ------------------------------------------------ -->
-<br>
-<br>
-
