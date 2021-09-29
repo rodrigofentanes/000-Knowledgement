@@ -5,7 +5,7 @@
 </h1>
 
 # Hello World
-Abaixo o código Java de uma programa simples que irá imprimir no console o texto "Hello World".
+Abaixo o código Java de um programa simples que irá imprimir no console o texto "Hello World".
 ```java
 public class Hello {
     public static void main(String[] args) {

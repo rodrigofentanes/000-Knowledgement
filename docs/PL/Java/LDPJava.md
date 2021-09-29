@@ -33,18 +33,6 @@
 <br>
 <br>
 
-# Métodos
-Existe uma diferênça conceitual entre funções e métodos, apesar de organicamente terem o mesmo comportamento.
-
-Superficialmente, podemos dizer que uma função é a "função" que existe fora e independentemente de uma classe. Já um método, é uma "função" que é propriedade de uma classe.
-
-Como em Java tudo funciona através de classes então sempre chamaremos suas funções de métodos.
-
-> Em paradigma orientado a objeto, o ideal é que toda função seja uma **função auxiliar**.
-
-<br>
-<br>
-
 # Interfaces
 Interfaces são como contratos entre as implementações.
 Uma interface por extender de outra interface.

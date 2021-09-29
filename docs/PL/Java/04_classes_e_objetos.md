@@ -2,35 +2,99 @@
 
 <h1 align="center">
     Classes e Objetos
-</h1> 
+</h1>
+
+Por ser um linguagem orientada à objetos, Java suporta vários conceitos desse paradigma.
+
+<br>
+
+# Objeto
+Em Java, objetos são caracterizados por **estados (states)** e **comportamentos (behaviors)**. Dessa forma, imaginemos que tenhamos um objeto dará forma a um cachorro. Alguns de seus **estados** caracterizarão seu *nome*, *cor* e *raça*. Alguns dos seus **comportamentos** caracterizarão *comer*, *latir* e *abanar o rabo*.
+
+Todo objeto é uma instância de uma classe. Assim podemos dizer que um objeto é a classe em vida, ou seja, uma classe alocada na memória do computador durante a execução do programa.
+
+<br>
+<br>
+
+# Instância
+**Instanciar** uma classe nada mais é que pegar o molde da classe e subir para a memória do computador, dando vida à classe. Ao instarciarmos uma classe, ela passa a ser chamada de **objeto**.
+
+<br>
+<br>
 
 # Classes
 A palavra reservada **class** é utilizada para definir uma classe java.
 
 Por convenção **toda** classe java começa com letra **maiúscula**.
 
-Todo programa Java roda em cima de uma classe: 
+Todo programa Java roda em cima de uma classe.
+
+A classe é como um modelo ou projeto que descreve os estados e comportamentos que qualquer objeto deste tipo poderá suportar.
+
+Abaixo, uma classe de exemplo: 
 
 ```java
-public class NomeDaClasse
+public class Cachorro {
+    String nome;
+    int raca;
+    String cor;
+
+    void comer() {
+        System.out.println("Glub Glub");
+    }
+
+    void latir() {
+        System.out.println("Au Au");
+    }
+
+    void dormir() {
+        System.out.println("zZ zZ");
+    }
+}
 ```
 
-Note a palavra **public**, ela é uma **palavra reservada** utilizada para definir um **modificador de acesso**. 
+As **variáveis** `nome`, `raca` e `cor` são **propriedades** da classe `Cachorro` que definirão seus **estados** enquanto objeto.
 
-<br>
+As **funções** `comer`, `latir` e `dormir` são **métodos** da classe `Cachorro` que definirão seus **comportamentos** enquanto objeto.
 
-## Construtores
-Um construtor é um método "especial" que leva o mesmo nome da classe em que está inserido e especifica como iremos "construir" esta classe quando formos instaciá-la.
+> Note a palavra **public**, ela é uma **palavra reservada** utilizada para definir um **modificador de acesso**.
 
-<br>
+> Existe uma diferença conceitual entre funções e métodos, apesar de organicamente serem similares. Superficialmente, podemos dizer que uma função é a "função" que existe fora e independentemente de uma classe. Já um método, é uma "função" que é propriedade de uma classe.
 
-## Instanciação
-**Instanciar** uma classe nada mais é que pegar o molde da classe e subir para a memória do computador, dando vida a classe. Ao instarciarmos uma classe, ela passa a ser chamada de **objeto**.
-
-<br>
-
-## Objeto
-Um objeto é a classe em vida, ou seja, uma classe alocada na memória do computador durante a execução do programa.
+> Como em Java tudo funciona através de classes então sempre chamaremos suas funções de métodos.
+> Em paradigma orientado a objeto, o ideal é que todo método seja uma **função auxiliar**.
 
 <br>
 <br>
+
+# Construtores
+Um construtor é um método **especial** que leva o mesmo nome da classe em que está inserido e especifica como iremos "construir" esta classe quando formos instaciá-la.
+
+Toda classe tem um construtor, mesmo que você não crie um construtor para sua classe o compilador Java irá inicializar automaticamente um construtor default para a classe.
+
+```java
+public class Cachorro {
+    public Cachorro() {
+        
+    }
+
+    public Cachorro(String raca) {
+        // Um construtor com um parâmetro, raca.
+    }
+}
+```
+
+Na classe acima, nós criamos dois construtores, um sem argumentos e outro com um argumento.
+
+O propósito de um construtor é definir um modelo de como criaremos nossos objetos.
+
+<br>
+<br>
+
+# Instanciando Classes
+Para criar um novo objeto a partir de determinada classe, precisamos instanciá-lo. Esta instanciação é feita através da **palavra chave (keyword)** `new`, veja abaixo:
+
+```java
+
+```
+
