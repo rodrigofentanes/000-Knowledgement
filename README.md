@@ -83,14 +83,12 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
         Java
     </summary>
 
--   [Introdução](docs/PL/Java/intro.md#back-readme)
--   [Tipos de Dados](docs/PL/Java/tipos.md#back-readme)
--   [Linguagem de Programação](docs/PL/Java/LDPJava.md#back-readme)
--   [Estrutura de Dados](docs/PL/Java/EDDJava.md#back-readme)
--   [Modificadores de acesso](docs/PL/Java/modificaAcesso.md#back-readme)
--   [Padrões de Projetos](docs/PL/Java/padroesDeProjetos.md#back-readme)
--   [Tratamento de dados](docs/PL/Java/tratamentoDeDados.md#back-readme)
--   [Tratamento de erros](docs/PL/Java/tratamentoDeErros.md#back-readme)
+-   [Boas Práticas](docs/PL/Java/00_boas_praticas.md#back-readme)
+-   [Comandos](docs/PL/Java/00_Comandos.md#back-readme)
+-   [Introdução](docs/PL/Java/01_introducao.md#back-readme)
+-   [A Plataforma Java](docs/PL/Java/02_plataforma.md#back-readme)
+-   [O Programa Java](docs/PL/Java/03_programa.md#back-readme)
+-   [Classes e Objetos](docs/PL/Java/04_classes_e_objetos.md#back-readme)
 
 </details>
 

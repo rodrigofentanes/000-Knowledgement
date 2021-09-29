@@ -1,59 +1,15 @@
 # :back: [README](../../../README.md#programming-languages)
 
 <h1 align="center">
-    Padrão de projeto Java
-</h1> 
+   Projeto Java
+</h1>
 
-<br>
+# Packages
+São as pastas dentro da estrutura de nosso projeto. Abaixo indicamos que estamos na pasta `com.rodrigofentanes` e dentro dela temos a pasta `nomeDaPasta`:
 
-# Comandos básicos
-
-| Comando | Exemplo | Descrição |
-| :-: | :-: | :-: |
-| javac | `javac hello.java` | Compila um código Java para um bytecode. Neste caso, ele pegará o arquivo `hello.java` e compilará no arquivo `hello.class` |
-| java | `java hello` | Executa arquivos java. Neste caso, executa o arquivo `hello.class`. |
-
-<br>
-<br>
-
-# IDE
-Para trabalhar com projetos em Java o ideal é que utilizemos uma IDE voltada para isso. Boas IDEs para desenvolver em java são:
--   **IntelliJ IDEA**
--   **Eclipse**
-
-<br>
-<br>
-
-# Organização dos arquivos
-
-## Pastas
-Um projeto Java terá uma pasta com seu nome, exemplo "**meuProjeto**".
-
-Esta pasta "meuProjeto" conterá dois arquivos inicialmente:
--   **src**
-    -   Contêm o código do projeto.
--   **JRE System Library**
-    - Contês as bibliotecas que serão utilizadas pelo projeto.
-
-<br>
-
-## src
-Nesta pasta emcontraremos os packages (pacotes) do projeto, exemplo "**br.com.umPacoteQualquer**". Note que cada ponto no nome do pacote representa uma pasta, veja abaixo como ficaria esta estrutrura de pastas:
--   meuProjeto
-    -   source
-        -   br
-            -   com
-                -   umPacoteQualquer
-
-<br>
-
-## Group
-É um conceito de java que discrimina o domínio online da empresa que está desenvolvendo o projeto, por exemplo, o 'google.com.br' teria o Group 'br.com.google'
-
-<br>
-
-## Artifact
-É o nome do projeto em que estamos trabalhando.
+```java
+package com.rodrigofentanes.nomeDaPasta;
+```
 
 <br>
 <br>
