@@ -95,6 +95,66 @@ O propósito de um construtor é definir um modelo de como criaremos nossos obje
 Para criar um novo objeto a partir de determinada classe, precisamos instanciá-lo. Esta instanciação é feita através da **palavra chave (keyword)** `new`, veja abaixo:
 
 ```java
+public class Cachorro {
+    public Cachorro(String raca) {
+        System.out.println("Você passou a raça: " + raca);
+    }
 
+    public static void main(String []args) {
+        Cachorro floquinho = new Cachorro("Poodle");
+    }
+}
+```
+No código acima vemos a criação de um objeto chamado **floquinho** do tipo **Cachorro** e raça **Poodle**. Ao intanciar o objeto em memória, o programa irá mostrar a mensagem " `Você passou a raça: Poodle` ".
+
+# Acessando variáveis e métodos
+Para acessar variáveis e métodos de uma classe temos que instanciá-los na memória por meio da keyword `new`, sabendo disso observe abaixo:
+
+```java
+/* Começamos por criar o objeto */
+ObjectReference = new Constructor();
+
+/* Depois, chamamos a variável */
+ObjectReference.nomeDaVariavel;
+
+/* Ou então, chamamos o método da classe */
+ObjectReference.nomeDoMetodo();
 ```
 
+<br>
+
+Veja abaixo um exemplo completo:
+
+```java
+public class Dog {
+    String name;
+
+    public Dog(String breed) {
+        System.out.println("You passed the breed :" + breed );
+    }
+
+    public void setName(String puppyName) {
+        name = puppyName;
+    }
+
+    public String getName() {
+        System.out.println("Puppy's name is :" + name);
+        return name;
+    }
+
+    public static void main(String []args) {
+         // Instacia objeto
+        Dog puppy = new Dog("poodle");
+
+        // Define o 'name' para 'Tommy' 
+        puppy.setName("Tommy");
+
+        // Obtêm o 'name' do objeto
+        puppy.getName(); 
+        
+        // Printa o 'name' do objeto
+        System.out.println("Variable Value :" + puppy.name);
+    }
+}
+```
+> Note acima os métodos chamados `getName` e `setName`, estes métodos são chamados respectivamente de **getter** e **setter**, são utilizados para obter e definir valores sem comprometer a integridade dos dados. Trataremos destes conceitos mais à frente.
