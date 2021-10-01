@@ -1,7 +1,7 @@
 # :back: [README](../../../README.md#programming-languages)
 
 <h1 align="center">
-    Boas Práticas Java
+    Boas Práticas - Java
 </h1>
 
 # Convenções de nomes

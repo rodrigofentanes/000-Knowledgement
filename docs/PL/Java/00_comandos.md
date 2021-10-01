@@ -1,7 +1,7 @@
 # :back: [README](../../../README.md#programming-languages)
 
 <h1 align="center">
-    Cheat Sheet Java
+    Comandos - Java
 </h1> 
 
 # Comandos básicos

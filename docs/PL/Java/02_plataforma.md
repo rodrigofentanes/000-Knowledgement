@@ -1,7 +1,7 @@
 # :back: [README](../../../README.md#programming-languages)
 
 <h1 align="center">
-    Plataforma Java
+    A Plataforma - Java
 </h1>
 
 A plataforma Java é dividida em:

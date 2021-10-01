@@ -1,7 +1,7 @@
 # :back: [README](../../../README.md#programming-languages)
 
 <h1 align="center">
-    Classes e Objetos
+    Classes e Objetos - Java
 </h1>
 
 Por ser um linguagem orientada à objetos, Java suporta vários conceitos desse paradigma.
@@ -106,6 +106,9 @@ public class Cachorro {
 }
 ```
 No código acima vemos a criação de um objeto chamado **floquinho** do tipo **Cachorro** e raça **Poodle**. Ao intanciar o objeto em memória, o programa irá mostrar a mensagem " `Você passou a raça: Poodle` ".
+
+<br>
+<br>
 
 # Acessando variáveis e métodos
 Para acessar variáveis e métodos de uma classe temos que instanciá-los na memória por meio da keyword `new`, sabendo disso observe abaixo:
