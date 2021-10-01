@@ -90,8 +90,8 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 -   [Classes e Objetos](docs/PL/Java/04_classes_e_objetos.md#back-readme)
 -   [Variáveis](docs/PL/Java/05_variaveis.md#back-readme)
 -   [Tipos de dados](docs/PL/Java/06_tipos_de_dados.md#back-readme)
--   [Tipos de dados](docs/PL/Java/07_atribuicao_e_referencia.md#back-readme)
--   [Tipos de dados](docs/PL/Java/08_arrays.md#back-readme)
+-   [Atribuição e Referência](docs/PL/Java/07_atribuicao_e_referencia.md#back-readme)
+-   [Arrays](docs/PL/Java/08_arrays.md#back-readme)
 
 </details>
 
