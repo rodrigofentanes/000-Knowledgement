@@ -4,18 +4,138 @@
    Tipos de dados Java
 </h1>
 
+Em java, um tipo de dado pode ser **primitivo** ou **não-primitivo**.
+
+# Tipos primitivos
+São tipos pré-definidos e disponibilizados pela própria linguagem Java. Eles são oito:
+-   byte
+-   short
+-   long
+-   char
+-   int
+-   float
+-   Boolean
+-   double
+
+> Um tipo primitivo **nunca** poderá ter valor igual a `nulo`.
+
+> Por não poderem ser nulos, os tipo primitivos tem valores default atribuídos à eles caso não sejam associados a um valor.
+
+## byte 
+É um valor 8-bits inteiro assinado com complemento de dois. Seu intervalo de valores vai do -128 até o 127. Pode ser útil ao salvar informações básicas em grandes arrays. Pode ser utilizado também no lugar do int, limitando os valores para atribuição, podendo servir como documentação.  
+
+> Valor default: 0 (zero).
+
+> Este tipo é útil para economizar espaço em grandes arrays, visto que são quatro vezes menores que uma variável do tipo inteiro.
+
+<br>
+
+## short
+É um valor 16-bits inteiro assinado com complemento de dois. Seu intervalo de valores vai do -32768 até o 32767. As mesmas observações do tipo byte como o array e a substituição do int se aplicam aqui.
+
+> Valor default: 0 (zero).
+
+> Também é útil na economia de espaço assim como o tipo byte.
+
+<br>
+
+## int
+É um valor 32-bits inteiro assinado com complemento de dois. Seu intervalo de valores vai do -2,147,483,648 (-2^31) até o 2,147,483,647 (2^31 – 1). 
+
+> Valor default: 0 (zero).
+
+> A partir do Java 8 é possível representar o inteiro como um valor 32-bits não assinado, ou seja, somente para valores positivos que possuem o intervalo do 0 ao 2^32 – 1. 
+
+> Para conseguir representar como um inteiro positivo, podemos utilizar a classe wrapper java.lang.Integer.
+
+<br>
+
+## long
+É um valor 64-bits inteiro assinado com complemento de dois. Seu intervalo de valores vai do -9,223,372,036,854,775,808 (-2^63) até o 9,223,372,036,854,775,807 (2^63 – 1). 
+
+> Valor default: 0 (zero).
+
+> A partir do Java 8 é possível representar o long como um valor 64-bits não assinado, ou seja, somente para valores positivos que possuem o intervalo do 0 ao 2^64 – 1. 
+
+> Para conseguir representar como um inteiro positivo, podemos utilizar a classe wrapper java.lang.Long.
+
+
+<br>
+
+## float
+É um valor com single-precision de 32 bits que segue a especificação 754 da IEEE de valores flutuantes. Ele não possui limite de tamanho e não possui boa precisão. Se você deseja economizar memória, este tipo pode ser utilizado no lugar do double. 
+
+> Valor default: 0.0F.
+
+> Esse tipo de dado não é aconselhável para valores de precisão como valores monetários ou valores de engenharia. Para esses casos, utilizar a classe java.math.BigDecimal.
+
+<br>
+
+## double
+É um valor com double-precision de 64 bits que segue a especificação 754 da IEEE de valores flutuantes. Ele não possui limite de tamanho e não possui boa precisão.
+
+
+> Valor default: 0.0d.
+
+> Esse tipo de dado não é aconselhável para valores de precisão como valores monetários ou valores de engenharia. Para esses casos utilizar a classe java.math.BigDecimal.
+
+<br>
+
+## Boolean
+É um valor que permite apenas dois tipos de valores true e false, assim apenas para itens com valores duais que deve ser utilizado. Apesar de representar um bit de informação seu tamanho real não é definido precisamente.
+
+<br>
+
+## char
+É um valor 16-bits Unicode simples. Seu intervalo de valores vai do ‘\u0000’ ou 0 até o valor máximo ‘\uffff’ ou 65535. É utilizado para armazenar caractéres.
+
+<br>
+
+## Tabela de referência
+
+<div align="center">
+
+| Tipo | Valor default | Consumo de memória | Valor mínimo | Valor máximo | Precisão |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| **boolean** | false | 1 bit | - | true ; false | - |
+| **byte** | 0 | 1 byte | -128 | 127 | - |
+| **char** | 'u0000' | 2 bytes | 'u0000' | 'uffff' | - |
+| **short** | 0 | 2 bytes | -32768 | 32767 | - |
+| **int** | 0 | 4 bytes | -2147483648 | 2147483647 | - |
+| **long** | 0L | 8 bytes | -9223372036854775808L | 9223372036854775807L | - |
+| **float** | 0.0f | 4 bytes | -3,4028E + 38 | 3,4028E + 38 | 6 - 7 dígitos |
+| **double** | 0.0d | 8 bytes | -1,7976E + 308 | 1,7976E + 308 | 15 dígitos |
+| **String** (ou qualquer outro **objeto**) | - | null | - | - | **Não é um tipo primitivo** |
+
+</div>
+
+<br>
+<br>
+
+# Tipos não-primitivos
+Estes são definidos pelos construtores das classes às quais pertencem. Estes ajudam os programadores a acessar os objetos na memória. Dentre outros, temos os **String** e **Array**.
+
+
+
+
+
+
+
+
+
+
+
+# Tipagem
 A linguagem Java é estaticamente tipada, ou seja, é necessário declarar sempre o tipo das variáveis, atributos e parâmetros que deseja-se utilizar.
 
 <br>
-<br>
 
-# Tipagem forte
+## Tipagem forte
 Significa que, em java, uma vez atribuído um tipo a uma variável, não conseguiremos mudar este tipo.
 
 <br>
-<br>
 
-# Tipagem estática
+## Tipagem estática
 Significa que, em Java, os tipos são verificados em tempo de compilação, diferentemente de uma linguagem de tipagem dinâmica em que a tipagem é verificada em tempo de execução. Isso quer dizer que logo ao compilar o código Java, você já obterá um erro caso atribua um valor incompatível com uma variável.
 
 <br>
@@ -150,70 +270,9 @@ public class ExemploCasting {
 <br>
 <br>
 
-# Tipos primitivos
-Um tipo primitivo **nunca** poderá ter valor igual a `nulo`.
 
-Por não poderem ser nulos, os tipo primitivos tem valores default atribuídos à eles caso não sejam associados a um valor.
 
-Os oito tipos primitivos são:
 
-## byte 
-É um valor 8-bits inteiro assinado com complemento de dois. Seu intervalo de valores vai do -128 até o 127. Pode ser útil ao salvar informações básicas em grandes arrays. Pode ser utilizado também no lugar do int, limitando os valores para atribuição, podendo servir como documentação.
-
-<br>
-
-## short
-É um valor 16-bits inteiro assinado com complemento de dois. Seu intervalo de valores vai do -32768 até o 32767. As mesmas observações do tipo byte como o array e a substituição do int se aplicam aqui.
-
-<br>
-
-## int
-É um valor 32-bits inteiro assinado com complemento de dois. Seu intervalo de valores vai do -2^31 até o 2^31 – 1. A partir do Java 8 é possível representar o inteiro como um valor 32-bits não assinado, ou seja, somente para valores positivos que possuem o intervalo do 0 ao 2^32 – 1. Para conseguir representar como um inteiro positivo utilizar a classe wrapper java.lang.Integer.
-
-<br>
-
-## long
-É um valor 64-bits inteiro assinado com complemento de dois. Seu intervalo de valores vai do -2^63 até o 2^63 – 1. A partir do Java 8 é possível representar o long como um valor 64-bits não assinado, ou seja, somente para valores positivos que possuem o intervalo do 0 ao 2^64 – 1. Para conseguir representar como um inteiro positivo utilizar a classe wrapper java.lang.Long.
-
-<br>
-
-## float
-É um valor com single-precision de 32 bits que segue a especificação 754 da IEEE de valores flutuantes. Se você deseja economizar memória pode ser utilizado no lugar do double. Esse tipo de dado não é aconselhável para valores de precisão como valores monetários ou valores de engenharia. Para esses casos utilizar a classe java.math.BigDecimal.
-
-<br>
-
-## double
-É um valor com double-precision de 64 bits que segue a especificação 754 da IEEE de valores flutuantes. Esse tipo de dado não é aconselhável para valores de precisão como valores monetários ou valores de engenharia. Para esses casos utilizar a classe java.math.BigDecimal.
-
-<br>
-
-## boolean
-É um valor que permite apenas dois tipos de valores true e false, assim apenas para itens com valores duais que deve ser utilizado. Apesar de representar um bit de informação seu tamanho real não é definido.
-
-<br>
-
-## char
-É um valor 16-bits Unicode simples. Seu intervalo de valores vai do ‘\u0000’ ou 0 até o valor máximo ‘\uffff’ ou 65535.
-
-<br>
-
-## Tabela de referência
-
-<div align="center">
-
-| Tipo | Valor default | Consumo de memória | Valor mínimo | Valor máximo | Precisão |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| **boolean** | false | 1 bit | - | true ; false | - |
-| **byte** | 0 | 1 byte | -128 | 127 | - |
-| **char** | 'u0000' | 2 bytes | 'u0000' | 'uffff' | - |
-| **short** | 0 | 2 bytes | -32768 | 32767 | - |
-| **int** | 0 | 4 bytes | -2147483648 | 2147483647 | - |
-| **long** | 0L | 8 bytes | -9223372036854775808L | 9223372036854775807L | - |
-| **float** | 0.0f | 4 bytes | -3,4028E + 38 | 3,4028E + 38 | 6 - 7 dígitos |
-| **double** | 0.0d | 8 bytes | -1,7976E + 308 | 1,7976E + 308 | 15 dígitos |
-| **String** (ou qualquer outro **objeto**) | - | null | - | - | **Não é um tipo primitivo** |
-
-</div>
 
 <br>
 <br>
