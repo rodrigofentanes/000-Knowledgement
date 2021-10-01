@@ -88,8 +88,8 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 -   [A Plataforma Java](docs/PL/Java/02_plataforma.md#back-readme)
 -   [O Programa Java](docs/PL/Java/03_programa.md#back-readme)
 -   [Classes e Objetos](docs/PL/Java/04_classes_e_objetos.md#back-readme)
--   [Classes e Objetos](docs/PL/Java/05_variaveis.md#back-readme)
--   [Classes e Objetos](docs/PL/Java/06_tipos_de_dados.md#back-readme)
+-   [Variáveis](docs/PL/Java/05_variaveis.md#back-readme)
+-   [Tipos de dados](docs/PL/Java/06_tipos_de_dados.md#back-readme)
 
 </details>
 
