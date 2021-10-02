@@ -32,9 +32,9 @@ Veja abaixo mais exemplos interessantes:
 int x = 3;
 int y = ++x * 5 / x-- + --x;
 // Na expressão acima:
-// No primeiro x ele incrementa o x e então imprime
-// No segundo x ele imprime o x e depois decrementa
-// No terceiro x ele decrementa o x e então o imprime
+// No primeiro x ele incrementa o x e então executa
+// No segundo x ele executa o x e depois decrementa
+// No terceiro x ele decrementa o x e então o executa
 // O que resulta na expressão:
 // 4 * 5 / 4 + 2
 System.out.println("x is " + x); // Imprime 2
