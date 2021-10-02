@@ -84,7 +84,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 
 -   [Boas Práticas](docs/PL/Java/00_boas_praticas.md#back-readme)
 -   [Comandos](docs/PL/Java/00_comandos.md#back-readme)
--   [Comandos](docs/PL/Java/00_operadores.md#back-readme)
+-   [Operadores](docs/PL/Java/00_operadores.md#back-readme)
 -   [Introdução](docs/PL/Java/01_introducao.md#back-readme)
 -   [A Plataforma Java](docs/PL/Java/02_plataforma.md#back-readme)
 -   [O Programa Java](docs/PL/Java/03_programa.md#back-readme)
