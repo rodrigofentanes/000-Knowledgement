@@ -191,76 +191,7 @@ public class Programa {
 <br>
 <br>
 
-# Tomadas de decisão
 
-<br>
-
-## if / else / else if
-```java
-package com.rodrigofentanes;
-
-public class Programa {
-    public static void main(String[] args) {
-        var condicao = true;
-
-        if (condicao){
-            // faça isso pois a condição a verdadeira
-        }else{
-            // faça isso pois a condição é falsa
-        }
-
-        if (condicao){
-            // se condicao verdadeira
-        } else if (condicao == false) {
-            // se outra condicao verdadeira
-        } else if (condicao == 10) {
-            // se outra condicao verdadeira
-        } else {
-            // se nenhuma das condições acima for verdadeira
-        }
-    }
-}
-```
-
-<br>
-
-## Ternário
-```java
-package com.rodrigofentanes;
-
-public class Programa {
-    public static void main(String[] args) {
-        final var condicao = false;
-        final var ternario = condicao ? "é verdadeira" : "é falsa";
-        System.out.println(ternario); // vai imprimir "é falsa"
-        
-    }
-}
-```
-
-<br>
-
-## Switch
-```java
-package com.rodrigofentanes;
-
-public class Programa {
-    public static void main (String [] args){
-        int numero = 10;
-        switch (numero){
-            case 10:
-                System.out.println("Dez"); //Imprime: Dez
-                break;
-            case 20:
-                System.out.println("Vinte");
-                break;
-        }
-    }
-}
-```
-
-<br>
-<br>
 
 # Estruturas de repetição
 
