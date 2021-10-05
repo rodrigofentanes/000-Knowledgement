@@ -93,7 +93,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 -   [Tipos de dados](docs/PL/Java/06_tipos_de_dados.md#back-readme)
 -   [Atribuição e Referência](docs/PL/Java/07_atribuicao_e_referencia.md#back-readme)
 -   [Arrays](docs/PL/Java/08_arrays.md#back-readme)
--   [Statements](docs/PL/Java/09_declaracoes.md#back-readme)
+-   [Statements](docs/PL/Java/09_instrucoes_de_sistema.md#back-readme)
 
 </details>
 
