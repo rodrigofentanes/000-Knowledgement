@@ -57,18 +57,12 @@ Java suporta três tipos de variáveis:
 2. Static
 3. Instance
 
-## Local Variables
-Essas são variáveis declaradas dentro de um corpo de método. Elas só podem ser acessado de dentro desse método.
-
-## Instance Variables
-Essas são as variáveis que foram definidas sem o uso de uma palavra-chave STATIC. Essas variáveis são específicas de um objeto.
-
-## Static Variables
-Estas são variáveis inicializadas uma vez e no início da execução do programa. Você deve inicializá-las antes das variáveis de instância.
-
 <br>
 
-O exemplo a seguir mostra as diferentes variáveis Java:
+O exemplo a seguir mostra os diferentes tipos de variáveis Java:
+
+Exemplo 1:
+
 ```java
 class VariablesExample {
     int p = 1; //an instance variable
@@ -81,3 +75,93 @@ class VariablesExample {
 }
 ```
 
+<br>
+<br>
+
+# Local Variables
+Essas são variáveis declaradas dentro de um corpo de método. Elas só podem ser acessado de dentro desse método.
+
+<br>
+<br>
+
+# Instance Variables
+Essas são as variáveis que foram definidas sem o uso de uma palavra-chave STATIC. Essas variáveis são específicas de um objeto e são instânciadas no momento em que o objeto é instanciado.
+
+<br>
+<br>
+
+# Static Variables
+Estas são variáveis inicializadas uma vez e no início da execução do programa. É uma boa prática inicializá-las antes das variáveis de instância.
+
+Uma variável ou método `static` não precisa ser instanciado para ser chamado, porém para que isso seja possível este método ou variável deve ser declarado como estático, observe abaixo:
+
+Exemplo 2:
+
+```java
+public class Main
+{
+    public static class MethodCallExample {
+        static int p = 10; // A variável utilizada dentro do método estático também deve ser declarada como estática. Caso contrário um erro irá ocorrer.
+        
+        static void metodoEstatico(String texto) {
+            System.out.println("O texto é: " + texto); // 
+            System.out.println("O valor da variável dentro da classe chamada é: " + p); 
+        }
+    }
+    
+	public static void main(String[] args) {
+		MethodCallExample.metodoEstatico("Meu texto"); 
+		/*
+		    Imprime: 
+		    O texto é: Meu texto
+		    O valor da variável dentro da classe chamada é: 10
+		*/
+	}
+}
+```
+
+> Para saber se uma variável/método deve ser estática basta analisar o **contexto**, se não precisa de contexto, como o `Math.round()`, ela será `static`.
+
+> Dentro de uma variável/método estático não se usa `this` pois, pelo fato de não haver contexto, esse pode ser utilizado em qualquer lugar.
+
+<br>
+
+Caso seu método necessite de um contexto, então teremos que fazer por meio de instanciação, veja: 
+
+Exemplo 3:
+
+```java
+public class Main
+{
+    public static class MethodCallExample {
+        int p = 10;
+        
+        void metodoNaoEstatico(String texto) {
+            System.out.println("O texto é: " + texto); // 
+            System.out.println("O valor da variável dentro da classe chamada é: " + p); 
+        }
+    }
+    
+	public static void main(String[] args) {
+		MethodCallExample mc = new MethodCallExample(); 
+		mc.metodoNaoEstatico("Meu texto"); 
+		/*
+		    Imprime: 
+		    O texto é: Meu texto
+		    O valor da variável dentro da classe chamada é: 10
+		*/
+	}
+}
+```
+
+> Note que acima, no Exemplo 3, foi necessário declarar a classe `MethodCallExample` como estática, isso é devido ao fato que variáveis/métodos não-estáticos não podem ser referenciados dentro de um contexto estático.
+
+> Não há muito sentido num método que é estático e de instância ao mesmo tempo.
+
+<br >
+<br >
+
+# Contexto
+Pode ser visto como:
+-   Escopo?
+-   Regra de negócio para a existência de uma classe ou método?

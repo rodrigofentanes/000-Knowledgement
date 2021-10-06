@@ -54,7 +54,9 @@ Como visto anteriormente, as **atribuições** em Java sempre serão por **cópi
 
 <br>
 
-Chamada ao método é um meio de invocar métodos Java. Quando fazemos uma chamada ao valor, o valor original não muda, veja abaixo: 
+Chamada ao método é um meio de invocar métodos Java. Quando fazemos uma chamada ao valor, o valor original não muda, veja abaixo:
+
+Exemplo 1:
 
 ```java
 public class Main
@@ -83,6 +85,8 @@ public class Main
 <br>
 
 Se em vez de passarmos um valor primitivo, passarmos um o objeto, o valor original mudará, veja abaixo:
+
+Exemplo 2:
 
 ```java
 public class Main
