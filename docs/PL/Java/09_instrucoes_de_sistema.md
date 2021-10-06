@@ -7,11 +7,12 @@
 <br>
 
 # Instruções de Salto (jump statements)
-Em Java, as intruções de salto **só podem ser chamadas** de **dentro** de um **loop** ou **switch**. 
+
 
 <br>
 
 ## break
+Em Java, esta intrução **só pode ser chamadas** dentro de um **loop** ou **switch**. 
 Esta instrução interrompe imediatamente a execução de outra instrução, dando assim prosseguimento ao código fora da instrução. Logo, se chamado dentro de um loop ele interrompe o loop, tendo este loop finalizado suas interações ou não.
 
 Exemplo 1:
@@ -96,6 +97,7 @@ public class BreakStatementExample {
 <br>
 
 ## continue
+Em Java, esta intrução **só pode ser chamadas** dentro de um **loop** ou **switch**. 
 Este nos permite sair imediatamente da interação atual e ir para a próxima interação da mesma instrução em que foi chamado. Logo, se chamado dentro de um loop, ele interrompe a interação atual e segue para a próxima interação deste mesmo loop.
 
 Exemplo:
@@ -127,6 +129,33 @@ public class BreakStatementExample {
         10
         SAIU DO FOR
     */
+}
+```
+
+<br>
+
+## Return
+Esta instrução interrompe o método no qual foi chamada e retorna um valor.
+
+Exemplo:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String a = metodo(0);
+        System.out.println("O valor de 'a' é: " + a);
+        String b = metodo(22);
+        System.out.println("O valor de 'b' é: " + b);
+    }
+
+    public static String metodo(int x) {
+        if(x == 0) {
+            return "Zero";
+        }
+
+        System.out.println("O código seguiu...");
+        return "Outro numero";
+    }
 }
 ```
 

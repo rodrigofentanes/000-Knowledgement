@@ -128,6 +128,8 @@ public class Main
 
 Caso seu método necessite de um contexto, então teremos que fazer por meio de instanciação, veja: 
 
+<br>
+
 Exemplo 3:
 
 ```java
@@ -157,6 +159,38 @@ public class Main
 > Note que acima, no Exemplo 3, foi necessário declarar a classe `MethodCallExample` como estática, isso é devido ao fato que variáveis/métodos não-estáticos não podem ser referenciados dentro de um contexto estático.
 
 > Não há muito sentido num método que é estático e de instância ao mesmo tempo.
+
+<br>
+
+Note que também podemos declarar uma classe de forma pura, fora da classe onde o método `main()` se encontra, dessa forma podemos declará-la como visto abaixo:
+
+Exemplo 4
+
+```java
+class MethodCallExample {
+    int p = 10;
+    
+    void metodoNaoEstatico(String texto) {
+        System.out.println("O texto é: " + texto); // 
+        System.out.println("O valor da variável dentro da classe chamada é: " + p); 
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+		MethodCallExample mc = new MethodCallExample(); 
+		mc.metodoNaoEstatico("Meu texto"); 
+		/*
+		    Imprime: 
+		    O texto é: Meu texto
+		    O valor da variável dentro da classe chamada é: 10
+		*/
+	}
+}
+```
+
+> Acima, no **Exemplo 4** não podemos definir a classe `MethodCallExample` como `pública` ou `privada`. Para isso teríamos que criar um arquivo com seu respectivo nome `MethodCallExample.java`.
 
 <br >
 <br >
