@@ -94,6 +94,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 -   [Atribuição e Referência](docs/PL/Java/07_atribuicao_e_referencia.md#back-readme)
 -   [Arrays](docs/PL/Java/08_arrays.md#back-readme)
 -   [Instruções de Sistema](docs/PL/Java/09_instrucoes_de_sistema.md#back-readme)
+-   [Métodos](docs/PL/Java/10_metodos.md#back-readme)
 
 </details>
 

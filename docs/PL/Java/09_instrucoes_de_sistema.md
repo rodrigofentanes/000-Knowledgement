@@ -7,16 +7,128 @@
 <br>
 
 # Instruções de Salto (jump statements)
+Em Java, as intruções de salto **só podem ser chamadas** de **dentro** de um **loop** ou **switch**. 
 
 <br>
 
 ## break
-Este nos permite finalizar a instrução dentro da qual foi chamado, dando assim prosseguimento ao código fora da instrução. Logo, se chamado dentro de um loop ele finaliza o loop, tendo este loop finalizado suas interações ou não.
+Esta instrução interrompe imediatamente a execução de outra instrução, dando assim prosseguimento ao código fora da instrução. Logo, se chamado dentro de um loop ele interrompe o loop, tendo este loop finalizado suas interações ou não.
+
+Exemplo 1:
+
+```java
+public class BreakStatementExample {
+    public static void main(String[] args) {
+        for(int p = 0; p <= 10; p++) {
+            if(p == 6) {
+                System.out.println("No 6 o loop é interrompido!");
+                break;
+            }
+            System.out.println(p);
+        }
+        System.out.println("SAIU DO FOR");
+    }
+    /*
+        Imprime:
+        0
+        1
+        2
+        3
+        4
+        5
+        No 6 o loop é interrompido!
+        SAIU DO FOR
+    */
+}
+```
+
+<br>
+
+Exemplo 2:
+
+```java
+public class BreakStatementExample {
+    public static void main(String[] args) {
+        for(int p = 1; p <= 5; p++) {
+		    System.out.println(":: p :: " + p);
+            for(int q = 1; q <= 5; q++) {
+                if(p == 3 && q == 3) {
+                    System.out.println("Se p e q igual a 3 interrompe");
+                    break;
+                }
+                System.out.println("q: " + q);
+            }
+        }
+    }
+    /*
+        :: p :: 1
+        q: 1
+        q: 2
+        q: 3
+        q: 4
+        q: 5
+        :: p :: 2
+        q: 1
+        q: 2
+        q: 3
+        q: 4
+        q: 5
+        :: p :: 3
+        q: 1
+        q: 2
+        Se p e q igual a 3 interrompe
+        :: p :: 4
+        q: 1
+        q: 2
+        q: 3
+        q: 4
+        q: 5
+        :: p :: 5
+        q: 1
+        q: 2
+        q: 3
+        q: 4
+        q: 5
+    */
+}
+```
 
 <br>
 
 ## continue
-Este nos permite sair da interação da instrução dentro da qual foi chamado para a próxima interação da mesma instrução. Logo, se chamado dentro de um loop, ele para a interação atual e segue para a próxima interação deste mesmo loop.
+Este nos permite sair imediatamente da interação atual e ir para a próxima interação da mesma instrução em que foi chamado. Logo, se chamado dentro de um loop, ele interrompe a interação atual e segue para a próxima interação deste mesmo loop.
+
+Exemplo:
+
+```java
+public class BreakStatementExample {
+    public static void main(String[] args) {
+        for(int p = 0; p <= 10; p++) {
+            if(p == 6) {
+                System.out.println("Não printa nem o 6 nem o 8!");
+                continue;
+            }
+            System.out.println(p);
+        }
+        System.out.println("SAIU DO FOR");
+    }
+    /*
+        Imprime:
+        0
+        1
+        2
+        3
+        4
+        5
+        Não printa nem o 6 nem o 8!
+        7
+        Não printa nem o 6 nem o 8!
+        9
+        10
+        SAIU DO FOR
+    */
+}
+```
 
 <br>
 <br>
