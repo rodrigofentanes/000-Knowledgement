@@ -241,24 +241,6 @@ public class Programa {
 }
 ```
 
-
-
-<br>
-
-## Ternário
-```java
-package com.rodrigofentanes;
-
-public class Programa {
-    public static void main(String[] args) {
-        final var condicao = false;
-        final var ternario = condicao ? "é verdadeira" : "é falsa";
-        System.out.println(ternario); // vai imprimir "é falsa"
-        
-    }
-}
-```
-
 <br>
 <br>
 
@@ -360,3 +342,9 @@ public class Programa {
     }
 }
 ```
+
+<br>
+<br>
+
+# Encadeamento Opcional (Optional Chaining / Chaining Optionals)
+É feito utilizando o **"operador de navegação segura"** ( `?.` ) e o **"operador Elvis"** ( `?:` ) ou até mesmo o **operador Stream** ( `::` ).

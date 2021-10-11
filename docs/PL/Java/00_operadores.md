@@ -17,10 +17,10 @@ Esses operadores são aplicados especificamente sobre um operador. Eles realizam
 
 | Operador | Nome | Exemplo | Descrição |
 | :-: | :-: | :-: | :- |
-| ++ | pós-incremento | `a++` | Incrementa o valor em uma unidade. Primeiro o programa/operação é executado, depois o incremento é feito. Veja: <br><br> `int a = 0` <br><br> `System.out.println(a++);` <br> ` //Imprime:0 ` <br><br> `System.out.println(a);` <br> ` //Imprime:1 ` <br><br> |
-| ++ | pré-incremento | `++a` | Incrementa o valor em uma unidade. Primeiro o valor de `a` é incrementado, depois o programa/operação é executado. Veja: <br><br> `int a = 0` <br><br> `System.out.println(++a);` <br> ` //Imprime:1 ` <br><br> `System.out.println(a);` <br> ` //Imprime:1 ` <br><br>  |
-| -- | pós-decremento | `a--` | Decrementa o valor em uma unidade. Primeiro o programa/operação é executado, depois o decremento é feito. Veja: <br><br> `int a = 0` <br><br> `System.out.println(a--);` <br> ` //Imprime:0 ` <br><br> `System.out.println(a);` <br> ` //Imprime:-1 ` <br><br> |
-| -- | pré-decremento | `--a` | Decrementa o valor em uma unidade. Primeiro o valor de `a` é decrementado, depois o programa/operação é executado. Veja: <br><br> `int a = 0` <br><br> `System.out.println(--a);` <br> ` //Imprime:-1 ` <br><br> `System.out.println(a);` <br> ` //Imprime:-1 ` <br><br> |
+| `++` | pós-incremento | `a++` | Incrementa o valor em uma unidade. Primeiro o programa/operação é executado, depois o incremento é feito. Veja: <br><br> `int a = 0` <br><br> `System.out.println(a++);` <br> ` //Imprime:0 ` <br><br> `System.out.println(a);` <br> ` //Imprime:1 ` <br><br> |
+| `++` | pré-incremento | `++a` | Incrementa o valor em uma unidade. Primeiro o valor de `a` é incrementado, depois o programa/operação é executado. Veja: <br><br> `int a = 0` <br><br> `System.out.println(++a);` <br> ` //Imprime:1 ` <br><br> `System.out.println(a);` <br> ` //Imprime:1 ` <br><br>  |
+| `--` | pós-decremento | `a--` | Decrementa o valor em uma unidade. Primeiro o programa/operação é executado, depois o decremento é feito. Veja: <br><br> `int a = 0` <br><br> `System.out.println(a--);` <br> ` //Imprime:0 ` <br><br> `System.out.println(a);` <br> ` //Imprime:-1 ` <br><br> |
+| `--` | pré-decremento | `--a` | Decrementa o valor em uma unidade. Primeiro o valor de `a` é decrementado, depois o programa/operação é executado. Veja: <br><br> `int a = 0` <br><br> `System.out.println(--a);` <br> ` //Imprime:-1 ` <br><br> `System.out.println(a);` <br> ` //Imprime:-1 ` <br><br> |
 
 
 <br>
@@ -53,32 +53,34 @@ Estes operadores são utilizados para fazer operações matemáticas como múlti
 
 | Operador | Nome | Exemplo | Descrição |
 | :-: | :-: | :-: | :- |
-| + | positivo <br> soma <br> concatenação | `+a` <br> ou <br> `a + b` <br> ou <br> `"a" + "b"` | Define um valor como positivo. É utilizado também para somar valores ou concatenar textos. |
-| - | negativo <br> subtração | `-a` <br> ou <br> `a - b` | Define um valor como negativo. É utilizado também para negar o sinal de um valor ou negar uma expressão aritmética. Veja: <br><br> `double x = 1.21` <br><br> `System.out.println(x);` <br> ` //Imprime: 1.21` <br><br> `x = -x` <br><br> `System.out.println(x);` <br> ` //Imprime: -1.21` <br><br> `x = -x` <br><br> `System.out.println(x);` <br> ` //Imprime: 1.21` 
-| * | multiplicação | `a * b`  | Multiplica `a` por `b` |
-| / | divisão | `a / b`  | Divide `a` por `b` |
-| % | módulo | `a % b`  | Retorna o resto da divisão |
+| `+` | positivo <br> soma <br> concatenação | `+a` <br> ou <br> `a + b` <br> ou <br> `"a" + "b"` | Define um valor como positivo. É utilizado também para somar valores ou concatenar textos. |
+| `-` | negativo <br> subtração | `-a` <br> ou <br> `a - b` | Define um valor como negativo. É utilizado também para negar o sinal de um valor ou negar uma expressão aritmética. Veja: <br><br> `double x = 1.21` <br><br> `System.out.println(x);` <br> ` //Imprime: 1.21` <br><br> `x = -x` <br><br> `System.out.println(x);` <br> ` //Imprime: -1.21` <br><br> `x = -x` <br><br> `System.out.println(x);` <br> ` //Imprime: 1.21` 
+| `*` | multiplicação | `a * b`  | Multiplica `a` por `b` |
+| `/` | divisão | `a / b`  | Divide `a` por `b` |
+| `%` | módulo | `a % b`  | Retorna o resto da divisão |
 
 <br>
 <br>
 
-# Operadores Lógicos (short-circuit)
+# Operadores Lógicos 
+
+## Short-Circuit
 Estes operadores são utilizados junto à valores binários (false-true / 0-1). Eles são úteis na avaliação de condições para **laços** (loops), declarações **condicionais** (conditional statements) ou **inversão** de valores booleanos.
 
 <br>
 
-## Tabela de referência
+### Tabela de referência
 
 | Operador | Nome | Exemplo | Descrição |
 | :-: | :-: | :-: | :- |
-| && | AND / E | `a == b && a < x` | É o operador lógico "E". É a forma mais performática de fazer ifs encadeados. No caso do exemplo, "a" é igual a "b" E "a" é menor que "x". É importante ressaltar que se uma condição anterior a outra for falsa, ele não continuará verificando as próximas e não entrará na nossa estrutura. |
-| \|\| | OR / OU | `a == b \|\| a < x` | Tanto faz se é um ou outro. Se "a" é igual a "b" OU "a" é menor que "x". É importante ressaltar que se uma condição anterior a outra for verdadeira, ele não continuará verificando as próximas e entrará na nossa estrutura. |
-| ! | NOT / negação | `!a` | Nega o valor de `a`, ou seja, se `a` for `true` o valor de `!a` será `falso` |
+| `&&` | AND / E | `a == b && a < x` | É o operador lógico "E". É a forma mais performática de fazer ifs encadeados. No caso do exemplo, "a" é igual a "b" E "a" é menor que "x". É importante ressaltar que se uma condição anterior a outra for falsa, ele não continuará verificando as próximas e não entrará na nossa estrutura. |
+| `\|\|` | OR / OU | `a == b \|\| a < x` | Tanto faz se é um ou outro. Se "a" é igual a "b" OU "a" é menor que "x". É importante ressaltar que se uma condição anterior a outra for verdadeira, ele não continuará verificando as próximas e entrará na nossa estrutura. |
+| `!` | NOT / negação | `!a` | Nega o valor de `a`, ou seja, se `a` for `true` o valor de `!a` será `falso` |
 
 <br>
 <br>
 
-# Operadores Lógicos (non-short-circuit)
+## Non-Short-Circuit
 
 The & operator combines two boolean values using the rules for AND, but always evaluates both operands. This is useful when you want both operands to be evaluated no matter what values are returned.
 
@@ -86,16 +88,16 @@ The disadvantage is a possible loss of speed. Most Java programs are written usi
 
 <br>
 
-## Tabela de referência
+### Tabela de referência
 
 | Operador | Nome | Exemplo | Descrição |
 | :-: | :-: | :-: | :- |
-| & | AND / E | `a == b && a < x` |  |
-| \| | OR / OU | `a == b \| a < x` |  |
+| `&` | AND / E | `a == b && a < x` |  |
+| `\|` | OR / OU | `a == b \| a < x` |  |
 
 <br>
 
-### Tabela Auxiliar
+### Tabela Geral
 
 | Expressão | Resultado | Ordem de avaliação |
 | :-: | :-: | :- |
@@ -159,4 +161,57 @@ Java suporta seis tipos de operadores de comparação, são eles:
 
 | Operador | Nome | Exemplo | Descrição |
 | :-: | :-: | :-: | :-: |
-| ( ) | typecast | `double q = 1.7;` <br> `p = (int) q;` | A variável `p` do tipo `int` recebe o valor da variável `q` do tipo `double` |
+| (`<tipo>`) | typecast | `double q = 1.7;` <br> `p = (int) q;` | A variável `p` do tipo `int` recebe o valor da variável `q` do tipo `double` |
+
+<br>
+<br>
+
+# Operador ternário
+São operadores que verificam se um valor é verdadeiro ou não, para cada caso um valor diferente será retornado.
+
+Exemplo 1:
+
+```java
+package com.rodrigofentanes;
+
+public class Programa {
+    public static void main(String[] args) {
+        final var condicao = false;
+        final var ternario = condicao ? "é verdadeira" : "é falsa";
+        System.out.println(ternario); // vai imprimir "é falsa"
+        
+    }
+}
+```
+
+<br>
+<br>
+
+# Operador de navegação segura (Safe Navigation Operator / Optional Chaining Operator)
+São utilizados para checar parâmetros que em algum momento podem retornar valores nulos ( `null` ). Este tipo de operador deve ser utilizado apenas quando os valores esperados são "opcionais", referente ao funcionamento esperado do sistema, podendo assim ser substituídos por uma "resposta genérica". Os operadores de navegação segura alteram a maneira como as propriedades são acessadas a partir de objetos encadeados/aninhados. Pode ser utilizados no encadeamento (chaining) de propriedades que podem ter como valor o `null` ou `undefined` (no caso do JavaScript).
+
+<br>
+
+## Casos de uso
+
+1.  Accessing potentially null or undefined properties of an object.
+2.  Getting results from a variable that may not be available yet.
+3.  Getting default values.
+4.  Accessing long chains of properties.
+
+<br>
+
+## Tabela de referência
+
+| Operador | Nome | Exemplo | Descrição |
+| :-: | :-: | :-: | :- |
+| `?.` | Chaining Optionals <br> Optional Chaining | `` |  |
+| `?:` | Operador Elvis | `String version = computer?.getSoundcard()?.getUSB()?.getVersion() ?: "UNKNOWN";` | Se a expressão usada pelo operador de navegação segura retornar null, o valor default "UNKNOWN" será retornado; caso contrário, será retornada a tag com a versão disponível. |
+| `::` | Stream | `` |  |
+
+
+
+
+
+
+
