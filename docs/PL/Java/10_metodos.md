@@ -365,7 +365,7 @@ public class VariableArgumentsExample {
 # Sobrescrita de método ( Method Overriding)
 Uma subclasse pode sobrescrever um método definido numa classe pai se esse não for declarado com a palavra-chave `final`. Sobrescrever significa sobrescrever funcionalidades de um método já existente.
 
-Exemplo:
+Exemplo 1:
 
 ```java
 class Mammal {
@@ -382,16 +382,175 @@ class Cow extends Mammal {
     
 public class Main {
     public static void main(String args[]) {
-        Mammal ma = new Mammal (); // Animal reference and object
-        Mammal mb = new Cow(); // Animal reference but Cow object
-        ma.run(); // to execute the method of Mammal class
-        mb.run(); // to execute the method of Cow class
+        Mammal ma = new Mammal();
+        Mammal mb = new Cow();
+        ma.run(); // Imprime: Mammals can run
+        mb.run(); // Imprime: Cows can run and eat
     }
 }
 ```
 
+<br>
 
+Exemplo 2:
 
+```java
+class LendingInstitution {
+    int getInterestRate() {
+        return 0;
+    }
+}
+
+class LendingInstitution1 extends LendingInstitution {
+    int getInterestRate() {
+        return 10;
+    }
+}
+
+class LendingInstitution2 extends LendingInstitution {
+    int getInterestRate() {
+        return 11;
+    }
+}
+
+class LendingInstitution3 extends LendingInstitution{
+    int getInterestRate() {
+        return 14;
+    }
+}
+
+public class TestLendingInstitution {
+    public static void main(String args[]) {
+        LendingInstitution1 l1 = new LendingInstitution1();
+        LendingInstitution2 l2 = new LendingInstitution2();
+        LendingInstitution3 l3 = new LendingInstitution3();
+        System.out.println("LendingInstitution1 Interest Rate: " + l1.getInterestRate()); 
+        // Imprime: LendingInstitution1 Interest Rate: 10
+        System.out.println("LendingInstitution1 Interest Rate: " + l2.getInterestRate());
+        // Imprime: LendingInstitution1 Interest Rate: 11
+        System.out.println("LendingInstitution1 Interest Rate: " + l3.getInterestRate());
+        // Imprime: LendingInstitution1 Interest Rate: 14
+    }
+}
+```
+
+Poder utilizar a palavra-chave `super` para acessar o método sobrescrito pela super classe.
+
+Exemplo 3:
+
+```java
+class Mammals {
+    public void run() {
+        System.out.println("Mammals can run");
+    }
+}
+
+class Cow extends Mammals {
+    public void run() {
+        super.run(); // Invoca o método da super classe (Mammals)
+        System.out.println("Cows can run and eat");
+    }
+}
+
+public class TestCow {
+    public static void main(String args[]) {
+        Mammals mm = new Cow(); // Variável do tipo "Mammals" mas é um objeto "Cow".
+        mm.run(); // Executa o método na classe Cow
+        /* 
+            Imprime :
+            Mammals can run
+            Cows can run and eat
+        */
+    }
+}
+```
+
+<br>
+<br>
+
+# Funções recursivas
+Recursão é um processo pelo qual um método chama a si mesmo uma ou mais vezes. Assim este método se torna um método recursivo.
+
+Recursividade torna o código **compacto** porém mais **complexo**.
+
+Sintáxe:
+
+```java
+int method(){
+    method();
+}
+```
+
+Exemplo 1:
+
+```java
+public class Main {
+
+    static void helloMethod(int x) {
+        if(x >= 0) {
+            System.out.println("Hello there");
+            helloMethod(x - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        helloMethod(2);
+        /*
+            imprime:
+            Hello there
+            Hello there
+            Hello there
+        */
+    }
+}
+```
+
+<br>
+
+Exemplo **fatorial**:
+
+```java
+public class Main {
+    static int numberFactorial(int nm){
+        if (nm == 1){
+            return 1;
+        }else{
+            return(nm * numberFactorial(nm - 1));
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("The result of 10 factorial is: " + numberFactorial(10));
+        // Imprime: The result of 10 factorial is: 3628800
+    }
+}
+```
+
+<br>
+
+Exemplo **fibonacci**:
+
+```java
+public class Main {    
+    static int x = 0, y = 1, z = 0;
+
+    static void showFib(int times) {
+        if(times > 0){
+            z = x + y;
+            x = y;
+            y = z;
+            System.out.print(z + " ");
+            showFib(times - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int times = 18;
+        System.out.println(x + " " + y); // Imprime: 0 1
+        showFib(times - 2); // Imprime: 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
+    }
+}
+```
 
 
 
