@@ -95,6 +95,7 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 -   [Arrays](docs/PL/Java/08_arrays.md#back-readme)
 -   [Instruções de Sistema](docs/PL/Java/09_instrucoes_de_sistema.md#back-readme)
 -   [Métodos](docs/PL/Java/10_metodos.md#back-readme)
+-   [Métodos](docs/PL/Java/11_heranca.md#back-readme)
 
 </details>
 

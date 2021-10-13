@@ -73,8 +73,8 @@ Estes operadores são utilizados junto à valores binários (false-true / 0-1). 
 
 | Operador | Nome | Exemplo | Descrição |
 | :-: | :-: | :-: | :- |
-| `&&` | AND / E | `a == b && a < x` | É o operador lógico "E". É a forma mais performática de fazer ifs encadeados. No caso do exemplo, "a" é igual a "b" E "a" é menor que "x". É importante ressaltar que se uma condição anterior a outra for falsa, ele não continuará verificando as próximas e não entrará na nossa estrutura. |
-| `\|\|` | OR / OU | `a == b \|\| a < x` | Tanto faz se é um ou outro. Se "a" é igual a "b" OU "a" é menor que "x". É importante ressaltar que se uma condição anterior a outra for verdadeira, ele não continuará verificando as próximas e entrará na nossa estrutura. |
+| `&&` | AND / E / Conditional AND | `a == b && a < x` | É o operador lógico "E". É a forma mais performática de fazer ifs encadeados. No caso do exemplo, "a" é igual a "b" E "a" é menor que "x". É importante ressaltar que se uma condição anterior a outra for falsa, ele não continuará verificando as próximas e não entrará na nossa estrutura. |
+| `\|\|` | OR / OU / Conditional OR | `a == b \|\| a < x` | Tanto faz se é um ou outro. Se "a" é igual a "b" OU "a" é menor que "x". É importante ressaltar que se uma condição anterior a outra for verdadeira, ele não continuará verificando as próximas e entrará na nossa estrutura. |
 | `!` | NOT / negação | `!a` | Nega o valor de `a`, ou seja, se `a` for `true` o valor de `!a` será `falso` |
 
 <br>
@@ -92,8 +92,9 @@ The disadvantage is a possible loss of speed. Most Java programs are written usi
 
 | Operador | Nome | Exemplo | Descrição |
 | :-: | :-: | :-: | :- |
-| `&` | AND / E | `a == b && a < x` |  |
-| `\|` | OR / OU | `a == b \| a < x` |  |
+| `&` | AND / E / Boolean AND | `a == b & a < x` |  |
+| `\|` | OR / OU / Boolean Inclusive OR | `a == b \| a < x` |  |
+| `^` | Boolean Exclusive OR | `` |  |
 
 <br>
 
@@ -147,7 +148,16 @@ Java suporta seis tipos de operadores de comparação, são eles:
 | Operador | Nome | Exemplo | Descrição |
 | :-: | :-: | :-: | :- |
 | = |  | `x = b` | Atribui o valor de 'b' à 'x' |
-| *= |  | `x *= 2`  | é o mesmo que escrever `x = x * 2`. É valido para todos os tipos de operadores aritméticos. |
+| *= |  | `x *= 2`  | Multiplication. É o mesmo que escrever `x = x * 2`. É valido para todos os tipos de operadores aritméticos. |
+| /= |  | `x /= 2`  | Division. |
+| %= |  | `x %= 2`  | Remainder. |
+| += |  | `x += 2`  | Addition. |
+| -= |  | `x -= 2`  | Subtraction. |
+| <<= |  | `x <<= 2`  | Left Shift. |
+| >>= |  | `x >>= 2`  | Right Shift. |
+| &= |  | `x &= 2`  | AND. |
+| ^= |  | `x ^= 2`  | Exclusive OR. |
+| \|= |  | `x \|= 2`  | Inclusive OR. |
 
 <br>
 <br>
@@ -179,7 +189,6 @@ public class Programa {
         final var condicao = false;
         final var ternario = condicao ? "é verdadeira" : "é falsa";
         System.out.println(ternario); // vai imprimir "é falsa"
-        
     }
 }
 ```
@@ -187,17 +196,17 @@ public class Programa {
 <br>
 <br>
 
-# Operador de navegação segura (Safe Navigation Operator / Optional Chaining Operator)
-São utilizados para checar parâmetros que em algum momento podem retornar valores nulos ( `null` ). Este tipo de operador deve ser utilizado apenas quando os valores esperados são "opcionais", referente ao funcionamento esperado do sistema, podendo assim ser substituídos por uma "resposta genérica". Os operadores de navegação segura alteram a maneira como as propriedades são acessadas a partir de objetos encadeados/aninhados. Pode ser utilizados no encadeamento (chaining) de propriedades que podem ter como valor o `null` ou `undefined` (no caso do JavaScript).
+# Operadores de navegação segura
+Também chamado de **Optional Chaining Operator** ou **Chaining Optionals** ou do inglês **Safe Navigation Operator**, é utilizado para checar parâmetros que em algum momento podem retornar valores nulos ( `null` ). Este tipo de operador deve ser utilizado apenas quando os valores esperados são "opcionais", referente ao funcionamento esperado do sistema, podendo assim ser substituídos por uma resposta nula. Os operadores de navegação segura alteram a maneira como as propriedades são acessadas a partir de objetos encadeados/aninhados. Pode ser utilizado no encadeamento (chaining) de propriedades que podem ter como valor o `null` ou `undefined` (no caso do JavaScript).
 
 <br>
 
 ## Casos de uso
 
-1.  Accessing potentially null or undefined properties of an object.
-2.  Getting results from a variable that may not be available yet.
-3.  Getting default values.
-4.  Accessing long chains of properties.
+1.  Acessar propriedades potencialmente nulas ( `null` ) ou indefinidas ( `undefined` ) de um objeto.
+2.  Obter resultados de variáveis que podem não estar disponíveis no momento.
+3.  Obter valores default.
+4.  Acessar propriedades em encadeamentos longos.
 
 <br>
 
@@ -205,13 +214,46 @@ São utilizados para checar parâmetros que em algum momento podem retornar valo
 
 | Operador | Nome | Exemplo | Descrição |
 | :-: | :-: | :-: | :- |
-| `?.` | Chaining Optionals <br> Optional Chaining | `` |  |
-| `?:` | Operador Elvis | `String version = computer?.getSoundcard()?.getUSB()?.getVersion() ?: "UNKNOWN";` | Se a expressão usada pelo operador de navegação segura retornar null, o valor default "UNKNOWN" será retornado; caso contrário, será retornada a tag com a versão disponível. |
-| `::` | Stream | `` |  |
+| `?.` | Encadeamento opcional / <br> Optional Chaining | `` |  |
+| `?:` | Operador Elvis / <br> Elvis Operator | `String version = computer?.getSoundcard()?.getUSB()?.getVersion() ?: "UNKNOWN";` | Se a expressão usada pelo operador de navegação segura retornar null, o valor default "UNKNOWN" será retornado; caso contrário, será retornada a tag com a versão disponível. |
+| `::` | Transmissão / <br> Stream | `` |  |
 
+<br>
+<br>
 
+# Operadores Bit a Bit
+Do inglês **Bitwise Operators**, são utilizados para manipular bits individuais de um número. Eles podem ser utilizados com qualquer um dos tipos primitivos. Servem para executar operações de atualização (update) e consulta (query) em árvores binárias indexadas.
 
+<br>
 
+### Tabela de referência
 
+| Operador | Nome | Exemplo | Descrição |
+| :-: | :-: | :-: | :- |
+| `\|` | Bitwise OR | `` |  |
+| `&` | Bitwise AND | `` |  |
+| `^` | Bitwise XOR | `` |  |
+| `~` | Bitwise Complement | `` |  |
 
+<br>
+<br>
 
+# Operadores de Deslocamento
+Do inglês **Shift Operators**, são usados para deslocar os bits de um número para a esquerda ou direita, multiplicando ou dividindo o número por dois, respectivamente. Eles podem ser usados quando temos que multiplicar ou dividir um número por dois.
+
+Sintáxe:
+
+```java
+numero shift_operator numero_de_posicoes_a_mudar
+```
+
+<br>
+
+### Tabela de referência
+
+| Operador | Nome | Exemplo | Descrição |
+| :-: | :-: | :-: | :- |
+| `>>` | Signed Right shift operator | `` |  |
+| `>>>` | Unsigned Right shift operator | `` |  |
+| `<<` | Left shift operator | `` |  |
+| `<<<` | Unsigned Left shift operator | `` |  |
