@@ -211,10 +211,35 @@ public class Main {
 <br>
 <br>
 
-# palavra-chave instanceof
+# Palavra-Chave `Instanceof`
+Esta pode ser usada para checar quando um objeto é uma instância de outro objeto.
 
+Exemplo:
 
+```java
+interface Mammal {
 
+}
+
+class Cow implements Mammal {
+
+}
+
+class BabyCow extends Cow {
+
+}
+
+public class Main {
+    public static void main(String args[]) {
+        Cow cow = new Cow();
+        BabyCow babyCow = new BabyCow();
+        System.out.println(cow instanceof Mammal); // Imprime: true
+        System.out.println(cow instanceof BabyCow); // Imprime: false
+        System.out.println(babyCow instanceof Cow); // Imprime: true
+        System.out.println(babyCow instanceof Mammal); // Imprime: true
+    }
+}
+```
 
 
 
