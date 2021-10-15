@@ -170,10 +170,187 @@ File f = new File("F:/java/names");
 OutputStream f = new FileOutputStream(f);
 ```
 
+<br>
 
+Exemplo:
 
+```java
+import java.io.*;
 
+public class FileStreamExample {
+   public static void main(String args[]) {
+      try {
+         byte bWrite [] = {3,11,23,34,52};
+         OutputStream os = new FileOutputStream("myfile.txt");
+         for(int p = 0; p < bWrite.length ; p++) {
+            os.write( bWrite[p] ); // to write the bytes
+         }
+         os.close();
+         InputStream is = new FileInputStream("myfile.txt");
+         int size = is.available();
+         for(int x = 0; x < size; x++) {
+            System.out.print((char)is.read() + " ");
+         }
+         is.close();
+      } catch (IOException ex) {
+         System.out.print("Exception");
+      }
+   }
+}
+```
 
+O código acima irá gerar um arquivo chamado myfile.txt e irá escrever números específicos dentro deste arquivo. É importante ressaltar que esses números serão escritos em formato binário.
+
+<br>
+<br>
+
+# Navegação em arquivos
+
+## Classe `File`
+Esta classe representa tanto o arquivo quanto o pathname do diretório se virmos de forma grosseira. É útil para criar arquivos, diretórios de arquivos, exclusão de arquivos, pesquisa de arquivo, etc. Utilizamos esta classe para representar o arquivo/diretório real no disco.
+
+Exemplo:
+
+```java
+import java.io.File;
+
+public class FileExample {
+   public static void main(String[] args) {
+      File f = null;
+      String[] strs = {"file1.txt", "file2.txt"};
+
+      try {
+         // for each string in string array
+         for(String s:strs ) {
+            // create a new file
+            f = new File(s);
+            // true for an executable file
+            boolean bool = f.canExecute();
+            // finding the absolute path
+            String a = f.getAbsolutePath();
+            // return the absolute path
+            System.out.print(a);
+            // to print
+            System.out.println(" is executable: "+ bool);
+         }
+      } catch (Exception ex) {
+         // in case an I/O error occurs
+         ex.printStackTrace();
+      }
+   }
+}
+```
+
+O código acima irá obter o diretório dos arquivos e dizer se or arquivo são executáveis ou não.
+
+<br>
+
+## Classe `FileReader`
+Esta é uma classe Java que herda da classe `InputStreamReader`. Tem grande utilidade para ler transmissões de caracteres (Character Stream). Abaixo, alguns construtores muito úteis:
+-  `FileReader(File file)`
+-  `FileReader(FileDescriptor fd)`
+-  `FileReader(String fileName)`
+
+Exemplo:
+
+```java
+import java.io.*;
+
+public class FileReadExample {
+   public static void main(String args[])throws IOException {
+      File f = new File("hello.txt");
+      // creating the file
+      f.createNewFile();
+      // creating a FileWriter Object
+      FileWriter wr = new FileWriter(f);
+      // Writing the content to file
+      wr.write("A\n Java\n great\n example\n");
+      wr.flush();
+      wr.close();
+      // Creating a FileReader Object
+      FileReader fr = new FileReader(f);
+      char [] ch = new char[50];
+      fr.read(ch); // read the content to an array
+      for(char c : ch){
+         System.out.print(c); // print the characters
+      }
+      fr.close();
+   }
+}
+```
+
+<br>
+
+## Classe `FileWriter`
+Esta classe herda da classe `OutputStreamWriter`. Tem grande utilidade para escrever transmissões de caracteres (Character Stream). Abaixo, alguns construtores:
+-  `FileWriter(File file)`
+-  `FileWriter(File file, boolean append)`
+-  `FileWriter(FileDescriptor fd)`
+-  `FileWriter(String fileName)`
+-  `FileWriter(String fileName, boolean append)`  
+
+Exemplo:
+
+```java
+import java.io.*;
+
+public class FileReadExample {
+   public static void main(String args[])throws IOException {
+      File f = new File("hello.txt");
+      // creating the file
+      f.createNewFile();
+      // creating a FileWriter Object
+      FileWriter wr = new FileWriter(f);
+      // Writing the content to file
+      wr.write("A\n Java\n great\n example\n");
+      wr.flush();
+      wr.close();
+      // Creating a FileReader Object
+      FileReader fr = new FileReader(f);
+      char [] ch = new char[50];
+      fr.read(ch); // read the content to an array
+      for(char c : ch){
+         System.out.print(c); // print the characters
+      }
+      fr.close();
+   }
+}
+```
+
+<br>
+
+## Listando diretórios
+Para ver todos os diretórios e arquivos em um diretório específico, podemos usar o método `list()` disponibilizado pelo objeto File.
+
+Exemplo:
+
+```java
+import java.io.File;
+
+public class ReadDirectory {
+   public static void main(String[] args) {
+      File f = null;
+      String[] paths;
+
+      try {
+         // creating a new file object
+         f = new File("./");
+         // an array of both files and directory
+         paths = f.list();
+         // for every name in path array
+         for(String path:paths) {
+            // returns filename and the directory name
+            System.out.println(path);
+         }
+      } catch(Exception ex) {
+         // in case any error occurs
+         ex.printStackTrace();
+      }
+   }
+}
+```
+
+O código acima irá mostrar todos os arquivos contidos no diretório em que o arquivo executado está.
 
 
 
