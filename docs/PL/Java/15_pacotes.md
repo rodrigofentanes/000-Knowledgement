@@ -8,7 +8,23 @@ Pacotes são essenciais para agrupar interfaces e classes que se relacionam. O a
 
 Com pacotes podemos agrupar classes e encontrar aquilo que precimos facilmente, evitando conflitos. É indicado que coloquemos no mesmo pacote classes, interfaces e outros itens que tenham relação. Dessa forma podemos acessar métodos e variáveis definidos em classes ou interfaces diferentes num mesmo pacote.
 
-Um pacote Java pode ser **definido pelo usuário** ou **pré-definido**. Exemplos de pacotes predefinidos são o **lang**, **awt**, **java**, **javax**, **net**, **io**, **swing**, **util**, **sql**, e outros. 
+Um pacote Java pode ser **definido pelo usuário** ou **pré-definido**. Exemplos de pacotes predefinidos são o **lang**, **awt**, **java**, **javax**, **net**, **io**, **swing**, **util**, **sql**, e outros.
+
+Há pelo menos três formas de acessar classes:
+1. Incluindo as classes ou interfaces num mesmo pacote. 
+```java
+   package nomedopacote;
+```
+2. Importanto um pacote.
+```java
+   import nomedopacote;
+   import nomedopacote.NomeDaClasse;
+```
+3. Instanciando explicitamante
+```java
+nomedopacote.NomeDaClasse objeto = new nomedopacote.NomeDaClasse();
+objeto.metodo();
+```
 
 Para criar pacotes basta utilizar a palavra-chave `package` e utilizaremos sempre letras minúsculas para nomeá-lo.
 

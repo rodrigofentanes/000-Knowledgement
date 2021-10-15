@@ -10,7 +10,7 @@ Utilizamos a palavra-chave `abstract` para declarar uma classe abstrata.
 
 Se uma classe possuir algum método abstrato, esta mesma classe deverá ser declarada como abstrata também.
 
-Uma classe abstrata só pode herdar de outra classe abstrata.
+Uma classe abstrata só pode herdar de outra classe abstrata, ou seja, uma classe abstrata só pode estender de outra classe abstrata.
 
 Exemplo:
 
