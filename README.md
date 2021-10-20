@@ -96,13 +96,13 @@ Espaço utilizado para o meu aprendizado. Está em constante alteração e, em a
 -   [Instruções de Sistema](docs/PL/Java/09_instrucoes_de_sistema.md#back-readme)
 -   [Métodos](docs/PL/Java/10_metodos.md#back-readme)
 -   [Herança](docs/PL/Java/11_heranca.md#back-readme)
--   [Abstracao](docs/PL/Java/12_abstracao.md#back-readme)
+-   [Abstração](docs/PL/Java/12_abstracao.md#back-readme)
 -   [Encapsulamento](docs/PL/Java/13_encapsulamento.md#back-readme)
 -   [Interfaces](docs/PL/Java/14_interfaces.md#back-readme)
 -   [Pacotes](docs/PL/Java/15_pacotes.md#back-readme)
--   [Applets](docs/PL/Java/16_applets.md#back-readme)
--   [Entrada/Saída](docs/PL/Java/17_input_output.md#back-readme)
 -   [Tratamento de excessões](docs/PL/Java/18_exception.md#back-readme)
+-   [Entrada/Saída](docs/PL/Java/17_input_output.md#back-readme)
+-   [Applets](docs/PL/Java/16_applets.md#back-readme)
 -   [AWT](docs/PL/Java/19_awt.md#back-readme)
 
 </details>

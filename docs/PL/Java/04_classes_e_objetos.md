@@ -29,6 +29,10 @@ Por convenção **toda** classe java começa com letra **maiúscula**.
 
 Todo programa Java roda em cima de uma classe.
 
+Uma classe tem dois tipos de membros:
+-   O primeiro tipo são as **variáveis** e se referem aos **estados** de uma classe. Varáveis também podem ser chamadas de **campos** ou **propriedades**.
+-   O segundo tipo são os métodos e se referem aos **comportamentos** de uma classe.
+
 A classe é como um modelo ou projeto que descreve os estados e comportamentos que qualquer objeto deste tipo poderá suportar.
 
 Abaixo, uma classe de exemplo: 

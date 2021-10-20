@@ -5,15 +5,28 @@
 </h1>
 
 # O que é Java?
+Java é uma linguagem de programação de propósito-geral, compilada e interpretada. Possui um grande número de recursos que a torna adequada para a web.
+
 Java é uma **plataforma** e uma **linguagem de programação**. Pode ser utilizada para desenvolver aplicações **standalone** ou **distributed**. 
 
-Enquanto plataforma, o Java possui a JRE (Java Runtime Environment) que é um ambiente de software onde os programas podem rodar.
+Enquanto **plataforma**, o Java possui a JRE (Java Runtime Environment) que é um ambiente de software onde os programas podem rodar.
 
-Enquanto Linguagem, o Java é um linguagem de alto-nível, robusta, orientada à objetos, case sensitive.
+Enquanto **Linguagem**, o Java é um linguagem de alto-nível, robusta, orientada à objetos, case sensitive.
 
 Por se tratar de uma linguagem orientada à objetos, o Java trata tudo como objeto.
 
 Diferentes de outras linguagens de programação, que são **compiladas** para **código nativo** ainda em tempo de desenvolvimento, a linguagem Java é **compilada** para um **bytecode** e **interpretado** por uma **máquina virtual** (JVM), o que faz do Java uma linguagem **compilada** e **interpretada**.
+
+<br>
+<br>
+
+# Vantagens
+O Java, inicialmente, veio para oferecer vantagens que o C++ não entregava, dentre eleas temos:
+-   **Segurança**: Em Java não há perigo em ler uma informação falsa ao, acidentalmente, exceder o tamanho de um array.
+-   **Gerenciamento automático de memória**: Um desenvolvedor Java não precisa ter que checar se existe espaço suficiente alocado em memória para um objeto ou desalocar espaço explicitamente. As operações são manipuladas automaticamente pelo garbage collector. Isso também significa que ponteiros não são necessários.
+-   **Simplicidade**: Não há ponteiros, uniões, modelos, estruturas. Quase tudo em Java pode ser declarado como uma classe. Toda confusão por utilizar herança multipla é evitada pois o Java não dá suporte a este tipo de recurso.
+-   **Suporte para excução de Multithread**: Imagine um tecido, as linhas são as threads. Java foi projetado desde o início para suportar o desenvolvimento de softwares Multitrhead.
+-   **Portabilidade**: O lema Java é *"Escreva uma vez, rode em todo lugar"*. Isso é possível graças a JVM.
 
 <br>
 <br>
@@ -80,6 +93,10 @@ Com o Java compilaremos para um bytecode que será executado pela máquina virtu
 3. Para executar o seu programa, a JVM (Java Virtual Machine) lê o arquivo compilado (.class) e as bibliotecas padrões do Java que estão no JRE (Java Runtime Environment).
 
 <br>
+
+![plot](files/fdeJava.png)
+
+<br>
 <br>
 
 # Ciclo de vida de uma aplicação Java
@@ -128,3 +145,23 @@ Requer licensa comercial sob contrato de Licença de Código Binário Oracle.
 
 <br>
 <br>
+
+# JShell
+A Java Shell Tool (JShell) é uma ferramenta interativa para o aprendizado da linguagem programação Java e prototipação de código Java. 
+
+Por definição é uma Read-Eval-Print Loop (REPL), que avalia declarações, instruções e expressões à medida que são inseridas e, em seguida, mostra imediatamente os resultados.
+
+Para utilizar o Jshell basta ter o java configurado na máquina e então abrir o terminal e digitar "jshell".
+
+Para ver tudo o que o jshell está fazendo basta acioná-lo pelo modo verboso "jshell -v".
+
+Para ver todas as variáveis disponíveis na sessão atual digite "/vars".
+
+Para salvar as entradas basta fazer "/save [filename.java]".
+
+Para abrir uma nova sessão basta fazer "/open arquivo.java"
+
+Para sair do jshel basta digitar "/exit".
+
+
+
