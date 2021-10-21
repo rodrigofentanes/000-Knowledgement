@@ -163,5 +163,9 @@ Para abrir uma nova sessão basta fazer "/open arquivo.java"
 
 Para sair do jshel basta digitar "/exit".
 
+> Eu, particularmente, enxergo como unica vantagem desta ferramenta o uso da forma verbosa, pois possibilita ver "por baixo dos panos".
+
+
+
 
 

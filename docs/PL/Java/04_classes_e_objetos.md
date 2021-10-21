@@ -13,6 +13,20 @@ Em Java, objetos são caracterizados por **estados (states)** e **comportamentos
 
 Todo objeto é uma instância de uma classe. Assim podemos dizer que um objeto é a classe em vida, ou seja, uma classe alocada na memória do computador durante a execução do programa.
 
+> Objetos em Java representam objetos do mundo real, logo um programa em Java é uma representação da interação entre objetos do mundo real, sejam eles físicos ou abstratos.
+
+Se, por exemplo, decidirmos criar um carro num programa Java, este terá estados como **fabricante**, **modeloDoCarro**, **anoDeProducao**, etc. E como comportamentos ele poderá ter **acelerar**, **frear**.
+
+<br>
+
+Todos os objetos estarão descritos nos arquivos `*.java` e estes objets são organizados em pacotes (`package`). 
+
+Alguns objetos podem ser vistos pelo lado de fora do pacote em que estão, outros não podem ser vistos pelo lado de fora do pacote. A esta característica damos o nome de **escopo**. Logo, a visibilidade de um objeto dependerá do seu escopo.
+
+> Um pacote é uma coleção lógica de tipos
+
+> Normalmente, mas nem sempre, os objetos ocupam o último nível hierárquico na organização dos diretórios de pacotes.
+
 <br>
 <br>
 
@@ -33,7 +47,11 @@ Uma classe tem dois tipos de membros:
 -   O primeiro tipo são as **variáveis** e se referem aos **estados** de uma classe. Varáveis também podem ser chamadas de **campos** ou **propriedades**.
 -   O segundo tipo são os métodos e se referem aos **comportamentos** de uma classe.
 
-A classe é como um modelo ou projeto que descreve os estados e comportamentos que qualquer objeto deste tipo poderá suportar.
+> Leia estado como as formas que um objeto pode tomar, as propriedades que ele pode possuir.
+
+> Leia comportamentos como as ações que um objeto pode praticar.
+
+A classe é como um modelo (template) ou projeto que descreve os estados e comportamentos que qualquer objeto deste tipo poderá suportar, logo, classes são o molde para a construção dos objetos.
 
 Abaixo, uma classe de exemplo: 
 

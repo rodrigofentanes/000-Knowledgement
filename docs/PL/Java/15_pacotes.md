@@ -4,6 +4,10 @@
    Pacotes (Packages) - Java
 </h1>
 
+Um pacote é uma coleção lógica de tipos (logical collection of types).
+
+Pacotes são diretórios organizados de forma hierárquica e normalmente, mas nem sempre, os objetos ocupam o último nível.
+
 Pacotes são essenciais para agrupar interfaces e classes que se relacionam. O agrupamento é determinado pela funcionalidade.
 
 Com pacotes podemos agrupar classes e encontrar aquilo que precimos facilmente, evitando conflitos. É indicado que coloquemos no mesmo pacote classes, interfaces e outros itens que tenham relação. Dessa forma podemos acessar métodos e variáveis definidos em classes ou interfaces diferentes num mesmo pacote.
