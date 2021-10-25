@@ -323,6 +323,8 @@ public class Main{
 # Argumentos variáveis
 Java permite passar um número variável de argumentos para um método, mas estes devem ser de um tipo similar.
 
+É bastante útil para quando temos um método que ainda não está bem definido e queremos prosseguir com o desenvolvimento sem perder produtividade.
+
 Sintáxe:
 
 ```java

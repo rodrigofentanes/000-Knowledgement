@@ -4,13 +4,21 @@
    Abstração - Java
 </h1>
 
-Abstração é um recurso (feature) que faz o desenvolvedor apresentar ao usuário apenas o que é necessário e oculta o resto.
+Utilizamos a palavra-chave `abstract` para declarar uma classe abstrata. Abstração é um recurso (feature) que faz o desenvolvedor apresentar ao usuário apenas o que é necessário e oculta o resto.
 
-Utilizamos a palavra-chave `abstract` para declarar uma classe abstrata.
+> Uma classe que possui algum método abstrato deve ser declarada como abstrata também.
 
-Se uma classe possuir algum método abstrato, esta mesma classe deverá ser declarada como abstrata também.
+> Se houver alguma declaração de um método como abstract (abstrato), a sua classe também deverá ser marcada como abstract.
 
-Uma classe abstrata só pode herdar de outra classe abstrata, ou seja, uma classe abstrata só pode estender de outra classe abstrata.
+> Uma classe abstrata **não pode ser instanciada**. 
+
+> Não é aplicável às variáveis, apenas às classes e métodos. 
+
+> É uma opção interessante para a construção de APIs por exemplo.
+
+<br>
+
+Uma classe abstrata só pode herdar de outra classe abstrata, logo uma classe abstrata só pode estender de outra classe abstrata.
 
 Exemplo:
 

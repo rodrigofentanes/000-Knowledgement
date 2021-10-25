@@ -212,7 +212,7 @@ public class Main {
 <br>
 
 # Palavra-Chave `Instanceof`
-Esta pode ser usada para checar quando um objeto é uma instância de outro objeto.
+É um operador e pode ser usado para checar quando um objeto é uma instância de outro objeto.
 
 Exemplo:
 

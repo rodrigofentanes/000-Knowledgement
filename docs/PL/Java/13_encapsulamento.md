@@ -34,7 +34,16 @@ public class Main {
 }
 ```
 
+<br>
+<br>
 
+# Final
+Quando é aplicado em Classe, não permite estender. 
+Quando é aplicado em métodos, impede que o mesmo seja sobrescrito na subclasse. 
+Quando é aplicado a uma variável, esta não poderá ter o valor alterado depois de deste ser atribuído. 
+
+<br>
+<br>
 
 
 

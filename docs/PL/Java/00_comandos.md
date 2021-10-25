@@ -4,6 +4,13 @@
     Comandos - Java
 </h1> 
 
+# Módulos Java
+
+![plot](files/JPMS.png)
+Link: https://files.jrebel.com/pdf/RebelLabs-Java-9-modules-cheat-sheet.pdf
+
+> Existe diferença entre **modulos de projeto** e **Java Modules**.
+
 # Comandos básicos
 
 | Comando | Exemplo | Descrição |

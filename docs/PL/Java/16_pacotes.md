@@ -6,10 +6,22 @@
 
 Um pacote é uma coleção lógica de tipos (logical collection of types).
 
-Pacotes são diretórios organizados de forma hierárquica e normalmente, mas nem sempre, os objetos ocupam o último nível.
+Pacotes são diretórios organizados de forma hierárquica e normalmente, mas nem sempre, os objetos ocupam o último nível dessa hierárquia.
 
-Pacotes são essenciais para agrupar interfaces e classes que se relacionam. O agrupamento é determinado pela funcionalidade.
+Cada pacote deve ter um nome único, como uma chave, e também deve seguir um determinado modelo. As boas práticas dizem que, para garantir a unicidade e o significado, você normalmente começa o nome com o nome de domínio da Internet da sua organização na ordem inversa e, em seguida, adiciona vários critérios de agrupamento. Neste projeto, os nomes dos pacotes seguem o modelo descrito aqui:
 
+```java
+com.apress.bgn.ch[*]+
+```
+
+O modelo acima começa com o nome de domínio invertido para a editora Apress (`com.apress`) , em seguida um termo identificando que um livro foi adicionado (`bgn` == beginner) e por fim o `ch` mais o número do pacote que a fonte (normalmente) corresponde.
+
+> Pacotes são essenciais para agrupar interfaces e classes que se relacionam. O agrupamento é determinado pela funcionalidade.
+
+<br>
+<br>
+
+# Propósito de utilizar pacotes
 Com pacotes podemos agrupar classes e encontrar aquilo que precimos facilmente, evitando conflitos. É indicado que coloquemos no mesmo pacote classes, interfaces e outros itens que tenham relação. Dessa forma podemos acessar métodos e variáveis definidos em classes ou interfaces diferentes num mesmo pacote.
 
 Um pacote Java pode ser **definido pelo usuário** ou **pré-definido**. Exemplos de pacotes predefinidos são o **lang**, **awt**, **java**, **javax**, **net**, **io**, **swing**, **util**, **sql**, e outros.

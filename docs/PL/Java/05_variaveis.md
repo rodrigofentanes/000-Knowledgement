@@ -93,7 +93,13 @@ Essas são as variáveis que foram definidas sem o uso de uma palavra-chave STAT
 # Static Variables
 Estas são variáveis inicializadas uma vez e no início da execução do programa. É uma boa prática inicializá-las antes das variáveis de instância.
 
-Uma variável ou método `static` não precisa ser instanciado para ser chamado, porém para que isso seja possível este método ou variável deve ser declarado como estático, observe abaixo:
+O static é usado para a criação de uma variável que poderá ser acessada por todas as instâncias de objetos desta classe como uma variável comum, ou seja, a variável criada será a mesma em todas as instâncias e quando seu conteúdo é modificado numa das instâncias, a modificação ocorrerá em todas as demais. Já na declaração de métodos o static permite o acesso direto à classe, dessa forma não é necessário instânciar um objeto para acessar o método.
+
+> O static garante que todas as instâncias de um objeto terão a mesma característica, de forma compartilhada.
+
+<br>
+
+Sabendo que uma variável ou método `static` não precisa ser instanciado para ser chamado, vamos tornar isso possível declarando este método ou variável como estático, observe abaixo:
 
 Exemplo 2:
 
