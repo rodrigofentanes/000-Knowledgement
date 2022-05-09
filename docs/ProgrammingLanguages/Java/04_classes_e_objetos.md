@@ -114,7 +114,7 @@ O propósito de um construtor é definir um modelo de como criaremos nossos obje
 <br>
 
 # Instanciando Classes
-Para criar um novo objeto a partir de determinada classe, precisamos instanciá-lo. Esta instanciação é feita através da **palavra chave (keyword)** `new`, veja abaixo:
+Para criar um novo objeto a partir de determinada classe, precisamos instanciá-lo. Esta instanciação é feita através da **palavra-chave (keyword)** `new`, veja abaixo:
 
 ```java
 public class Cachorro {
@@ -128,6 +128,8 @@ public class Cachorro {
 }
 ```
 No código acima vemos a criação de um objeto chamado **floquinho** do tipo **Cachorro** e raça **Poodle**. Ao intanciar o objeto em memória, o programa irá mostrar a mensagem " `Você passou a raça: Poodle` ".
+
+> Ao utilizar a palavra reservada **new** nós chamamos o construtor da classe referida para assim então "construir" a classe na memória. 
 
 <br>
 <br>
