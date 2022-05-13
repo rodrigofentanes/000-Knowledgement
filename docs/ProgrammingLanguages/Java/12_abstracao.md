@@ -18,7 +18,7 @@ Utilizamos a palavra-chave `abstract` para declarar uma classe abstrata. Abstra�
 
 <br>
 
-Uma classe abstrata só pode herdar de outra classe abstrata, logo uma classe abstrata só pode estender de outra classe abstrata.
+Uma classe abstrata só pode herdar de outra classe abstrata, logo uma classe abstrata só pode estender de outra classe abstrata. **Uma classe abstrata não pode ser instanciada na memória e por isso precisa de uma ou mais classes filhas para poder ser funcional em um sistema.**
 
 Exemplo:
 
@@ -42,7 +42,7 @@ public class Main {
 }
 ```
 
-Parece ser desnecessário colocar métodos abstratos dentro de uma classe abstrata, visto que esta classe não pode ser instanciada, porém ao declarar um objeto proviniente de uma classe abstrata precisamos utilizar algum tipo de implementação para poder adicionar comportamentos ao programa. Dessa forma, é por este motivo que acima instanciamos a classe `John` para o tipo referente a classe abstrata `Student`, pois dessa forma podemos utilizar a implementação feita na classe `Jonh`. Abaixo mais um exemplo do gênero.
+Parece ser desnecessário colocar métodos abstratos dentro de uma classe abstrata, visto que esta classe não pode ser instanciada, porém ao declarar um objeto proviniente de uma classe abstrata precisamos utilizar algum tipo de implementação para poder adicionar comportamentos ao programa. É por este motivo que acima instanciamos a classe `John` para o tipo referente a classe abstrata `Student`, pois dessa forma podemos utilizar a implementação feita na classe `Jonh`. Abaixo mais um exemplo do gênero.
 
 Exemplo:
 

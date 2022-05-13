@@ -314,14 +314,149 @@ Uma Interface é semelhante a uma classe, mas a diferença é que na classe forn
 <br>
 
 # Extends
+No Salesforce, por default, todas as classes são consideradas como **final**, isso implica em que por padrão uma classe não pode extender de outra. Dessa forma, para informar ao compilador que uma classe pode ser extensível, devemos utilizar a palavra reservada **virtual**. 
 
+Exemplo de classe extensível:
 
+```java
+/**
+ * @author Rodrigo Fentanes - TOPi/BRQ
+ */
 
+public virtual class Customer {
+    Customer() {
 
-03:05:00
+    }
+}
+```
 
+Exemplo de exntensão:
 
+```java
+/**
+ * @author Rodrigo Fentanes - TOPi/BRQ
+ */
 
+public class CustomerPremium extends Customer {
+    CustomerPremium() {
+
+    }
+}
+```
+
+> Uma classe extendida também pode ser extensível, logo o exemplo acima também poderia ser ```public virtual class CustomerPremium extends Customer```
+
+<br>
+<br>
+
+# Abstract
+Uma classe abstrata é uma classe que não pode ser instanciada, dessa forma elas "precisam" de classes "filhas" para serem funcionais.
+
+Exemplo de classe abstrata:
+
+```java
+/**
+ * @author Rodrigo Fentanes - TOPi/BRQ
+ */
+
+public abstract class Customer {
+    Customer() {
+
+    }
+}
+```
+
+Exemplo de classe filha de uma classe abstrata:
+
+```java
+/**
+ * @author Rodrigo Fentanes - TOPi/BRQ
+ */
+
+public class PremiumCustomer extends Customer {
+    PremiumCustomer() {
+
+    }
+}
+```
+
+<br>
+
+## Métodos de uma classe abstrata
+Os métodos de uma classe abstrata são **final** por default, dessa forma para sobrescrever (atente-se que a palavra é sobrescrita e não sobrecarga) métodos de uma classe abstrata é necessário indicar isso no código com a palavra reservada **virtual**. Vejamos abaixo:
+
+```java
+public abstract class Customer {
+    protected name;
+
+    Customer() {
+
+    }
+
+    public void fazerIsso(){
+        // codigo
+    }
+
+    virtual
+    public void fazerAquilo(){
+        // codigo
+    }
+
+}
+```
+
+Também é necessário indicar no local onde a sobrescrita irá ocorrer através da palavra reservada **override**, dessa forma na classe filha faremos:
+
+```java
+public class PremiumCustomer extends Customer {
+    PremiumCustomer() {
+        super();
+
+    }
+
+    override
+    public void fazerAquilo(){
+        Syste.debug('O nome é: ' + this.name);
+    }
+}
+```
+
+> MACETE: Veja que acima também utilizamos o modificador de acesso **protected**, este irá permitir que uma classe filha acesse membros (atributo ou método) de uma classe pai, afinal no Salesforce um atributo é por padrão **private** o que impede que classes filhas enxerguem os atributos de suas respectivas classes pais.
+
+> MACETE: O Acesso a um membro de uma classe pai pode ser feito através do modificador **protected** ou através de métodos **getter and setter**.
+
+<br>
+
+Veja abaixo um mapa com os modificadores de acesso:
+
+<div align="center">
+
+| modificador de acesso | Dentro da classe | Por herança | Fora do pacote |
+| :-: | :-: | :-: | :-: |
+| Public | Sim | Sim | Sim |
+| Protected | Sim | Sim | Não |
+| Private | Sim | Não | Não |
+
+</div>
+
+> O modificador **protected** só pode ser declarado em classes que são **virtual** ou **abstract**. 
+
+<br>
+
+## Contrutores de uma classe extedida
+Por padrão um classe extendida tem em seu contrutor o método/palavra-reservada "super()", este chama o construtor da classe pai.
+
+```java
+public class PremiumCustomer extends Customer {
+    PremiumCustomer() {
+        super();
+    }
+}
+```
+
+> Se omitirmos a declaração do "super()" em nosso código, o compilador irá colocar um auomaticamente.
+
+<br>
 
 
 
