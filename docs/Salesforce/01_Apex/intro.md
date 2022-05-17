@@ -21,7 +21,14 @@ A Apex é uma liguagem baseada em Java (95%) e em C# (5%), dessa forma, por baix
 <br>
 <br>
 
+# Princípio do "É um"
+
+<br>
+<br>
+
 # Classe
+Para criar uma classe pelo VSCode basta fazermos **ctrl + shift + p** e selecionar **SFDX: Create class**. Também é possível criar uma classe através do Developer Console.  
+
 Ao nomear uma classe sempre devemos seguir a convenção PascalCase, dessa forma nomearemos "NomeDaClasse" por exemplo.
 
 Toda classe apex possui a extensão ".cls".
@@ -250,6 +257,8 @@ public class Customer {
 }
 ```
 
+> É possivel fazer sobrecarda de métodos e de construtores.
+
 <br>
 <br>
 
@@ -309,6 +318,36 @@ Null é uma palavra reservada no apex. Quando você cria uma variável sem inici
 
 # Interfaces
 Uma Interface é semelhante a uma classe, mas a diferença é que na classe fornecemos o corpo dos métodos, mas na Interface fornecemos apenas os nomes dos métodos, mas não o corpo, temos que implementá-los em nossas classes e, em seguida, temos que escrever o corpo do método.
+
+O conceito de interface atinge o ponto máximo de abstração em Apex.
+
+Com uma interface podemos injetar/ditar quais comportamentos uma classe deve ter. Intergfaces são determinadoras de comportamente somente, não possuem implementação.
+
+Todos os métodos definidos dentro de uma interface são automaticamente públicos e abstratos, podemos enxergar uma interface como um contrato.
+
+Uma classe pode implementar várias interfaces.
+
+
+
+Exemplo:
+
+```java
+public interface Autenticavel {
+    public void autentica(String usuario, String senha);
+}
+```
+
+```java
+public class Gerente extends Funcionario implements Autenticavel {
+    public void autentica(String usuario, String senha){
+        // code...
+    }
+}
+```
+
+
+
+
 
 <br>
 <br>
@@ -425,6 +464,8 @@ public class PremiumCustomer extends Customer {
 
 > MACETE: O Acesso a um membro de uma classe pai pode ser feito através do modificador **protected** ou através de métodos **getter and setter**.
 
+> A palavra-reservada **this** SEMPRE representará a instância do tipo em que foi criada.
+
 <br>
 
 Veja abaixo um mapa com os modificadores de acesso:
@@ -444,7 +485,7 @@ Veja abaixo um mapa com os modificadores de acesso:
 <br>
 
 ## Contrutores de uma classe extedida
-Por padrão um classe extendida tem em seu contrutor o método/palavra-reservada "super()", este chama o construtor da classe pai.
+Por padrão um classe extendida tem em seu contrutor o método/palavra-reservada "super()", este chama o construtor da classe pai, veja abaixo.
 
 ```java
 public class PremiumCustomer extends Customer {
@@ -454,21 +495,119 @@ public class PremiumCustomer extends Customer {
 }
 ```
 
-> Se omitirmos a declaração do "super()" em nosso código, o compilador irá colocar um auomaticamente.
+> Se omitirmos a declaração do "super()" em nosso código, o compilador irá colocar um automaticamente.
+
+> O "super()" deve estar na primeira linha do construtor, ou seja, deve ser a primeira instrução.
 
 <br>
 
+Para o caso de sobrecarga do construtor de uma classe extendida, devemos utilizar o "this()", este chama o construtor da própria classe, veja abaixo:
 
+```java
+public class PremiumCustomer extends Customer {
+    PremiumCustomer() {
+        super();
+    }
+
+    PremiumCustomer(String atributo) {
+        this();
+    }
+}
+```
+
+> O "this()" deve ser escrito explicitamente, pois o compilador não o adiciona automaticamente. 
+
+> O "this()" deve estar na primeira linha do construtor, ou seja, deve ser a primeira instrução.
+
+<br>
+
+Caso quisermos chamar a sobrecarga do construtor da classe pai, podemos fazer como abaixo:
+
+```java
+public class PremiumCustomer extends Customer {
+    PremiumCustomer() {
+        super(nome);
+    }
+}
+```
+
+> O "super()" acima chamará o construtor "Customer(String nome)", que é a sobrecarga do construtor da classe pai.
+
+<br>
+
+## Exemplos de códigos possíveis
+
+A palavra-reservada "super" sempre se refere a classe pai e é utilizadaq para acessar diretamente os membros da classe pai. Veja abaixo:
+
+```java
+public class PremiumCustomer extends Customer {
+    // code ...
+    
+    override
+    public String getNameAndAddLastName() {
+        return super.getName() + ' sobrenome';
+    }
+}
+```
+
+<br>
+<br>
+
+# Polimorfísmo
+O polimorfismo será sempre executado através de uma variável polimórfica. Polimorfismo é a capacidade de criar uma variável de um tipo "pai" e atribuir a ela um valor de um tipo "filho" dela.
+
+## Declaração de uma variável polimórfica
+```java
+// Variável do tipo "Customer"
+Customer customer = new Customer();
+customer.metodo();
+
+// Variável do tipo "Customer" utilizando a sobrecarga do construtor
+Customer otherCustomer = new Customer('Customer name');
+otherCustomer.metodo();
+
+// Variável do tipo "CustomerPremium" que é filha de "Customer"
+CustomerPremium customerPremium = new CustomerPremium();
+customerPremium.metodo();
+
+// Variável polimórfica do tipo "Customer"
+Customer customerPremium = new CustomerPremium('Premium customer');
+customerPremium.metodo();
+```
+
+> Note que acima, ao instanciar o objeto "customerPremium", mantemos o tipo de dado "Customer" mesmo este objeto sendo do tipo de dado "CustomerPremium". Isto se deve ao fato deste objeto ser de um tipo que extende de outro.
+
+<br>
+<br>
+
+# Up-Casting e Down-Casting
+
+```java
+// Lista que recebe variáveis do tipo string
+List<String> emails = new List<String>();
+
+// Lista que recebe variáveis do tipo Object, aqui ocorre o Down-Casting, ou seja, uma conversão de String para Object
+List<Object> emailsPolimorficos = emails;
+
+// Uma variável do tipo Object recebendo um valor do tipo Object
+Object emailObject = emailsPolimorficos.get(0);
+
+// Uma variável do tipo String precisa fazer um Up-Casting para receber uma variável do tipo Object
+String email = (String) emailsPolimorficos.get(0);
+
+```
 
 <br>
 <br>
 
 # Getter and Setter
-O Salesforce Herdou uma característica sitática muito util do C#, veja abaixo como podemos declarar os Getters e Setters de uma variável seguindo a sináxe do C#:
+O Salesforce Herdou uma característica sintática muito util do C#, veja abaixo como podemos declarar os Getters e Setters de uma variável seguindo a sináxe do C#:
 
 ```java
 String nome {get;set;}
 ```
+
+> A característica acima é chamada de "binding".
 
 > É muito útil quando estamos integrando classes com componentes de página (visualforce, lightining).
 
@@ -652,6 +791,8 @@ if(variable == null) {
 return variable == null;
 
 ```
+
+> NUNCA utilizar Boolean como parêmetro.
 
 <br>
 <br>
