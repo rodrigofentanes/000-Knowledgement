@@ -1,9 +1,19 @@
 # :back: [README](../../../README.md#programming-languages)
 
 <h1 align="center">
-    Aura Component
+    Lightning Web Component (LWC)
 </h1> 
 
 <br>
 
 # Introdução
+
+
+
+
+
+
+
+
+
+
