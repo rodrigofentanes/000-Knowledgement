@@ -6,6 +6,9 @@
 
 <br>
 
+# Introdução
+O acesso aos dados dentro do Salesforce é feita através do SOQL.
+
 # SOQL - Salesforce Object Query Language
 
 As principais características do SOQL são:
