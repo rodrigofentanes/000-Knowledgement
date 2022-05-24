@@ -6,6 +6,4 @@
 
 <br>
 
-# Framework de integração
-A motivação da criação do framework foi a necessidade de padronização de uma estrutura de integração assincrona para ser utilizada em vários projetos.
-
+# Introdução

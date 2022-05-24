@@ -26,7 +26,8 @@ A plataforma Salesforce pode ser acessada das seguintes formas:
 - Profissional
   - https://login.salesforce.com/
 - Teste / Estudos / Sandbox
-  - https://test.salesforce.com/ 
+  - https://test.salesforce.com/
+- Link personalizado
 
 <br>
 <br>
@@ -259,7 +260,7 @@ Define como a página de registro ficará quando o registro for criado ou aberto
   - somente leitura.
 
 # Tipos de registro
-Tipos de registro oferecem a capacidade de, ao criar um cadastro, poder escolher o tipo de regitro queremos criar em função das necessidades dea empresa ou departamento.
+Tipos de registro oferecem a capacidade de, ao criar um cadastro, poder escolher o tipo de regitro queremos criar em função das necessidades da empresa ou departamento.
 
 > **Exemplo:** um vendedor pode trabalhar com clientes de grande ou pequeno porte, com base nesta informação, quando o referido vendedor quiser criar uma oportunidade, podemos dar-lhe a opção de escolher o tipo de Oportunidade; pequena ou grande.
 
@@ -267,6 +268,8 @@ Tipos de registro oferecem a capacidade de, ao criar um cadastro, poder escolher
 2. **gerenciador de objetos** > **oportunidade** > **Tipos de registro**
 
 > As etápas acima utilizam Layouts de páginas existentes.
+
+<br>
 
 ## Regras de validação
 **configuração** > **gerenciador de objetos** > **Regras de validação**

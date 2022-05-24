@@ -14,11 +14,9 @@ Veja abaixo um modelo de entrega:
 -   Desenvolvimento (Dev)
 -   Homologação (Homolog)
 -   Produção (Prod)
+-   Controle de versionamento (git clone)
 
 <br>
-
-## Inicialização de orgs
-instalar extensão "forcecode"... git clone da org.... ctrl + shift + p && forcecode create org (clicar em cima da "pasta clone")....
 
 
 
