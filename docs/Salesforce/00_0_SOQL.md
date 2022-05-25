@@ -1,15 +1,13 @@
 # :back: [README](../../../README.md#programming-languages)
 
 <h1 align="center">
-    Acesso a dados
+    SOQL - Salesforce Object Query Language
 </h1>
 
 <br>
 
 # Introdução
 O acesso aos dados dentro do Salesforce é feita através do SOQL.
-
-# SOQL - Salesforce Object Query Language
 
 As principais características do SOQL são:
 -   É semelhante à sintaxe da SQL ANSI;
