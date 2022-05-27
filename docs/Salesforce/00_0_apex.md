@@ -99,6 +99,17 @@ Neste contexto, a única diferença entre o Apex e o Java é:
 
 **Não existe modificador default em Apex, dessa forma ao não declarar um modificador em Apex, automaticamente, o modificador aplicado será o "private".**
 
+
+
+## without sharing
+Significa que não iremos utilizar as permissões do usuáro que está chamando a classe.
+
+<br>
+<br>
+
+## with sharing
+Significa que iremos utilizar as permissões do usuáro que está chamando a classe. Ou seja, a classe irá compartilhar as configurações de acesso do usuário que a está chamando.
+
 <br>
 <br>
 
@@ -793,6 +804,16 @@ return variable == null;
 ```
 
 > NUNCA utilizar Boolean como parêmetro.
+
+<br>
+
+## Regra das 3 tabs
+Passou de três tabs, quase certo estar errado.
+
+<br>
+
+## Regra das 15 linhas
+Se um método passa de 20 linhas, provavelmente você está fazendo mais do que uma coisa nele.
 
 <br>
 <br>

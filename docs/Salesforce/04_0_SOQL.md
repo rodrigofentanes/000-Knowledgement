@@ -23,6 +23,12 @@ As principais características do SOQL são:
 <br>
 <br>
 
+# Lookup field
+Um campo de lookup é simplesmente a forma como o Salesforce chama uma **foreign key**, logo todo campo lookuo possui um Id.
+
+<br>
+<br>
+
 # Base de um código SOQL
 
 ```sql
@@ -68,7 +74,7 @@ Ainda sobre navegações entre objetos, é importante frizar que podemos navegar
 ]
 ```
 
-> Acima acessamos o objeto City que possui relação com Account. Agora perceba que não colocamos apenas o nome do objeto, adicionamos também dois underline e um "r" ao final do nome do objeto. Isso se deve ao fato que ao navegar entre objetos devemos indicar os objetos customizados com um "__r" no final. Logo o objeto "City" é declarado "City__r".
+> Acima acessamos o objeto City que possui relação com Account. Agora perceba que não colocamos apenas o nome do objeto, adicionamos também dois underlines e um "r" ao final do nome do objeto. Isso se deve ao fato que ao navegar entre objetos devemos indicar os objetos customizados com um "__r" no final. Logo o objeto "City" é declarado "City__r".
 
 Chamado de **Bind Verbal**, as variáveis dentro de chamadas SOQL tornam nossas chamadas mais dinâmicas. Exemplo de uso de variáveis em SOQL:
 
@@ -159,22 +165,6 @@ Basta escrever o código SOQL, clicar **ctrl + p** e selecionat a opção **SFDX
 <br>
 <br>
 
-# Data Manipulation Language (DML)
-
-<br>
-
-# without sharing
-Significa que não iremos utilizar as permissões do usuáro que está chamando a classe.
-
-<br>
-<br>
-
-# with sharing
-Significa que iremos utilizar as permissões do usuáro que está chamando a classe. Ou seja, a classe irá compartilhar as configurações de acesso do usuário que a está chamando.
-
-<br>
-<br>
-
 # Boas práticas
 
 Devemos sempre inserir uma chamada SOQL numa lista, visto que, caso tentemos inserir uma chamada SOQL que não retorne resultado algum em uma variável que não seja uma Lista, esta ação resultará em erro.
@@ -193,11 +183,106 @@ public class ClasseTal {
 }
 ```
 
+<br>
 
+> Nunca devemos colocar uma chamada SOQL dentro de um loop, seja ele qual for. Ou seja, NUNCA FAÇA ACESSO A DADOS dentro de um `for` por exemplo.
 
+> Procure sempre utilizar coleções para armazenar dados provenientes de uma chamada SOQL.
 
+<br>
+<br>
 
-03:28:00
+# Design Pattern Repository
+Foi um padrão criado por Eric Evans, autor do livro '**Domain Driven Design**', e Martin Fawler. 
 
+Tem como objetivo:
+-   Centralizar todo o acesso à SOQL,SOQL e DML, ou seja, deve ser utilizado para centralizar todos o acesso à SObjects.
+-   Prover de forma simples e não manipula Listas de Objetivos.
+-   Todos os métodos deverão ser 'virtual'.
+-   Utilize sempre findByXXX como nome de método de pesquisa. 
 
+## Repository
+É um sufixo que atribuímos a toda classe que nos servirá de repositório, ou seja, a classe que fará as chamadas ao banco de dados.
 
+Uma classe repository deve ser utilizada APENAS para acessar os SObjects, evite manipular estrutura de dados em uma classe repository.
+
+Para cada objeto salesforce devemos ter uma classe repository.
+
+Veja abaixo:
+```java
+/**
+ * @author  - Rodrigo Fentanes
+ * @email  - rodrigo.fentanes@hotmail.com
+ */
+
+public virtual class AccountRepository {
+    public AccountRepository() {
+
+    }
+
+    virtual
+    public List<Accont> findByName (String name){
+        return [
+            SELECT Id, 
+                Name
+            FROM Accont
+            WHERE Name = :name
+        ];
+    }
+
+    virtual
+    public Map<String, List<Account>> findByCity (String city) {
+        Map<String, List<Account>> accountsByCity = new Map<String,List<Accont>>();
+
+        List<Account> accounts = [
+            SELECT Id,
+                Name,
+                City
+            FROM Account
+            WHERE BillingCity = :city
+        ];
+
+        for(Account account : accounts) {
+            if(accountsByCity.containsKey(account.BillingCity)){
+                // Procura uma lista que contenha como chave o nome da cidade e se encontrar adiciona um item à lista
+                accountsByCity.get(accountBillingCity).add(account);
+            } else {
+                // Se não encontrar uma chave com o nome da cidade, Cria uma nova nova chave no mapa passando uma nova lista como valor
+                accountsByCity.put(account.BillingCity, new List<Account>());
+                accountsByCity.get(accountBillingCity).add(account);
+            }
+        }
+
+        return accountsByCity;
+    }
+}
+```
+
+<br>
+
+## Avoid Static
+Como o nome já diz, é um conceito que diz "evite elementos estáticos". Segundo este conceito, quando usamos a palavra-reservada `static` nós abrimos mão da Orientação à Objetos, pois quando temos um membro (variável, método, etc) da classe e colocamos ele como estático ele deixa de pertecer à instância e passa a pertencer à classe. Isso resulta em que acabamos perdendo toda a capacidade de polimorfismo, herença, sobrescrita, etc.
+
+<br>
+
+## Usem o Virtual
+Isso irá permitir que outros desenvolvedores sobrescrevam as classes e os métodos.
+
+<br>
+<br>
+
+# Limites SOQL
+
+|Descrição|Síncrono|Assíncrono|
+|:-|:-| :- |
+|Total de SOQL executadas por chamada|100| |
+|Total de registros retornados em SOQL queries por chamada|50000| |
+|Total de registros retornados por Database.getQueryLocator chamada|10000| |
+
+> Sincrono são os métodos que nós sabemos quando vamos chamar, ou seja quando chamamos uma classe efetivamente e quando acaba ela espera que nós a chamemos novamente pra que ela possa rodar de novo.
+
+> Assincrono é quando não sabemos quando um método será chamado, por exemplo no caso de uma Trigger de Update onde não sabemos quando o registro será atualizado e assim chamar o método.
+
+> O salesforce funciona por chamada (ciclo transacional) que nada mais é do que o tempo de CPU que nosso programa tem para executar dentro do Salesforce.
+
+> Os limite insdependem de liceça. Para todas vale igual.

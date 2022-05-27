@@ -768,80 +768,6 @@ O componente acima utilizará o attribute declarado no controller abaixo:
 <br>
 <br>
 
-# Juntando as peças
-
-Apex Class (Controller):
-
-```java
-public with sharing class TicketsController {
-    @AuraEnabled (cacheable=true)
-    public static List<Aeroporto__c> getAeroportos(String search) {
-        search += '%';
-        return [
-            SELECT Id,
-                Name,
-                Estado__r.name
-                Sigla__c
-            FROM Aeroporto__c
-            WHERE Name LIKE :search OR
-                Sigla__c LIKE :search
-            WITH SECURITY_ENFORCED
-        ]
-    }
-}
-```
-
-Código comentado:
-
-```java
-
-```
-
-<br>
-<br>
-
-Aura component:
-
-```xml
-<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="TicketsController">
-    <aura:attribute name="foos" type="Object" default="[]">
-    <aura:handler name="init" value="this" action="{c.init}">
-
-    <aura:iteration items="1,2,3" var="foo">
-        <c:cardTicket></c:cardTicket>
-    </aura:iteration>
-</aura:component>
-```
-
-Código comentado:
-
-```xml
-<!-- No trecho `controller="TicketsController"` estamos dizendo ao componente qual a classe Apex que lhe servirá como controller. Neste caso será a classe `TicketsController.cls` -->
-<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="TicketsController">
-
-    <!-- Aqui vemos um atributo chamado 'foos' do tipo 'Object' que tem como valro default uma array vazio '[]' -->
-    <aura:attribute name="foos" type="Object" default="[]">
-
-    <!-- 
-        > A tag 'aura:handler' lida com o ciclo de vida de um componente aura.
-
-        > `value="this"` passa a própria classe como valor
-
-        > O código abaixo resultará em que quando o componente for iniciado, ele chamará o método `init` (c.init) que estará dentro do aura controller.
-    -->
-    <aura:handler name="init" value="this" action="{c.init}">
-
-    <aura:iteration items="{!v.foos}" var="foo">
-        <c:cardTicket></c:cardTicket>
-    </aura:iteration>
-
-
-</aura:component>
-```
-
-<br>
-<br>
-
 Aura controller:
 
 ```js
@@ -916,10 +842,89 @@ Código comentado:
 <br>
 <br>
 
+# Juntando as peças
+
+Apex Class (Controller):
+
+```java
+public with sharing class TicketsController {
+    @AuraEnabled (cacheable=true)
+    public static List<Aeroporto__c> getAeroportos(String search) {
+        search += '%';
+        return [
+            SELECT Id,
+                Name,
+                Estado__r.name
+                Sigla__c
+            FROM Aeroporto__c
+            WHERE Name LIKE :search OR
+                Sigla__c LIKE :search
+            WITH SECURITY_ENFORCED
+        ]
+    }
+}
+```
+
+Código comentado:
+
+```java
+
+```
+
+<br>
+<br>
+
+Aura component:
+
+```xml
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="TicketsController">
+    <aura:attribute name="foos" type="Object" default="[]">
+    <aura:handler name="init" value="this" action="{c.init}">
+
+    <aura:iteration items="1,2,3" var="foo">
+        <c:cardTicket></c:cardTicket>
+    </aura:iteration>
+</aura:component>
+```
+
+Código comentado:
+
+```xml
+<!-- No trecho `controller="TicketsController"` estamos dizendo ao componente qual a classe Apex que lhe servirá como controller. Neste caso será a classe `TicketsController.cls` -->
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="TicketsController">
+
+    <!-- Aqui vemos um atributo chamado 'foos' do tipo 'Object' que tem como valro default uma array vazio '[]' -->
+    <aura:attribute name="foos" type="Object" default="[]">
+
+    <!-- 
+        > A tag 'aura:handler' lida com o ciclo de vida de um componente aura.
+
+        > `value="this"` passa a própria classe como valor
+
+        > O código abaixo resultará em que quando o componente for iniciado, ele chamará o método `init` (c.init) que estará dentro do aura controller.
+    -->
+    <aura:handler name="init" value="this" action="{c.init}">
+
+    <aura:iteration items="{!v.foos}" var="foo">
+        <c:cardTicket></c:cardTicket>
+    </aura:iteration>
 
 
+</aura:component>
+```
 
+<br>
+<br>
 
+# Ciclo de vida de um componente
+A tag utilizada para gerenciar o ciclo de vida de um componente é a `<aura:handler>`.
+
+Exemplo:
+```xml
+<aura:handler name="init" value="this" action="{!c.init}" />
+```
+
+> Acima, sempre que o componente for iniciado `name="init"` ele chamara o método do controller aura `action="{!c.init}"` passando a própria classe como valor.
 
 
 
