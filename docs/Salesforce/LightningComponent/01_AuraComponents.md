@@ -52,4 +52,6 @@ As aplicações utilizam design responsivo e suportão as últimas tecnologias a
 # Aura Components
 Os componentes do Aura são as unidades independentes (self-contained) e reutilizáveis de um aplicativo. Eles representam uma seção reutilizável da interface do usuário e podem variar em granularidade de uma única linha de texto para um aplicativo inteiro.
 
+O framework inclui um conjunto de componentes pre
+
 

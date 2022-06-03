@@ -286,3 +286,17 @@ Isso irá permitir que outros desenvolvedores sobrescrevam as classes e os méto
 > O salesforce funciona por chamada (ciclo transacional) que nada mais é do que o tempo de CPU que nosso programa tem para executar dentro do Salesforce.
 
 > Os limite insdependem de liceça. Para todas vale igual.
+
+
+
+
+
+
+
+
+
+
+
+
+
+se um objeto nao aparecer na lista de objetos ele pode ser um custom settings ou metadado
